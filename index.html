@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div#square {
+position: absolute;
+top: 0px;
+left: 0px;
+width: 100px;
+height: 100px;
+background: red;
+	    -webkit-transition: top 2s, left 2s; /* For Safari 3.1 to 6.0 */
+transition: top 2s, left 2s;
+}
+</style>
+</head>
+<body>
+
+
+<div id="square" onclick="down()"></div>
+
+<script>
+var ok = true;
+
+function left() {
+	var div = document.getElementById("square");
+	if (ok == true) {
+		div.style.left = "90%";
+		ok = false;
+	} else {
+		div.style.top = "0%";
+		ok = true;
+	}
+}
+
+function down() {
+	var div = document.getElementById("square");
+	if (ok == true) {
+		div.style.top = "85%";
+	} else {
+		div.style.left = "0%";
+	}
+	setTimeout(left, 2000);
+}
+</script>
+</body>
+</html>
+
