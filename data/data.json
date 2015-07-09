@@ -1,0 +1,112 @@
+{
+    "categories": [
+        {
+            "categoryId": 1,
+            "name" : "Category 1",
+            "ord" : 1,
+            "products" : [
+                {
+                    "productId": 1,
+                    "name" : "Product 1",
+                    "description": "Some description for the product 1 ajbdsjasdans dna ",
+                    "price": 199,
+                    "image": "http://"
+                },
+                {
+                    "productId": 2,
+                    "name" : "Product 2",
+                    "description": "Some description for the product 1 ajbdsjasdans dna ",
+                    "price": 199,
+                    "image": "http://"
+                },
+                {
+                    "productId": 3,
+                    "name" : "Product 3",
+                    "description": "Some description for the product 1 ajbdsjasdans dna ",
+                    "price": 199,
+                    "image": "http://"
+                },
+                {
+                    "productId": 4,
+                    "name" : "Product 4",
+                    "description": "Some description for the product 1 ajbdsjasdans dna ",
+                    "price": 199,
+                    "image": "http://"
+                },
+                {
+                    "productId": 5,
+                    "name" : "Product 5",
+                    "description": "Some description for the product 1 ajbdsjasdans dna ",
+                    "price": 199,
+                    "image": "http://"
+                },
+                {
+                    "productId": 6,
+                    "name" : "Product 6",
+                    "description": "Some description for the product 1 ajbdsjasdans dna ",
+                    "price": 199,
+                    "image": "http://"
+                }
+
+            ]
+        },
+        {
+            "categoryId": 2,
+            "name" : "Category 2",
+            "ord" : 2,
+            "products" : [
+                {
+                    "productId": 1,
+                    "name" : "Product 1",
+                    "description": "Some description for the product 1 ajbdsjasdans dna ",
+                    "price": 199,
+                    "image": "http://"
+                },
+                {
+                    "productId": 2,
+                    "name" : "Product 2",
+                    "description": "Some description for the product 1 ajbdsjasdans dna ",
+                    "price": 199,
+                    "image": "http://"
+                }
+
+
+            ]
+        },
+        {
+            "categoryId": 3,
+            "name" : "Category 3",
+            "ord" : 3,
+            "products" : [
+                {
+                    "productId": 1,
+                    "name" : "Product 1",
+                    "description": "Some description for the product 1 ajbdsjasdans dna ",
+                    "price": 199,
+                    "image": "http://"
+                },
+                {
+                    "productId": 2,
+                    "name" : "Product 2",
+                    "description": "Some description for the product 1 ajbdsjasdans dna ",
+                    "price": 199,
+                    "image": "http://"
+                },
+                {
+                    "productId": 3,
+                    "name" : "Product 3",
+                    "description": "Some description for the product 1 ajbdsjasdans dna ",
+                    "price": 199,
+                    "image": "http://"
+                },
+                {
+                    "productId": 4,
+                    "name" : "Product 4",
+                    "description": "Some description for the product 1 ajbdsjasdans dna ",
+                    "price": 199,
+                    "image": "http://"
+                }
+            ]
+        }
+    ]
+}
