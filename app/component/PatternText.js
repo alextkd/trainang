@@ -33,11 +33,13 @@ Ext.define('Ecommerce.component.PatternText', {
             e.stopEvent();
         }
     },
-    onFocus: function(evt) {
+
+    onFocus: function (evt) {
         var component = this.getComponent();
         component.updateFieldAttribute('type', "number");
     },
-    onBlur: function(evt) {
+
+    onBlur: function (evt) {
         var component = this.getComponent();
         component.updateFieldAttribute('type', "text");
     }

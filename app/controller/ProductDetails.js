@@ -42,7 +42,10 @@ Ext.define('Ecommerce.controller.ProductDetails', {
     onDeActivateView: function () {
         var navigationBar = this.getMain().getNavigationBar();
 
-        navigationBar.setMasked(true);
+        navigationBar.setMasked({
+            xtype      : 'mask',
+            transparent: true
+        });
         this.getEditButton().hide();
         this.getAddButton().show();
     },

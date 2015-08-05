@@ -1,7 +1,7 @@
 Ext.define('Ecommerce.controller.Main', {
     extend  : 'Ext.app.Controller',
     requires: [
-        'Ecommerce.view.Product'
+        'Ecommerce.view.products.Product'
     ],
     config  : {
         models : [

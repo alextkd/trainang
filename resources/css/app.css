@@ -477,21 +477,21 @@
  */
 /**
  * Background noise recipe
- * 
+ *
  * This recipe use a sass function to generate a .png file
- * 
+ *
  * Inspired by a jQuery plugin "Noisy" by Daniel Rapp @DanielRapp
  * @link https://github.com/DanielRapp/Noisy
- * 
+ *
  * Converted using Sass by Aaron Russell @aaronrussell & Philipp Bosch @philippbosch
  * @link https://gist.github.com/1021332
- * 
+ *
  * Ported to a sass gem by Antti Salonen @antsa
  * @link https://github.com/antsa/sassy_noise
- * 
+ *
  * Mixin:        background-noise
  * Function:     background_noise
- * 
+ *
  * @author Daniel Rapp @DanielRapp
  * @author Aaron Russell @aaronrussell
  * @author Philipp Bosch @philippbosch
@@ -530,7 +530,7 @@
  */
 /**
  * Blueprint grid background pattern
- * 
+ *
  * @link http://lea.verou.me/css3patterns/#blueprint-grid
  *
  * @author Lea Verou http://lea.verou.me/ for the original pattern
@@ -538,12 +538,12 @@
  */
 /**
  * Background overlay inspired by Google Chrome modal overlay
- * 
+ *
  * @author Maxime Thirouin @MoOx maxime.thirouin@gmail.com
  */
 /**
  * Striped background pattern
- * 
+ *
  * @link http://lea.verou.me/css3patterns/
  *
  * @author Lea Verou http://lea.verou.me/ for the original pattern
@@ -760,74 +760,87 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
 }
+
 /* line 8, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Box.scss */
 .x-layout-box.x-horizontal {
     -webkit-box-orient: horizontal !important;
     -ms-flex-direction: row !important;
     flex-direction: row !important;
 }
+
 /* line 11, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Box.scss */
 .x-layout-box.x-horizontal > .x-layout-box-item.x-flexed {
     min-width: 0 !important;
 }
+
 /* line 16, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Box.scss */
 .x-layout-box.x-vertical {
     -webkit-box-orient: vertical !important;
     -ms-flex-direction: column !important;
     flex-direction: column !important;
 }
+
 /* line 19, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Box.scss */
 .x-layout-box.x-vertical > .x-layout-box-item.x-flexed {
     min-height: 0 !important;
 }
+
 /* line 24, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Box.scss */
 .x-layout-box > .x-layout-box-item {
     display: flex !important;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
 }
+
 /* line 28, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Box.scss */
 .x-layout-box.x-align-start {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
 }
+
 /* line 32, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Box.scss */
 .x-layout-box.x-align-center {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
 }
+
 /* line 36, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Box.scss */
 .x-layout-box.x-align-end {
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
 }
+
 /* line 40, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Box.scss */
 .x-layout-box.x-align-stretch {
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
 }
+
 /* line 44, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Box.scss */
 .x-layout-box.x-pack-start {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
 }
+
 /* line 48, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Box.scss */
 .x-layout-box.x-pack-center {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
 }
+
 /* line 52, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Box.scss */
 .x-layout-box.x-pack-end {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
 }
+
 /* line 56, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Box.scss */
 .x-layout-box.x-pack-justify {
     -webkit-box-pack: justify;
@@ -850,6 +863,7 @@ body {
 .x-webkit .x-layout-box.x-horizontal > .x-layout-box-item.x-flexed {
     width: 0 !important;
 }
+
 /* line 75, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Box.scss */
 .x-webkit .x-layout-box.x-vertical > .x-layout-box-item.x-flexed {
     height: 0 !important;
@@ -859,10 +873,12 @@ body {
 .x-firefox .x-stretched.x-dock-horizontal > .x-dock-body {
     width: 0;
 }
+
 /* line 90, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Box.scss */
 .x-firefox .x-stretched.x-dock-vertical > .x-dock-body {
     height: 0;
 }
+
 /* line 98, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Box.scss */
 .x-firefox .x-container .x-dock-horizontal.x-unsized .x-dock-body {
     -webkit-box-flex: 1;
@@ -871,6 +887,7 @@ body {
     min-height: 0;
     min-width: 0;
 }
+
 /* line 107, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Box.scss */
 .x-firefox .x-has-height > .x-dock.x-unsized.x-dock-vertical > .x-dock-body {
     height: 0;
@@ -922,10 +939,12 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
 }
+
 /* line 8, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Dock.scss */
 .x-dock > .x-dock-body {
     overflow: hidden;
 }
+
 /* line 13, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Dock.scss */
 .x-dock.x-sized, .x-dock.x-sized > .x-dock-body > *, .x-dock.x-sized > .x-dock-body > .x-body > .x-inner {
     width: auto;
@@ -936,6 +955,7 @@ body {
     bottom: 0;
     left: 0;
 }
+
 /* line 17, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Dock.scss */
 .x-dock.x-sized > .x-dock-body {
     position: relative;
@@ -948,10 +968,12 @@ body {
     min-height: 0;
     min-width: 0;
 }
+
 /* line 26, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Dock.scss */
 .x-dock.x-unsized, .x-dock.x-stretched {
     height: 100%;
 }
+
 /* line 29, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Dock.scss */
 .x-dock.x-unsized > .x-dock-body, .x-dock.x-stretched > .x-dock-body {
     position: relative;
@@ -967,6 +989,7 @@ body {
     min-height: 0;
     min-width: 0;
 }
+
 /* line 37, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Dock.scss */
 .x-dock.x-unsized > .x-dock-body > *, .x-dock.x-stretched > .x-dock-body > * {
     -webkit-box-flex: 1;
@@ -975,24 +998,28 @@ body {
     min-height: 0;
     min-width: 0;
 }
+
 /* line 45, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Dock.scss */
 .x-dock.x-dock-vertical {
     -webkit-box-orient: vertical;
     -ms-flex-direction: column;
     flex-direction: column;
 }
+
 /* line 49, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Dock.scss */
 .x-dock.x-dock-horizontal {
     -webkit-box-orient: horizontal !important;
     -ms-flex-direction: row !important;
     flex-direction: row !important;
 }
+
 /* line 52, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Dock.scss */
 .x-dock.x-dock-horizontal > .x-dock-item {
     display: flex;
     display: -webkit-box;
     display: -ms-flexbox;
 }
+
 /* line 56, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Dock.scss */
 .x-dock.x-dock-horizontal > .x-dock-item.x-sized > .x-inner, .x-dock.x-dock-horizontal > .x-dock-item.x-sized > .x-body {
     width: auto;
@@ -1003,12 +1030,14 @@ body {
     bottom: 0;
     left: 0;
 }
+
 /* line 61, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Dock.scss */
 .x-dock.x-dock-horizontal > .x-dock-item.x-unsized {
     -webkit-box-orient: vertical;
     -ms-flex-direction: column;
     flex-direction: column;
 }
+
 /* line 64, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Dock.scss */
 .x-dock.x-dock-horizontal > .x-dock-item.x-unsized > * {
     -webkit-box-flex: 1;
@@ -1022,14 +1051,17 @@ body {
 .x-ie .x-stretched.x-dock-horizontal > .x-dock-body {
     width: 0;
 }
+
 /* line 85, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Dock.scss */
 .x-ie .x-stretched.x-dock-vertical > .x-dock-body {
     height: 0;
 }
+
 /* line 92, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Dock.scss */
 .x-ie .x-has-width > .x-dock.x-unsized.x-dock-horizontal > .x-dock-body {
     width: 0;
 }
+
 /* line 98, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Dock.scss */
 .x-ie .x-has-height > .x-dock.x-unsized.x-dock-vertical > .x-dock-body {
     height: 0;
@@ -1047,6 +1079,7 @@ body {
     -ms-flex-direction: column;
     flex-direction: column;
 }
+
 /* line 10, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Fit.scss */
 .x-stretched.x-container > .x-inner, .x-stretched.x-container > .x-body,
 .x-stretched.x-container > .x-body > .x-inner {
@@ -1087,6 +1120,7 @@ body {
     bottom: 0;
     left: 0;
 }
+
 /* line 34, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Fit.scss */
 .x-layout-fit-item.x-unsized {
     width: 100%;
@@ -1120,11 +1154,13 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
 }
+
 /* line 12, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Float.scss */
 .x-center > *,
 .x-centered > * {
     position: relative;
 }
+
 /* line 16, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Float.scss */
 .x-center > .x-floating,
 .x-centered > .x-floating {
@@ -1140,10 +1176,12 @@ body {
 .x-layout-float {
     overflow: hidden;
 }
+
 /* line 28, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Float.scss */
 .x-layout-float > .x-layout-float-item {
     float: left;
 }
+
 /* line 33, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/layout/_Float.scss */
 .x-layout-float.x-direction-right > .x-layout-float-item {
     float: right;
@@ -1187,6 +1225,7 @@ body {
     height: 0 !important;
     visibility: hidden;
 }
+
 /* line 32, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/util/_PaintMonitor.scss */
 .x-paint-monitor.cssanimation {
     -webkit-animation-duration: 0.0001ms;
@@ -1194,10 +1233,12 @@ body {
     animation-duration: 0.0001ms;
     animation-name: x-paint-monitor-helper;
 }
+
 /* line 39, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/util/_PaintMonitor.scss */
 .x-paint-monitor.overflowchange {
     overflow: hidden;
 }
+
 /* line 42, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/util/_PaintMonitor.scss */
 .x-paint-monitor.overflowchange::after {
     content: '';
@@ -1224,12 +1265,14 @@ body {
     visibility: hidden;
     overflow: hidden;
 }
+
 /* line 18, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/util/_SizeMonitor.scss */
 .x-size-monitors > * {
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
+
 /* line 25, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/util/_SizeMonitor.scss */
 .x-size-monitors.scroll > *.shrink::after {
     content: '';
@@ -1239,6 +1282,7 @@ body {
     min-width: 1px;
     min-height: 1px;
 }
+
 /* line 34, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/util/_SizeMonitor.scss */
 .x-size-monitors.scroll > *.expand::after {
     content: '';
@@ -1246,11 +1290,13 @@ body {
     width: 100000px;
     height: 100000px;
 }
+
 /* line 44, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/util/_SizeMonitor.scss */
 .x-size-monitors.overflowchanged > *.shrink > * {
     width: 100%;
     height: 100%;
 }
+
 /* line 51, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/util/_SizeMonitor.scss */
 .x-size-monitors.overflowchanged > *.expand > * {
     width: 200%;
@@ -1305,6 +1351,7 @@ body {
     top: 0;
     left: 0;
 }
+
 /* line 19, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/util/_Translatable.scss */
 .x-translatable-hboxfix > .x-translatable {
     position: relative !important;
@@ -1321,6 +1368,7 @@ body {
     bottom: 0;
     left: 0;
 }
+
 /* line 28, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/util/_Translatable.scss */
 .x-translatable-container::before {
     content: '';
@@ -1347,16 +1395,19 @@ body {
     overflow: hidden;
     z-index: 1;
 }
+
 /* line 16, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Button.scss */
-..addbutton-icon {
+.x-button .x-button-icon {
     position: relative;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 /* line 22, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Button.scss */
 .x-button .x-button-icon.x-shown {
     display: block;
 }
+
 /* line 26, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Button.scss */
 .x-button .x-button-icon.x-hidden {
     display: none;
@@ -1564,6 +1615,7 @@ input, textarea {
     font-size: .8em;
     padding: 1.2em;
 }
+
 /* line 33, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html body {
     line-height: 1.5;
@@ -1571,53 +1623,63 @@ input, textarea {
     color: #333333;
     font-size: 75%;
 }
+
 /* line 51, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html h1, .x-html h2, .x-html h3, .x-html h4, .x-html h5, .x-html h6 {
     font-weight: normal;
     color: #222222;
 }
+
 /* line 52, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html h1 img, .x-html h2 img, .x-html h3 img, .x-html h4 img, .x-html h5 img, .x-html h6 img {
     margin: 0;
 }
+
 /* line 53, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html h1 {
     font-size: 3em;
     line-height: 1;
     margin-bottom: 0.50em;
 }
+
 /* line 54, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html h2 {
     font-size: 2em;
     margin-bottom: 0.75em;
 }
+
 /* line 55, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html h3 {
     font-size: 1.5em;
     line-height: 1;
     margin-bottom: 1.00em;
 }
+
 /* line 56, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html h4 {
     font-size: 1.2em;
     line-height: 1.25;
     margin-bottom: 1.25em;
 }
+
 /* line 57, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html h5 {
     font-size: 1em;
     font-weight: bold;
     margin-bottom: 1.50em;
 }
+
 /* line 58, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html h6 {
     font-size: 1em;
     font-weight: bold;
 }
+
 /* line 59, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html p {
     margin: 0 0 1.5em;
 }
+
 /* line 60, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html p .left {
     display: inline;
@@ -1625,6 +1687,7 @@ input, textarea {
     margin: 1.5em 1.5em 1.5em 0;
     padding: 0;
 }
+
 /* line 61, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html p .right {
     display: inline;
@@ -1632,139 +1695,171 @@ input, textarea {
     margin: 1.5em 0 1.5em 1.5em;
     padding: 0;
 }
+
 /* line 62, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html a {
     text-decoration: underline;
     color: #0066cc;
 }
+
 /* line 18, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 .x-html a:visited {
     color: #004c99;
 }
+
 /* line 21, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 .x-html a:focus {
     color: #0099ff;
 }
+
 /* line 24, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 .x-html a:hover {
     color: #0099ff;
 }
+
 /* line 27, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 .x-html a:active {
     color: #bf00ff;
 }
+
 /* line 63, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html blockquote {
     margin: 1.5em;
     color: #666666;
     font-style: italic;
 }
+
 /* line 64, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html strong, .x-html dfn {
     font-weight: bold;
 }
+
 /* line 65, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html em, .x-html dfn {
     font-style: italic;
 }
+
 /* line 66, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html sup, .x-html sub {
     line-height: 0;
 }
+
 /* line 67, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html abbr, .x-html acronym {
     border-bottom: 1px dotted #666666;
 }
+
 /* line 68, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html address {
     margin: 0 0 1.5em;
     font-style: italic;
 }
+
 /* line 69, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html del {
     color: #666666;
 }
+
 /* line 70, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html pre {
     margin: 1.5em 0;
     white-space: pre;
 }
+
 /* line 71, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html pre, .x-html code, .x-html tt {
     font: 1em "andale mono", "lucida console", monospace;
     line-height: 1.5;
 }
+
 /* line 72, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html li ul, .x-html li ol {
     margin: 0;
 }
+
 /* line 73, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html ul, .x-html ol {
     margin: 0 1.5em 1.5em 0;
     padding-left: 1.5em;
 }
+
 /* line 74, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html ul {
     list-style-type: disc;
 }
+
 /* line 75, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html ol {
     list-style-type: decimal;
 }
+
 /* line 76, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html dl {
     margin: 0 0 1.5em 0;
 }
+
 /* line 77, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html dl dt {
     font-weight: bold;
 }
+
 /* line 78, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html dd {
     margin-left: 1.5em;
 }
+
 /* line 79, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html table {
     margin-bottom: 1.4em;
     width: 100%;
 }
+
 /* line 80, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html th {
     font-weight: bold;
 }
+
 /* line 81, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html thead th {
     background: #c3d9ff;
 }
+
 /* line 82, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html th, .x-html td, .x-html caption {
     padding: 4px 10px 4px 5px;
 }
+
 /* line 85, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html table.striped tr:nth-child(even) td,
 .x-html table tr.even td {
     background: #e5ecf9;
 }
+
 /* line 86, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html tfoot {
     font-style: italic;
 }
+
 /* line 87, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html caption {
     background: #eeeeee;
 }
+
 /* line 88, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html .quiet {
     color: #666666;
 }
+
 /* line 89, /var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html .loud {
     color: #111111;
 }
+
 /* line 124, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Class.scss */
 .x-html ul li {
     list-style-type: circle;
 }
+
 /* line 127, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Class.scss */
 .x-html ol li {
     list-style-type: decimal;
@@ -2056,11 +2151,13 @@ input, textarea {
 .x-img.x-img-image {
     text-align: center;
 }
+
 /* line 9, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Img.scss */
 .x-img.x-img-image img {
     width: auto;
     height: 100%;
 }
+
 /* line 15, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Img.scss */
 .x-img.x-img-background {
     background-repeat: no-repeat;
@@ -2075,6 +2172,7 @@ input, textarea {
 .x-map {
     background-color: #edeae2;
 }
+
 /* line 8, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Map.scss */
 .x-map * {
     -webkit-box-sizing: content-box;
@@ -2119,14 +2217,17 @@ input, textarea {
     justify-content: center;
     background: rgba(0, 0, 0, 0.3) center center no-repeat;
 }
+
 /* line 22, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Mask.scss */
 .x-mask.x-mask-gray {
     background-color: rgba(0, 0, 0, 0.5);
 }
+
 /* line 26, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Mask.scss */
 .x-mask.x-mask-transparent {
     background-color: transparent;
 }
+
 /* line 30, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Mask.scss */
 .x-mask .x-mask-inner {
     position: relative;
@@ -2137,6 +2238,7 @@ input, textarea {
     font-size: .95em;
     font-weight: bold;
 }
+
 /* line 40, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Mask.scss */
 .x-mask .x-loading-spinner-outer {
     display: flex;
@@ -2155,19 +2257,23 @@ input, textarea {
     min-width: 8em;
     height: 8em;
 }
+
 /* line 51, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Mask.scss */
 .x-mask.x-indicator-hidden .x-mask-inner {
     padding-bottom: 0 !important;
 }
+
 /* line 54, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Mask.scss */
 .x-mask.x-indicator-hidden .x-loading-spinner-outer {
     display: none;
 }
+
 /* line 58, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Mask.scss */
 .x-mask.x-indicator-hidden .x-mask-message {
     position: relative;
     bottom: .25em;
 }
+
 /* line 64, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Mask.scss */
 .x-mask .x-mask-message {
     position: absolute;
@@ -2179,10 +2285,12 @@ input, textarea {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
 }
+
 /* line 74, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Mask.scss */
 .x-mask.x-has-message .x-mask-inner {
     padding-bottom: 2em;
 }
+
 /* line 78, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Mask.scss */
 .x-mask.x-has-message .x-loading-spinner-outer {
     height: 168px;
@@ -2240,14 +2348,17 @@ audio {
     margin: 6px;
     border: 1px solid #ccc;
 }
+
 /* line 14, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_MessageBox.scss */
 .x-msgbox .x-docking-vertical {
     overflow: hidden;
 }
+
 /* line 19, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_MessageBox.scss */
 .x-msgbox .x-toolbar.x-docked-top {
     border-bottom: 0;
 }
+
 /* line 23, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_MessageBox.scss */
 .x-msgbox .x-toolbar.x-docked-bottom {
     border-top: 0;
@@ -2385,6 +2496,7 @@ audio {
     padding: 6px;
     background-color: #ccc;
 }
+
 /* line 17, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Panel.scss */
 .x-panel.x-floating .x-panel-inner,
 .x-panel.x-floating > .x-body,
@@ -2429,20 +2541,24 @@ audio {
     min-height: 2.6em;
     overflow: hidden;
 }
+
 /* line 11, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Toolbar.scss */
 .x-toolbar.x-docked-top {
     border-bottom: 1px solid;
 }
+
 /* line 15, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Toolbar.scss */
 .x-toolbar.x-docked-bottom {
     border-top: 1px solid;
 }
+
 /* line 19, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Toolbar.scss */
 .x-toolbar.x-docked-left {
     width: 50px;
     height: auto;
     border-right: 1px solid;
 }
+
 /* line 25, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Toolbar.scss */
 .x-toolbar.x-docked-right {
     width: 50px;
@@ -2457,14 +2573,17 @@ audio {
     font-weight: bold;
     max-width: 100%;
 }
+
 /* line 39, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Toolbar.scss */
 .x-title.x-title-align-left {
     padding-left: 10px;
 }
+
 /* line 44, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Toolbar.scss */
 .x-title.x-title-align-right {
     padding-right: 10px;
 }
+
 /* line 48, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Toolbar.scss */
 .x-title .x-innerhtml {
     white-space: nowrap;
@@ -2499,6 +2618,7 @@ audio {
     max-height: 90%;
     margin: 6px;
 }
+
 /* line 12, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/_Toast.scss */
 .x-toast .x-toast-text {
     text-align: center;
@@ -2545,6 +2665,7 @@ audio {
     -ms-flex-align: center;
     align-items: center;
 }
+
 /* line 20, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/carousel/_Carousel.scss */
 .x-carousel-indicator span {
     display: block;
@@ -2553,6 +2674,7 @@ audio {
     margin: 3px;
     background-color: #eee;
 }
+
 /* line 27, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/carousel/_Carousel.scss */
 .x-carousel-indicator span.x-carousel-indicator-active {
     background-color: #ccc;
@@ -2580,6 +2702,7 @@ audio {
 .x-draw-component {
     position: relative;
 }
+
 /* line 7, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/chart/_AbstractChart.scss */
 .x-draw-component .x-inner {
     overflow: hidden;
@@ -2617,6 +2740,7 @@ audio {
     border: 1px solid #cccccc;
     background: white;
 }
+
 /* line 53, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/chart/_AbstractChart.scss */
 .x-legend .x-legend-inner .x-legend-container .x-legend-item {
     padding: 0.8em 1em 0.8em 1.8em;
@@ -2630,11 +2754,13 @@ audio {
     white-space: nowrap;
     position: relative;
 }
+
 /* line 65, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/chart/_AbstractChart.scss */
 .x-legend .x-legend-inner .x-legend-container .x-legend-item .x-legend-inactive {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
     opacity: 0.3;
 }
+
 /* line 69, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/chart/_AbstractChart.scss */
 .x-legend .x-legend-inner .x-legend-container .x-legend-item .x-legend-item-marker {
     position: absolute;
@@ -2651,14 +2777,17 @@ audio {
     left: .7em;
     top: 1em;
 }
+
 /* line 83, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/chart/_AbstractChart.scss */
 .x-legend.x-docked-top .x-legend-item, .x-legend.x-docked-bottom .x-legend-item {
     border-right: 1px solid rgba(204, 204, 204, 0.5);
 }
+
 /* line 85, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/chart/_AbstractChart.scss */
 .x-legend.x-docked-top .x-legend-item:last-child, .x-legend.x-docked-bottom .x-legend-item:last-child {
     border-right: 0;
 }
+
 /* line 92, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/chart/_AbstractChart.scss */
 .x-legend.x-docked-left .x-legend-inner, .x-legend.x-docked-right .x-legend-inner {
     display: -webkit-box;
@@ -2676,10 +2805,12 @@ audio {
     display: box;
     padding: .6em;
 }
+
 /* line 106, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/chart/_AbstractChart.scss */
 .x-chart-toolbar .x-button {
     margin: .2em;
 }
+
 /* line 110, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/chart/_AbstractChart.scss */
 .x-chart-toolbar[data-side=left], .x-chart-toolbar[data-side=right] {
     top: 0;
@@ -2688,14 +2819,17 @@ audio {
     -ms-box-orient: vertical;
     box-orient: vertical;
 }
+
 /* line 115, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/chart/_AbstractChart.scss */
 .x-chart-toolbar[data-side=left] {
     left: 0;
 }
+
 /* line 119, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/chart/_AbstractChart.scss */
 .x-chart-toolbar[data-side=right] {
     right: 0;
 }
+
 /* line 123, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/chart/_AbstractChart.scss */
 .x-chart-toolbar[data-side=top], .x-chart-toolbar[data-side=bottom] {
     -webkit-box-orient: horizontal;
@@ -2704,10 +2838,12 @@ audio {
     box-orient: horizontal;
     right: 0;
 }
+
 /* line 128, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/chart/_AbstractChart.scss */
 .x-chart-toolbar[data-side=top] {
     top: 0;
 }
+
 /* line 132, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/chart/_AbstractChart.scss */
 .x-chart-toolbar[data-side=bottom] {
     bottom: 0;
@@ -2762,26 +2898,32 @@ audio {
 .x-list {
     overflow: hidden;
 }
+
 /* line 4, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/dataview/_List.scss */
 .x-list .x-scroll-scroller {
     max-width: 100%;
 }
+
 /* line 8, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/dataview/_List.scss */
 .x-list .x-list-inner {
     width: 100% !important;
 }
+
 /* line 12, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/dataview/_List.scss */
 .x-list.x-list-indexed .x-list-disclosure {
     margin-right: 50px;
 }
+
 /* line 16, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/dataview/_List.scss */
 .x-list .x-item-selected .x-list-disclosure {
     background-color: #fff;
 }
+
 /* line 20, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/dataview/_List.scss */
 .x-list .x-list-scrolldock-hidden {
     display: none;
 }
+
 /* line 24, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/dataview/_List.scss */
 .x-list .x-list-item {
     position: absolute !important;
@@ -2789,31 +2931,38 @@ audio {
     top: 0;
     width: 100%;
 }
+
 /* line 30, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/dataview/_List.scss */
 .x-list .x-list-item > .x-dock {
     height: auto;
 }
+
 /* line 34, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/dataview/_List.scss */
 .x-list .x-list-item .x-dock-horizontal {
     border-top: 1px solid #ccc;
 }
+
 /* line 39, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/dataview/_List.scss */
 .x-list .x-list-item.x-item-selected .x-dock-horizontal, .x-list .x-list-item.x-item-selected.x-list-item-tpl {
     background-color: #ccc;
 }
+
 /* line 45, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/dataview/_List.scss */
 .x-list .x-list-item.x-item-pressed.x-list-item-tpl,
 .x-list .x-list-item.x-item-pressed .x-dock-horizontal {
     background-color: #ddd;
 }
+
 /* line 51, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/dataview/_List.scss */
 .x-list .x-list-item .x-list-item-body, .x-list .x-list-item.x-list-item-tpl .x-innerhtml {
     padding: 5px;
 }
+
 /* line 55, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/dataview/_List.scss */
 .x-list .x-list-item.x-list-item-relative {
     position: relative !important;
 }
+
 /* line 60, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/dataview/_List.scss */
 .x-list .x-list-header {
     background-color: #eee;
@@ -2821,10 +2970,12 @@ audio {
     border-bottom: 1px solid #ccc;
     font-weight: bold;
 }
+
 /* line 66, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/dataview/_List.scss */
 .x-list .x-list-header.x-list-item-relative {
     position: relative !important;
 }
+
 /* line 71, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/dataview/_List.scss */
 .x-list .x-list-disclosure {
     margin: 5px 15px 5px 0;
@@ -2834,12 +2985,14 @@ audio {
     border: 1px solid #ccc;
     background-color: #eee;
 }
+
 /* line 80, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/dataview/_List.scss */
 .x-list .x-list-item-tpl .x-list-disclosure {
     position: absolute;
     right: 0px;
     top: 0px;
 }
+
 /* line 86, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/dataview/_List.scss */
 .x-list .x-list-emptytext {
     text-align: center;
@@ -2855,10 +3008,12 @@ audio {
     -ms-flex-pack: center;
     justify-content: center;
 }
+
 /* line 95, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/dataview/_List.scss */
 .x-list.x-list-indexed .x-list-disclosure {
     margin-right: 35px;
 }
+
 /* line 99, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/dataview/_List.scss */
 .x-list .x-list-scrolldockitem {
     position: absolute !important;
@@ -2909,6 +3064,7 @@ audio {
 .x-list-nowrap .x-list-inner {
     width: auto;
 }
+
 /* line 148, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/dataview/_List.scss */
 .x-list-nowrap .x-list-container {
     white-space: nowrap !important;
@@ -2939,6 +3095,7 @@ audio {
     -ms-flex: 0 0 auto !important;
     flex: 0 0 auto !important;
 }
+
 /* line 14, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/dataview/_IndexBar.scss */
 .x-indexbar > div {
     font-size: 0.6em;
@@ -2980,10 +3137,12 @@ audio {
 .x-form-label {
     display: none !important;
 }
+
 /* line 5, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/form/_Panel.scss */
 .x-form-label span {
     font-weight: bold;
 }
+
 /* line 9, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/form/_Panel.scss */
 .x-form-label-nowrap .x-form-label {
     white-space: nowrap;
@@ -2997,20 +3156,24 @@ audio {
     display: -webkit-box;
     display: -ms-flexbox;
 }
+
 /* line 18, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/form/_Panel.scss */
 .x-field .x-field-input {
     position: relative;
     min-width: 3.7em;
 }
+
 /* line 24, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/form/_Panel.scss */
 .x-field .x-field-input,
 .x-field .x-input-el {
     width: 100%;
 }
+
 /* line 29, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/form/_Panel.scss */
 .x-field.x-field-labeled .x-form-label {
     display: block !important;
 }
+
 /* line 34, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/form/_Panel.scss */
 .x-field .x-component-outer {
     position: relative;
@@ -3023,6 +3186,7 @@ audio {
     -ms-flex-direction: row !important;
     flex-direction: row !important;
 }
+
 /* line 43, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/form/_Panel.scss */
 .x-label-align-left .x-component-outer,
 .x-label-align-right .x-component-outer {
@@ -3086,33 +3250,39 @@ audio {
     display: -webkit-box;
     display: -ms-flexbox;
 }
+
 /* line 95, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/form/_Panel.scss */
 .x-spinner .x-component-outer > * {
     width: auto;
 }
+
 /* line 100, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/form/_Panel.scss */
 .x-spinner .x-field-input {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 0px;
     flex: 1 0 0px;
 }
+
 /* line 103, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/form/_Panel.scss */
 .x-spinner .x-field-input .x-input-el {
     width: 100%;
     text-align: center;
 }
+
 /* line 110, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/form/_Panel.scss */
 .x-spinner .x-field-input input::-webkit-outer-spin-button,
 .x-spinner .x-field-input input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
 /* line 116, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/form/_Panel.scss */
 .x-spinner .x-spinner-button {
     text-align: center;
     border: 1px solid #ccc !important;
     background-color: #eee;
 }
+
 /* line 123, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/form/_Panel.scss */
 .x-spinner.x-field-grouped-buttons .x-input-el {
     text-align: left;
@@ -3153,6 +3323,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .x-field-clearable .x-clear-icon {
     display: block;
 }
+
 /* line 167, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/form/_Panel.scss */
 .x-field-clearable .x-field-input {
     padding-right: 10px;
@@ -3162,6 +3333,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .x-field-revealable .x-reveal-icon {
     display: block;
 }
+
 /* line 177, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/form/_Panel.scss */
 .x-field-revealable .x-field-input {
     padding-right: 10px;
@@ -3192,6 +3364,7 @@ input[type="search"]::-webkit-search-cancel-button {
     border: 1px solid #ccc;
     overflow: hidden;
 }
+
 /* line 208, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/form/_Panel.scss */
 .x-form-fieldset .x-dock .x-dock-body {
     -webkit-box-flex: 1;
@@ -3203,6 +3376,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .x-form-fieldset-title {
     font-weight: bold;
 }
+
 /* line 217, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/form/_Panel.scss */
 .x-form-fieldset-title .x-innerhtml {
     white-space: nowrap;
@@ -3233,15 +3407,18 @@ input[type="search"]::-webkit-search-cancel-button {
     background-color: #fff;
     overflow: hidden;
 }
+
 /* line 14, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/picker/_Picker.scss */
 .x-sheet.x-picker .x-sheet-inner .x-picker-slot .x-body {
     border-left: 1px solid #999999;
     border-right: 1px solid #ACACAC;
 }
+
 /* line 20, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/picker/_Picker.scss */
 .x-sheet.x-picker .x-sheet-inner .x-picker-slot.x-first .x-body {
     border-left: 0;
 }
+
 /* line 26, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/picker/_Picker.scss */
 .x-sheet.x-picker .x-sheet-inner .x-picker-slot.x-last .x-body {
     border-left: 0;
@@ -3282,6 +3459,7 @@ input[type="search"]::-webkit-search-cancel-button {
     position: relative;
     z-index: 2;
 }
+
 /* line 57, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/picker/_Picker.scss */
 .x-picker-slot-title > div {
     white-space: nowrap;
@@ -3294,16 +3472,19 @@ input[type="search"]::-webkit-search-cancel-button {
 .x-picker-slot .x-dataview-inner {
     width: 100% !important;
 }
+
 /* line 68, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/picker/_Picker.scss */
 .x-picker-slot .x-dataview-item {
     vertical-align: middle;
     height: 30px;
     line-height: 30px;
 }
+
 /* line 73, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/picker/_Picker.scss */
 .x-picker-slot .x-dataview-item.x-item-selected {
     font-weight: bold;
 }
+
 /* line 78, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/picker/_Picker.scss */
 .x-picker-slot .x-picker-item {
     white-space: nowrap;
@@ -3348,15 +3529,18 @@ input[type="search"]::-webkit-search-cancel-button {
     display: none;
     margin: auto;
 }
+
 /* line 11, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/plugin/_ListPaging.scss */
 .x-list-paging .x-list-paging-msg {
     text-align: center;
     clear: both;
 }
+
 /* line 17, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/plugin/_ListPaging.scss */
 .x-list-paging.x-loading .x-loading-spinner {
     display: block;
 }
+
 /* line 21, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/plugin/_ListPaging.scss */
 .x-list-paging.x-loading .x-list-paging-msg {
     display: none;
@@ -3388,6 +3572,7 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 100%;
     height: 4.5em;
 }
+
 /* line 18, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/plugin/_PullRefresh.scss */
 .x-list-pullrefresh .x-loading-spinner {
     display: none;
@@ -3422,6 +3607,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .x-list-pullrefresh-loading *.x-loading-spinner {
     display: block;
 }
+
 /* line 49, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/plugin/_PullRefresh.scss */
 .x-list-pullrefresh-loading .x-list-pullrefresh-arrow {
     display: none;
@@ -3443,6 +3629,7 @@ input[type="search"]::-webkit-search-cancel-button {
     min-height: 0;
     min-width: 0;
 }
+
 /* line 12, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/slider/_Slider.scss */
 .x-slider > *,
 .x-toggle > * {
@@ -3511,14 +3698,17 @@ input[type="search"]::-webkit-search-cancel-button {
 .x-tabbar.x-docked-top {
     border-bottom-width: 1px;
 }
+
 /* line 22, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/tab/_Panel.scss */
 .x-tabbar.x-docked-top .x-tab .x-button-icon {
     position: relative;
 }
+
 /* line 25, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/tab/_Panel.scss */
 .x-tabbar.x-docked-top .x-tab .x-button-icon.x-shown {
     display: inline-block;
 }
+
 /* line 29, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/tab/_Panel.scss */
 .x-tabbar.x-docked-top .x-tab .x-button-icon.x-hidden {
     display: none;
@@ -3528,15 +3718,18 @@ input[type="search"]::-webkit-search-cancel-button {
 .x-tabbar.x-docked-bottom {
     border-top-width: 1px;
 }
+
 /* line 38, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/tab/_Panel.scss */
 .x-tabbar.x-docked-bottom .x-tab .x-button-icon {
     display: block;
     position: relative;
 }
+
 /* line 42, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/tab/_Panel.scss */
 .x-tabbar.x-docked-bottom .x-tab .x-button-icon.x-shown {
     visibility: visible;
 }
+
 /* line 46, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/tab/_Panel.scss */
 .x-tabbar.x-docked-bottom .x-tab .x-button-icon.x-hidden {
     visibility: hidden;
@@ -3558,6 +3751,7 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 100% !important;
     height: 100% !important;
 }
+
 /* line 11, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/table/_Table.scss */
 .x-table-inner.x-fixed-layout {
     table-layout: fixed !important;
@@ -3579,6 +3773,7 @@ input[type="search"]::-webkit-search-cancel-button {
     display: none;
     content: "landscape";
 }
+
 @media (orientation: portrait) {
     /* line 1, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/viewport/_Default.scss */
     .x-orientation-inspector {
@@ -3594,10 +3789,12 @@ input[type="search"]::-webkit-search-cancel-button {
     font-weight: bold;
     overflow: hidden;
 }
+
 /* line 9, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-header-container .x-grid-column {
     display: inline-block;
 }
+
 /* line 13, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-header-container .x-grid-header-container-inner {
     width: 100000px;
@@ -3605,6 +3802,7 @@ input[type="search"]::-webkit-search-cancel-button {
     top: 0;
     left: 0;
 }
+
 /* line 21, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-column {
     height: 64px;
@@ -3614,12 +3812,14 @@ input[type="search"]::-webkit-search-cancel-button {
     vertical-align: middle;
     padding: 0 8px;
 }
+
 /* line 29, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-column .x-innerhtml {
     display: inline-block;
     width: auto;
     position: relative;
 }
+
 /* line 37, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-column.x-column-sorted-asc .x-innerhtml:after, .x-grid .x-grid-column.x-column-sorted-desc .x-innerhtml:after {
     position: absolute;
@@ -3630,22 +3830,27 @@ input[type="search"]::-webkit-search-cancel-button {
     font-family: 'Pictos';
     font-size: 12px;
 }
+
 /* line 50, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-column.x-column-align-left .x-innerhtml:after, .x-grid .x-grid-column.x-column-align-center .x-innerhtml:after {
     right: -16px;
 }
+
 /* line 54, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-column.x-column-align-right .x-innerhtml:after {
     left: -16px;
 }
+
 /* line 58, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-column.x-column-sorted-asc .x-innerhtml:after {
     content: "{";
 }
+
 /* line 61, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-column.x-column-sorted-desc .x-innerhtml:after {
     content: "}";
 }
+
 /* line 66, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-headergroup {
     display: inline-block;
@@ -3654,6 +3859,7 @@ input[type="search"]::-webkit-search-cancel-button {
     height: 64px;
     padding-top: 32px;
 }
+
 /* line 73, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-headergroup .x-inner > .x-innerhtml {
     height: 32px;
@@ -3670,17 +3876,20 @@ input[type="search"]::-webkit-search-cancel-button {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 /* line 89, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-headergroup .x-grid-column {
     height: 32px !important;
     line-height: 27px !important;
     font-size: 0.7em;
 }
+
 /* line 96, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-headergroup .x-grid-column.x-column-sorted-asc .x-innerhtml:after, .x-grid .x-grid-headergroup .x-grid-column.x-column-sorted-desc .x-innerhtml:after {
     line-height: 27px;
     height: 27px;
 }
+
 /* line 104, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-row {
     position: absolute;
@@ -3689,6 +3898,7 @@ input[type="search"]::-webkit-search-cancel-button {
     border-width: 0 0 1px 0;
     border-style: solid;
 }
+
 /* line 112, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-cell {
     display: inline-block;
@@ -3699,25 +3909,30 @@ input[type="search"]::-webkit-search-cancel-button {
     overflow: hidden;
     border-width: 0 1px 0 0;
 }
+
 /* line 123, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-cell-align-center,
 .x-grid .x-grid-column-align-center {
     text-align: center;
 }
+
 /* line 128, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-cell-align-right,
 .x-grid .x-grid-column-align-right {
     text-align: right;
 }
+
 /* line 132, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions {
     border-width: 0 0 0 1px;
     border-style: solid;
 }
+
 /* line 136, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-list-item .x-innerhtml {
     padding: 0px !important;
 }
+
 /* line 140, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-header {
     height: 32px;
@@ -3728,6 +3943,7 @@ input[type="search"]::-webkit-search-cancel-button {
     overflow: hidden;
     padding-left: 10px;
 }
+
 /* line 154, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-sortablehandle,
 .x-grid .x-grid-viewoptions .x-column-options-visibleindicator,
@@ -3739,6 +3955,7 @@ input[type="search"]::-webkit-search-cancel-button {
     position: absolute;
     bottom: 0;
 }
+
 /* line 160, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-sortablehandle:after,
 .x-grid .x-grid-viewoptions .x-column-options-visibleindicator:after,
@@ -3757,58 +3974,70 @@ input[type="search"]::-webkit-search-cancel-button {
     content: "l";
     vertical-align: middle;
 }
+
 /* line 175, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-sortablehandle {
     left: 0;
 }
+
 /* line 177, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-sortablehandle:after {
     line-height: 54px;
 }
+
 /* line 181, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-visibleindicator {
     right: 0;
 }
+
 /* line 183, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-visibleindicator:after {
     font-size: 30px;
     line-height: 54px;
     content: "E";
 }
+
 /* line 190, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-groupindicator {
     right: 40px;
 }
+
 /* line 192, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-groupindicator:after {
     font-size: 30px;
     line-height: 54px;
     content: "g";
 }
+
 /* line 200, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-folder,
 .x-grid .x-grid-viewoptions .x-column-options-leaf {
     width: 30px;
     left: 40px;
 }
+
 /* line 204, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-folder:after,
 .x-grid .x-grid-viewoptions .x-column-options-leaf:after {
     line-height: 52px;
     content: "o";
 }
+
 /* line 210, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-leaf:after {
     content: "F";
 }
+
 /* line 214, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-list-item.x-item-selected.x-list-item-tpl {
     background: transparent;
 }
+
 /* line 216, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-list-item.x-item-selected.x-list-item-tpl .x-innerhtml {
     background: transparent;
 }
+
 /* line 221, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-text {
     display: block;
@@ -3818,15 +4047,18 @@ input[type="search"]::-webkit-search-cancel-button {
     vertical-align: middle;
     line-height: 28px;
 }
+
 /* line 231, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-columnoptions {
     border-width: 0 0 1px;
 }
+
 /* line 235, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-multiselection-column {
     position: relative;
     padding: 0;
 }
+
 /* line 239, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-multiselection-column:after {
     position: absolute;
@@ -3840,11 +4072,13 @@ input[type="search"]::-webkit-search-cancel-button {
     text-align: center;
     content: "2";
 }
+
 /* line 253, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-multiselection-cell {
     position: relative;
     padding: 0;
 }
+
 /* line 257, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-multiselection-cell:after {
     position: absolute;
@@ -3858,19 +4092,23 @@ input[type="search"]::-webkit-search-cancel-button {
     text-align: center;
     content: "_";
 }
+
 /* line 271, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-item-selected .x-grid-multiselection-cell:after {
     content: "3";
 }
+
 /* line 276, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-pagingtoolbar > .x-body {
     padding: 0 30px 0 50px;
 }
+
 /* line 281, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-pagingtoolbar-currentpage {
     position: relative;
     height: 22px;
 }
+
 /* line 285, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-pagingtoolbar-currentpage span {
     position: absolute;
@@ -3879,12 +4117,14 @@ input[type="search"]::-webkit-search-cancel-button {
     line-height: 22px;
     height: 22px;
 }
+
 /* line 294, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-summaryrow {
     height: 32px;
     font-size: 0.8em;
     position: relative;
 }
+
 /* line 299, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-summaryrow .x-grid-cell {
     height: 32px;
@@ -3892,6 +4132,7 @@ input[type="search"]::-webkit-search-cancel-button {
     border-width: 0 0 1px;
     border-style: solid;
 }
+
 /* line 307, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-summaryrow .x-grid-multiselection-cell:after {
     content: '';
@@ -3957,14 +4198,14 @@ input[type="search"]::-webkit-search-cancel-button {
     height: auto !important;
     width: auto !important;
     /*
-  		&.x-scroll-scroller-vertical {
-  			height: auto !important;
-  		}
-  
-  		&.x-scroll-scroller-horizontal {
-  			width: auto !important;
-  		}
-  		*/
+  &.x-scroll-scroller-vertical {
+      height: auto !important;
+  }
+
+  &.x-scroll-scroller-horizontal {
+      width: auto !important;
+  }
+  */
 }
 
 /* line 36, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
@@ -3986,23 +4227,28 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 100%;
     height: 100%;
 }
+
 /* line 52, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-grid > * {
     display: table-row;
 }
+
 /* line 56, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-grid > * > * {
     display: table-cell;
 }
+
 /* line 60, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-grid > :first-child > :first-child {
     width: 100%;
     height: 100%;
 }
+
 /* line 65, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-grid > :first-child > :nth-child(2) {
     padding: 3px 3px 0 0;
 }
+
 /* line 69, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-grid > :nth-child(2) > :first-child {
     padding: 0 0 3px 3px;
@@ -4026,10 +4272,12 @@ input[type="search"]::-webkit-search-cancel-button {
 .x-scroll-bar-x {
     width: 100%;
 }
+
 /* line 89, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-x > .x-scroll-bar-stretcher {
     width: 300%;
 }
+
 /* line 93, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-x.active {
     height: 6px;
@@ -4039,10 +4287,12 @@ input[type="search"]::-webkit-search-cancel-button {
 .x-scroll-bar-y {
     height: 100%;
 }
+
 /* line 101, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-y > .x-scroll-bar-stretcher {
     height: 300%;
 }
+
 /* line 105, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-y.active {
     width: 6px;
@@ -4069,29 +4319,35 @@ input[type="search"]::-webkit-search-cancel-button {
 .x-scroll-indicator.rounded {
     background: none;
 }
+
 /* line 127, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded > * {
     position: absolute;
     background-color: #333;
 }
+
 /* line 132, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded > :nth-child(2) {
     -webkit-transform-origin: 0% 0%;
     background: none;
     content: url(data:image/bmp;base64,Qk08AAAAAAAAADYAAAAoAAAAAQAAAAEAAAABABAAAAAAAAYAAAASCwAAEgsAAAAAAAAAAAAAxhgAAAAA);
 }
+
 /* line 139, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded.x-scroll-indicator-light > * {
     background-color: #eee;
 }
+
 /* line 143, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded.x-scroll-indicator-light > :nth-child(2) {
     content: url(data:image/bmp;base64,Qk08AAAAAAAAADYAAAAoAAAAAQAAAAEAAAABABAAAAAAAAYAAAASCwAAEgsAAAAAAAAAAAAAvXcAAAAA);
 }
+
 /* line 149, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded.x-scroll-indicator-y > * {
     width: 100%;
 }
+
 /* line 153, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded.x-scroll-indicator-y > :first-child {
     height: 3px;
@@ -4102,10 +4358,12 @@ input[type="search"]::-webkit-search-cancel-button {
     -webkit-border-top-right-radius: 3px;
     border-top-right-radius: 3px;
 }
+
 /* line 158, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded.x-scroll-indicator-y > :nth-child(2) {
     height: 1px;
 }
+
 /* line 162, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded.x-scroll-indicator-y > :last-child {
     height: 3px;
@@ -4116,10 +4374,12 @@ input[type="search"]::-webkit-search-cancel-button {
     -webkit-border-bottom-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
+
 /* line 169, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded.x-scroll-indicator-x > * {
     height: 100%;
 }
+
 /* line 173, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded.x-scroll-indicator-x > :first-child {
     width: 3px;
@@ -4130,10 +4390,12 @@ input[type="search"]::-webkit-search-cancel-button {
     -webkit-border-bottom-left-radius: 3px;
     border-bottom-left-radius: 3px;
 }
+
 /* line 178, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded.x-scroll-indicator-x > :nth-child(2) {
     width: 1px;
 }
+
 /* line 182, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded.x-scroll-indicator-x > :last-child {
     width: 3px;
@@ -4242,6 +4504,7 @@ body.x-desktop {
     transform-origin: 0.5em 0.5em;
     /* Shared Properties for all the bars */
 }
+
 /* line 269, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/mixins/_Class.scss */
 .x-loading-spinner > span, .x-loading-spinner > span:before, .x-loading-spinner > span:after {
     display: block;
@@ -4253,55 +4516,68 @@ body.x-desktop {
     transform-origin: 0.05em 0.5em;
     content: " ";
 }
+
 /* line 280, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/mixins/_Class.scss */
 .x-loading-spinner > span {
     left: 50%;
     margin-left: -0.05em;
 }
+
 /* line 284, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/mixins/_Class.scss */
 .x-loading-spinner > span.x-loading-top {
     background-color: rgba(170, 170, 170, 0.99);
 }
+
 /* line 285, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/mixins/_Class.scss */
 .x-loading-spinner > span.x-loading-top::after {
     background-color: rgba(170, 170, 170, 0.9);
 }
+
 /* line 286, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/mixins/_Class.scss */
 .x-loading-spinner > span.x-loading-left::before {
     background-color: rgba(170, 170, 170, 0.8);
 }
+
 /* line 287, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/mixins/_Class.scss */
 .x-loading-spinner > span.x-loading-left {
     background-color: rgba(170, 170, 170, 0.7);
 }
+
 /* line 288, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/mixins/_Class.scss */
 .x-loading-spinner > span.x-loading-left::after {
     background-color: rgba(170, 170, 170, 0.6);
 }
+
 /* line 289, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/mixins/_Class.scss */
 .x-loading-spinner > span.x-loading-bottom::before {
     background-color: rgba(170, 170, 170, 0.5);
 }
+
 /* line 290, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/mixins/_Class.scss */
 .x-loading-spinner > span.x-loading-bottom {
     background-color: rgba(170, 170, 170, 0.4);
 }
+
 /* line 291, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/mixins/_Class.scss */
 .x-loading-spinner > span.x-loading-bottom::after {
     background-color: rgba(170, 170, 170, 0.35);
 }
+
 /* line 292, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/mixins/_Class.scss */
 .x-loading-spinner > span.x-loading-right::before {
     background-color: rgba(170, 170, 170, 0.3);
 }
+
 /* line 293, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/mixins/_Class.scss */
 .x-loading-spinner > span.x-loading-right {
     background-color: rgba(170, 170, 170, 0.25);
 }
+
 /* line 294, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/mixins/_Class.scss */
 .x-loading-spinner > span.x-loading-right::after {
     background-color: rgba(170, 170, 170, 0.2);
 }
+
 /* line 295, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/mixins/_Class.scss */
 .x-loading-spinner > span.x-loading-top::before {
     background-color: rgba(170, 170, 170, 0.15);
@@ -4415,6 +4691,7 @@ body.x-desktop {
     min-height: 1.8em;
     padding: .3em .6em;
 }
+
 /* line 13, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-button, .x-toolbar .x-button {
     border: 1px solid #999999;
@@ -4422,10 +4699,12 @@ body.x-desktop {
     background-color: #cccccc;
     color: black;
 }
+
 /* line 20, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-button.x-button-back:before, .x-button.x-button-forward:before, .x-toolbar .x-button.x-button-back:before, .x-toolbar .x-button.x-button-forward:before {
     background: #999999;
 }
+
 /* line 26, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-button, .x-button.x-button-back:after, .x-button.x-button-forward:after, .x-toolbar .x-button, .x-toolbar .x-button.x-button-back:after, .x-toolbar .x-button.x-button-forward:after {
     background-image: none;
@@ -4435,6 +4714,7 @@ body.x-desktop {
     background-image: -o-linear-gradient(top, #f2f2f2, #d9d9d9 3%, #bfbfbf);
     background-image: -ms-linear-gradient(top, #f2f2f2, #d9d9d9 3%, #bfbfbf);
 }
+
 /* line 31, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-button.x-button-pressing, .x-button.x-button-pressing:after, .x-button.x-button-pressed, .x-button.x-button-pressed:after, .x-button.x-button-active, .x-button.x-button-active:after, .x-toolbar .x-button.x-button-pressing, .x-toolbar .x-button.x-button-pressing:after, .x-toolbar .x-button.x-button-pressed, .x-toolbar .x-button.x-button-pressed:after, .x-toolbar .x-button.x-button-active, .x-toolbar .x-button.x-button-active:after {
     background-image: none;
@@ -4444,16 +4724,19 @@ body.x-desktop {
     background-image: -o-linear-gradient(top, #ababab, #b8b8b8 10%, #c4c4c4 65%, #c6c6c6);
     background-image: -ms-linear-gradient(top, #ababab, #b8b8b8 10%, #c4c4c4 65%, #c6c6c6);
 }
+
 /* line 17, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-button .x-button-icon {
     width: 1.5em;
     height: 1.5em;
 }
+
 /* line 21, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-button .x-button-icon:before {
     font-size: 1.6em;
     line-height: 1em;
 }
+
 /* line 28, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-button.x-item-disabled .x-button-label, .x-button.x-item-disabled .x-badge, .x-button.x-item-disabled .x-button-icon {
     opacity: .5;
@@ -4472,6 +4755,7 @@ body.x-desktop {
 .x-ie .x-button {
     height: 0px;
 }
+
 /* line 42, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-ie .x-button .x-button-label, .x-ie .x-button .x-badge {
     overflow: visible;
@@ -4507,14 +4791,17 @@ body.x-desktop {
     margin: 6px .2em;
     padding: 0 .6em;
 }
+
 /* line 72, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-toolbar .x-button .x-button-label, .x-toolbar .x-button .x-badge {
     font-size: .7em;
 }
+
 /* line 76, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-toolbar .x-button .x-button-label, .x-toolbar .x-button .x-badge, .x-toolbar .x-button .x-hasbadge .x-badge {
     line-height: 1.6em;
 }
+
 /* line 81, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-toolbar .x-button .x-button-icon:before {
     font-size: 1.3em;
@@ -4541,6 +4828,7 @@ body.x-desktop {
     padding: .2em .4em;
     min-height: 0;
 }
+
 /* line 104, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-button-small .x-button-label, .x-button.x-button-action-small .x-button-label, .x-button.x-button-confirm-small .x-button-label, .x-button.x-button-decline-small .x-button-label, .x-button-small .x-badge, .x-button.x-button-action-small .x-badge, .x-button.x-button-confirm-small .x-badge, .x-button.x-button-decline-small .x-badge,
 .x-toolbar .x-button-small .x-button-label,
@@ -4553,6 +4841,7 @@ body.x-desktop {
 .x-toolbar .x-button.x-button-decline-small .x-badge {
     font-size: .6em;
 }
+
 /* line 108, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-button-small .x-button-icon, .x-button.x-button-action-small .x-button-icon, .x-button.x-button-confirm-small .x-button-icon, .x-button.x-button-decline-small .x-button-icon,
 .x-toolbar .x-button-small .x-button-icon,
@@ -4595,22 +4884,26 @@ body.x-desktop {
     margin-left: 0.77217em;
     padding-left: .4em;
 }
+
 /* line 154, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-webkit .x-button-back:before,
 .x-webkit .x-toolbar .x-button-back:before {
     left: -15px;
 }
+
 /* line 158, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-webkit .x-button-back:after,
 .x-webkit .x-toolbar .x-button-back:after {
     left: -14px;
 }
+
 /* line 164, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-webkit .x-button-forward,
 .x-webkit .x-toolbar .x-button-forward {
     margin-right: 0.78217em;
     padding-right: .4em;
 }
+
 /* line 169, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-webkit .x-button-forward:before, .x-webkit .x-button-forward:after,
 .x-webkit .x-toolbar .x-button-forward:before,
@@ -4618,11 +4911,13 @@ body.x-desktop {
     -webkit-mask: -4px 0 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAABGCAYAAADb7SQ4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAXlJREFUaN7lmTFqAlEQhh8EhFSCYJXW1law9QAewMrWAwQWAmmtbPcGHiCQ1gPYCla2QsDKSsgmQecvFqImu2/fzry/2OLb9mt23vwz47Kvn5MwEFxM8DkLB6HHEIOd0GGIwUpoMcRgyRKDOUsMJizxpzBiiMFR6DPEeZl1GWKwFh4ZYvAmPDDEqmVWVQxmLPG3MGaIVcosVAz2whNDDDZCmyEG7yFlpiEGKUsMEpb4XKXMtMXeiVVb7J1YLcRgW1ZmVuLSxGopLkys1mLwwhL/mVhjie8Sayxx3kp7DPFVYo0tzhNriyEGU5Z40TjxtDE/F6WcDowHBE/msDFNImG0xZQRBAonDCvxhhH2vKZIZ9Ds+7EDfaWFnKZ4xhja5owxdcnYCAQv1p1Gi4sprn08cZbDt6ZYZasXIn5mLFHTjLCvVt1V+4rVt/M+4r3FPaJMbHaBKRKb3pyKxKZXtv/Er4yjZpRL6q042u34tzh4xV9H/FHnqBHKBQeEd6aqqwD6AAAAAElFTkSuQmCC') no-repeat;
     -webkit-mask-size: 15px 100%;
 }
+
 /* line 174, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-webkit .x-button-forward:before,
 .x-webkit .x-toolbar .x-button-forward:before {
     right: -15px;
 }
+
 /* line 178, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-webkit .x-button-forward:after,
 .x-webkit .x-toolbar .x-button-forward:after {
@@ -4645,11 +4940,13 @@ body.x-desktop {
     -o-border-radius: none;
     border-radius: none;
 }
+
 /* line 200, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-button.x-button-plain > *,
 .x-toolbar .x-button.x-button-plain > * {
     overflow: visible;
 }
+
 /* line 204, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-button.x-button-plain.x-button-pressing, .x-button.x-button-plain.x-button-pressed,
 .x-toolbar .x-button.x-button-plain.x-button-pressing,
@@ -4670,6 +4967,7 @@ body.x-desktop {
     -o-border-radius: 0;
     border-radius: 0;
 }
+
 /* line 220, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-segmentedbutton .x-button.x-first {
     -moz-border-radius-topleft: 0.4em;
@@ -4679,6 +4977,7 @@ body.x-desktop {
     -webkit-border-bottom-left-radius: 0.4em;
     border-bottom-left-radius: 0.4em;
 }
+
 /* line 224, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-segmentedbutton .x-button.x-last {
     -moz-border-radius-topright: 0.4em;
@@ -4688,6 +4987,7 @@ body.x-desktop {
     -webkit-border-bottom-right-radius: 0.4em;
     border-bottom-right-radius: 0.4em;
 }
+
 /* line 229, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-segmentedbutton .x-button:not(.x-first) {
     border-left: 0;
@@ -4697,6 +4997,7 @@ body.x-desktop {
 .x-hasbadge {
     overflow: visible;
 }
+
 /* line 243, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-hasbadge .x-badge {
     border-color: #990000;
@@ -5102,6 +5403,7 @@ body.x-desktop {
     background-color: #006bb6;
     color: white;
 }
+
 /* line 20, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-button.x-button-action.x-button-back:before, .x-button.x-button-action.x-button-forward:before, .x-toolbar .x-button.x-button-action.x-button-back:before, .x-toolbar .x-button.x-button-action.x-button-forward:before,
 .x-button.x-button-action-round.x-button-back:before,
@@ -5114,6 +5416,7 @@ body.x-desktop {
 .x-button.x-button-action-small.x-button-forward:before {
     background: #002f50;
 }
+
 /* line 26, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-button.x-button-action, .x-button.x-button-action.x-button-back:after, .x-button.x-button-action.x-button-forward:after, .x-toolbar .x-button.x-button-action, .x-toolbar .x-button.x-button-action.x-button-back:after, .x-toolbar .x-button.x-button-action.x-button-forward:after,
 .x-button.x-button-action-round,
@@ -5135,6 +5438,7 @@ body.x-desktop {
     background-image: -o-linear-gradient(top, #0398ff, #007ad0 3%, #005c9d);
     background-image: -ms-linear-gradient(top, #0398ff, #007ad0 3%, #005c9d);
 }
+
 /* line 31, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-button.x-button-action.x-button-pressing, .x-button.x-button-action.x-button-pressing:after, .x-button.x-button-action.x-button-pressed, .x-button.x-button-action.x-button-pressed:after, .x-button.x-button-action.x-button-active, .x-button.x-button-action.x-button-active:after, .x-toolbar .x-button.x-button-action.x-button-pressing, .x-toolbar .x-button.x-button-action.x-button-pressing:after, .x-toolbar .x-button.x-button-action.x-button-pressed, .x-toolbar .x-button.x-button-action.x-button-pressed:after, .x-toolbar .x-button.x-button-action.x-button-active, .x-toolbar .x-button.x-button-action.x-button-active:after,
 .x-button.x-button-action-round.x-button-pressing,
@@ -5180,6 +5484,7 @@ body.x-desktop {
     background-color: #6c9804;
     color: white;
 }
+
 /* line 20, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-button.x-button-confirm.x-button-back:before, .x-button.x-button-confirm.x-button-forward:before, .x-toolbar .x-button.x-button-confirm.x-button-back:before, .x-toolbar .x-button.x-button-confirm.x-button-forward:before,
 .x-button.x-button-confirm-round.x-button-back:before,
@@ -5192,6 +5497,7 @@ body.x-desktop {
 .x-button.x-button-confirm-small.x-button-forward:before {
     background: #263501;
 }
+
 /* line 26, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-button.x-button-confirm, .x-button.x-button-confirm.x-button-back:after, .x-button.x-button-confirm.x-button-forward:after, .x-toolbar .x-button.x-button-confirm, .x-toolbar .x-button.x-button-confirm.x-button-back:after, .x-toolbar .x-button.x-button-confirm.x-button-forward:after,
 .x-button.x-button-confirm-round,
@@ -5213,6 +5519,7 @@ body.x-desktop {
     background-image: -o-linear-gradient(top, #a2e306, #7eb105 3%, #5b7f03);
     background-image: -ms-linear-gradient(top, #a2e306, #7eb105 3%, #5b7f03);
 }
+
 /* line 31, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-button.x-button-confirm.x-button-pressing, .x-button.x-button-confirm.x-button-pressing:after, .x-button.x-button-confirm.x-button-pressed, .x-button.x-button-confirm.x-button-pressed:after, .x-button.x-button-confirm.x-button-active, .x-button.x-button-confirm.x-button-active:after, .x-toolbar .x-button.x-button-confirm.x-button-pressing, .x-toolbar .x-button.x-button-confirm.x-button-pressing:after, .x-toolbar .x-button.x-button-confirm.x-button-pressed, .x-toolbar .x-button.x-button-confirm.x-button-pressed:after, .x-toolbar .x-button.x-button-confirm.x-button-active, .x-toolbar .x-button.x-button-confirm.x-button-active:after,
 .x-button.x-button-confirm-round.x-button-pressing,
@@ -5258,6 +5565,7 @@ body.x-desktop {
     background-color: #c70505;
     color: white;
 }
+
 /* line 20, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-button.x-button-decline.x-button-back:before, .x-button.x-button-decline.x-button-forward:before, .x-toolbar .x-button.x-button-decline.x-button-back:before, .x-toolbar .x-button.x-button-decline.x-button-forward:before,
 .x-button.x-button-decline-round.x-button-back:before,
@@ -5270,6 +5578,7 @@ body.x-desktop {
 .x-button.x-button-decline-small.x-button-forward:before {
     background: #630303;
 }
+
 /* line 26, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-button.x-button-decline, .x-button.x-button-decline.x-button-back:after, .x-button.x-button-decline.x-button-forward:after, .x-toolbar .x-button.x-button-decline, .x-toolbar .x-button.x-button-decline.x-button-back:after, .x-toolbar .x-button.x-button-decline.x-button-forward:after,
 .x-button.x-button-decline-round,
@@ -5291,6 +5600,7 @@ body.x-desktop {
     background-image: -o-linear-gradient(top, #f91f1f, #e00606 3%, #ae0404);
     background-image: -ms-linear-gradient(top, #f91f1f, #e00606 3%, #ae0404);
 }
+
 /* line 31, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-button.x-button-decline.x-button-pressing, .x-button.x-button-decline.x-button-pressing:after, .x-button.x-button-decline.x-button-pressed, .x-button.x-button-decline.x-button-pressed:after, .x-button.x-button-decline.x-button-active, .x-button.x-button-decline.x-button-active:after, .x-toolbar .x-button.x-button-decline.x-button-pressing, .x-toolbar .x-button.x-button-decline.x-button-pressing:after, .x-toolbar .x-button.x-button-decline.x-button-pressed, .x-toolbar .x-button.x-button-decline.x-button-pressed:after, .x-toolbar .x-button.x-button-decline.x-button-active, .x-toolbar .x-button.x-button-decline.x-button-active:after,
 .x-button.x-button-decline-round.x-button-pressing,
@@ -5343,6 +5653,7 @@ body.x-desktop {
     background-image: none;
     background-color: #03111a;
 }
+
 /* line 19, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Panel.scss */
 .x-panel.x-floating.x-floating-light,
 .x-msgbox.x-floating-light,
@@ -5350,6 +5661,7 @@ body.x-desktop {
     background-image: none;
     background-color: #1985d0;
 }
+
 /* line 24, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Panel.scss */
 .x-panel.x-floating .x-panel-inner,
 .x-panel.x-floating > .x-body,
@@ -5369,6 +5681,7 @@ body.x-desktop {
     position: absolute;
     overflow: hidden;
 }
+
 /* line 35, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Panel.scss */
 .x-webkit .x-anchor.x-anchor-top {
     margin-top: -0.68em;
@@ -5379,6 +5692,7 @@ body.x-desktop {
     -webkit-mask-size: 1.631em 0.7em;
     background-color: #03111a;
 }
+
 /* line 45, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Panel.scss */
 .x-webkit .x-anchor.x-anchor-bottom {
     margin-left: -0.8155em;
@@ -5388,6 +5702,7 @@ body.x-desktop {
     -webkit-mask-size: 1.631em 0.7em;
     background-color: #03111a;
 }
+
 /* line 54, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Panel.scss */
 .x-webkit .x-anchor.x-anchor-left {
     margin-left: -0.6655em;
@@ -5398,6 +5713,7 @@ body.x-desktop {
     -webkit-mask-size: 0.7em 1.631em;
     background-color: #03111a;
 }
+
 /* line 64, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Panel.scss */
 .x-webkit .x-anchor.x-anchor-right {
     margin-top: -0.35em;
@@ -5440,6 +5756,7 @@ body.x-desktop {
 .x-sheet-action-inner > .x-button {
     margin-bottom: 0.5em;
 }
+
 /* line 19, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Sheet.scss */
 .x-sheet-inner > .x-button:last-child,
 .x-sheet-action-inner > .x-button:last-child {
@@ -5462,37 +5779,45 @@ body.x-desktop {
     -o-border-radius: 0.3em;
     border-radius: 0.3em;
 }
+
 /* line 14, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_MessageBox.scss */
 .x-msgbox .x-icon {
     margin: 0 0.8em 0 0.5em;
     background: #fff;
     -webkit-mask-size: 100%;
 }
+
 /* line 20, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_MessageBox.scss */
 .x-msgbox .x-msgbox-info {
     -webkit-mask-image: url('data:image/png;base64,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');
 }
+
 /* line 24, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_MessageBox.scss */
 .x-msgbox .x-msgbox-warning {
     -webkit-mask-image: url('data:image/png;base64,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');
 }
+
 /* line 28, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_MessageBox.scss */
 .x-msgbox .x-msgbox-question {
     -webkit-mask-image: url('data:image/png;base64,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');
 }
+
 /* line 32, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_MessageBox.scss */
 .x-msgbox .x-msgbox-error {
     -webkit-mask-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAFGUlEQVRoBe2bzW8VVRxAeS0UMZggaARtGgtNU5pIRCMaEsPChrgh7FhCjHtdEBKNLvwjdOHShSHGmEiMiVFw4cL4EcFoolRSuqBiRDQqCLRS6znDzPP1dub1fbbzLv6S05m57829vzN3Pu+8VhYWFtZ0KyqVygbqHoA74QEYhnmojX4WpuFHuAZz5HSdaVei0mlhJBW7Hx6GJ+AheAwaiS/50rfwGXwNF8nPDdGx6JgwonvJ6hE4CI/DXdBOXGHlz+EEnEb803Yqq65rD7cDFSn4NvwKHh/dwLpt42A7ubpuS7I03Ad74C24DP9AN0Rr67QN27JN2+5rRb5pYRraBC+Bx9ZKiNZKO2+bM/AKbG5WuilhGtgNb4Jn0zCRlV42B3PZ3Yx0w8JUfAQmwcvKSssVtWcu5nSkUemGhKnwKFyE1diFi2SzcnMyt6ONSNcVphJvCl4ATxZZA2WdmqO59tcTLxRmRc/Ez8AvUFbJMC9zNefCM3g9YW8kvocyHbOhYLhsrua8t6iXc4VZYRQ+hJsQVlr2ZXM299E86SXCfNEb/tfhTyi7XFF+5q7DhlB6kTBfqMCzMA1FlfVKuQ66JM8LmXgoPM4XTsIs9IpYUZ466DKeyTr1TJwETztegg7BLhhICnv7jw66HErdEpuqMEvb4Um4O/kkjj+66KRbEokwW2AtS/tgBzgfS+ii077UsbpL30fhBNwLsYVOuum4pg9zz8xj4P7u2FNsoZNuY7q6S3twPwUx9i5aSeim44DC68CxKB/sYw3ddFyn8BBsg5hOVugsCt10HFJ4BGLuXfSS0HFE80HYmBQt/XOdIseJfwfvaDzBlTGy3JRyHNzngTB0HFR4KxSdnS/w2ctwFhxZKHO4t3q1eRV82gtDx60Kb4E7wk/T5d+YTnIPqnjpI73EmnNe6LjFrVJvN3VXya7VeZWUpiyV1ceciyK5Dhd9GGW5W+S2iv+Fg+72eKh3TARfX/XFZfO1h+eg6JLjbec8Z+nSS6c5/k2+/ZAXOs55WboEvqfJu/nYTvlznAHPM3UItMxh5w3BgwVJ6nhJYa+xVyFP2Gv0MYghdLzgVpmCP2IwWsZBxymFz8FlKP1xSo6thm46nlPYrp6EvyDW0E3HqwrPwinwRVSsoZuOs75l83R9Bn4G52MLnXQ7o6s9bMzAR+B+HlvopJuOt4ZpMb/CvF3ulogtdDqVOlbHpZX8DnzQd5QjltBFJ92SyHZpX6p5YB+HH2A++bS3/+igy/HULbGpCqdu7zP9BLxU9XrooItO/wX24SvTnXz6MXgjnj199NrU3HXYucQvLHCZOAzT0GuiWb7mfjjXLbfw1qD886zUiz97MGdzX5vrlldoGbEZ3gAfq7ItV/apuZpz4W8wFx2/oTwrOkh/Am5A2WXN0VwHQ4/a5brCaU+PUMm7UGZpczPHkVq5vPllhWuk3ymptLLmtqxs4pK3FfLKqND3Ni+Ct2rekK/2Lm4O5mJOm/JyzitrqIezFal4PTwNp+EmrJa0bZuDuazP8mtk2pRwViGNDMNr4BPISva2bdmmbQ9n+TQzbUk4a4BGJ8Azo/fh3RS3btuwrYms/Vambf8bD0O4jgM/CgfAXcyfFoT36BS1FIq6634A78FXSLb1YNO2MEkkgbiD9l63x2E/2Ptj0Ky8kmfhJPirWB/tZhD1/rjt6JhwbSbIe3LzBfQ22AV7YAfck+K8MQWOSIjzX8A38BNcQ9Lxto7Gv+RtOqJ9fOwKAAAAAElFTkSuQmCC');
 }
+
 /* line 36, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_MessageBox.scss */
 .x-msgbox .x-title {
     font-size: .9em;
     line-height: 1.4em;
 }
+
 /* line 41, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_MessageBox.scss */
 .x-msgbox .x-body {
     background: transparent !important;
 }
+
 /* line 45, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_MessageBox.scss */
 .x-msgbox .x-toolbar {
     background: transparent none;
@@ -5500,10 +5825,12 @@ body.x-desktop {
     -moz-box-shadow: none;
     box-shadow: none;
 }
+
 /* line 49, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_MessageBox.scss */
 .x-msgbox .x-toolbar.x-docked-top {
     height: 1.3em;
 }
+
 /* line 54, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_MessageBox.scss */
 .x-msgbox .x-field {
     min-height: 2em;
@@ -5514,12 +5841,14 @@ body.x-desktop {
     -o-border-radius: 0.2em;
     border-radius: 0.2em;
 }
+
 /* line 60, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_MessageBox.scss */
 .x-msgbox .x-form-field {
     min-height: 1.5em;
     padding-right: 0 !important;
     -webkit-appearance: none;
 }
+
 /* line 66, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_MessageBox.scss */
 .x-msgbox .x-field-input {
     padding-right: 2.2em;
@@ -5536,6 +5865,7 @@ body.x-desktop {
     padding: 0.4em 0;
     height: auto;
 }
+
 /* line 80, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_MessageBox.scss */
 .x-msgbox-buttons .x-button-normal span {
     opacity: .7;
@@ -5546,6 +5876,7 @@ body.x-desktop {
     color: rgba(190, 224, 247, 0.9);
     text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
 }
+
 /* line 91, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_MessageBox.scss */
 .x-msgbox-dark .x-msgbox-input {
     background-image: none;
@@ -5564,11 +5895,13 @@ body.x-desktop {
 .x-toolbar {
     padding: 0 0.2em;
 }
+
 /* line 8, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar.x-docked-left {
     width: 7em;
     padding: 0.2em;
 }
+
 /* line 13, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar.x-docked-right {
     width: 7em;
@@ -5607,27 +5940,33 @@ body.x-desktop {
     background-image: -ms-linear-gradient(top, #1e93e4, #1676b9 3%, #11598c);
     border-color: black;
 }
+
 /* line 48, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar-dark .x-title {
     color: white;
     text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
 }
+
 /* line 53, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar-dark.x-docked-top {
     border-bottom-color: black;
 }
+
 /* line 57, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar-dark.x-docked-bottom {
     border-top-color: black;
 }
+
 /* line 61, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar-dark.x-docked-left {
     border-right-color: black;
 }
+
 /* line 65, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar-dark.x-docked-right {
     border-left-color: black;
 }
+
 /* line 13, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-toolbar-dark .x-button, .x-toolbar .x-toolbar-dark .x-button,
 .x-toolbar-dark .x-field-select .x-component-outer, .x-toolbar
@@ -5637,6 +5976,7 @@ body.x-desktop {
     background-color: #11598c;
     color: white;
 }
+
 /* line 20, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-toolbar-dark .x-button.x-button-back:before, .x-toolbar-dark .x-button.x-button-forward:before, .x-toolbar .x-toolbar-dark .x-button.x-button-back:before, .x-toolbar .x-toolbar-dark .x-button.x-button-forward:before,
 .x-toolbar-dark .x-field-select .x-component-outer.x-button-back:before,
@@ -5645,6 +5985,7 @@ body.x-desktop {
 .x-toolbar-dark .x-field-select .x-component-outer.x-button-forward:before {
     background: #061f31;
 }
+
 /* line 26, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-toolbar-dark .x-button, .x-toolbar-dark .x-button.x-button-back:after, .x-toolbar-dark .x-button.x-button-forward:after, .x-toolbar .x-toolbar-dark .x-button, .x-toolbar .x-toolbar-dark .x-button.x-button-back:after, .x-toolbar .x-toolbar-dark .x-button.x-button-forward:after,
 .x-toolbar-dark .x-field-select .x-component-outer,
@@ -5660,6 +6001,7 @@ body.x-desktop {
     background-image: -o-linear-gradient(top, #1985d0, #1468a2 3%, #0e4b75);
     background-image: -ms-linear-gradient(top, #1985d0, #1468a2 3%, #0e4b75);
 }
+
 /* line 31, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-toolbar-dark .x-button.x-button-pressing, .x-toolbar-dark .x-button.x-button-pressing:after, .x-toolbar-dark .x-button.x-button-pressed, .x-toolbar-dark .x-button.x-button-pressed:after, .x-toolbar-dark .x-button.x-button-active, .x-toolbar-dark .x-button.x-button-active:after, .x-toolbar .x-toolbar-dark .x-button.x-button-pressing, .x-toolbar .x-toolbar-dark .x-button.x-button-pressing:after, .x-toolbar .x-toolbar-dark .x-button.x-button-pressed, .x-toolbar .x-toolbar-dark .x-button.x-button-pressed:after, .x-toolbar .x-toolbar-dark .x-button.x-button-active, .x-toolbar .x-toolbar-dark .x-button.x-button-active:after,
 .x-toolbar-dark .x-field-select .x-component-outer.x-button-pressing,
@@ -5681,6 +6023,7 @@ body.x-desktop {
     background-image: -o-linear-gradient(top, #0a3351, #0c4267 10%, #0f517e 65%, #0f5280);
     background-image: -ms-linear-gradient(top, #0a3351, #0c4267 10%, #0f517e 65%, #0f5280);
 }
+
 /* line 76, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar-dark .x-label,
 .x-toolbar-dark .x-form-label {
@@ -5699,27 +6042,33 @@ body.x-desktop {
     background-image: -ms-linear-gradient(top, #4ca9e9, #1e93e4 3%, #1676b9);
     border-color: black;
 }
+
 /* line 48, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar-light .x-title {
     color: white;
     text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
 }
+
 /* line 53, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar-light.x-docked-top {
     border-bottom-color: black;
 }
+
 /* line 57, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar-light.x-docked-bottom {
     border-top-color: black;
 }
+
 /* line 61, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar-light.x-docked-left {
     border-right-color: black;
 }
+
 /* line 65, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar-light.x-docked-right {
     border-left-color: black;
 }
+
 /* line 13, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-toolbar-light .x-button, .x-toolbar .x-toolbar-light .x-button,
 .x-toolbar-light .x-field-select .x-component-outer, .x-toolbar
@@ -5729,6 +6078,7 @@ body.x-desktop {
     background-color: #1676b9;
     color: white;
 }
+
 /* line 20, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-toolbar-light .x-button.x-button-back:before, .x-toolbar-light .x-button.x-button-forward:before, .x-toolbar .x-toolbar-light .x-button.x-button-back:before, .x-toolbar .x-toolbar-light .x-button.x-button-forward:before,
 .x-toolbar-light .x-field-select .x-component-outer.x-button-back:before,
@@ -5737,6 +6087,7 @@ body.x-desktop {
 .x-toolbar-light .x-field-select .x-component-outer.x-button-forward:before {
     background: #0b3c5e;
 }
+
 /* line 26, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-toolbar-light .x-button, .x-toolbar-light .x-button.x-button-back:after, .x-toolbar-light .x-button.x-button-forward:after, .x-toolbar .x-toolbar-light .x-button, .x-toolbar .x-toolbar-light .x-button.x-button-back:after, .x-toolbar .x-toolbar-light .x-button.x-button-forward:after,
 .x-toolbar-light .x-field-select .x-component-outer,
@@ -5752,6 +6103,7 @@ body.x-desktop {
     background-image: -o-linear-gradient(top, #359ee7, #1985d0 3%, #1468a2);
     background-image: -ms-linear-gradient(top, #359ee7, #1985d0 3%, #1468a2);
 }
+
 /* line 31, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-toolbar-light .x-button.x-button-pressing, .x-toolbar-light .x-button.x-button-pressing:after, .x-toolbar-light .x-button.x-button-pressed, .x-toolbar-light .x-button.x-button-pressed:after, .x-toolbar-light .x-button.x-button-active, .x-toolbar-light .x-button.x-button-active:after, .x-toolbar .x-toolbar-light .x-button.x-button-pressing, .x-toolbar .x-toolbar-light .x-button.x-button-pressing:after, .x-toolbar .x-toolbar-light .x-button.x-button-pressed, .x-toolbar .x-toolbar-light .x-button.x-button-pressed:after, .x-toolbar .x-toolbar-light .x-button.x-button-active, .x-toolbar .x-toolbar-light .x-button.x-button-active:after,
 .x-toolbar-light .x-field-select .x-component-outer.x-button-pressing,
@@ -5773,6 +6125,7 @@ body.x-desktop {
     background-image: -o-linear-gradient(top, #0f517e, #125f95 10%, #156eac 65%, #156fae);
     background-image: -ms-linear-gradient(top, #0f517e, #125f95 10%, #156eac 65%, #156fae);
 }
+
 /* line 76, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar-light .x-label,
 .x-toolbar-light .x-form-label {
@@ -5791,27 +6144,33 @@ body.x-desktop {
     background-image: -ms-linear-gradient(top, #ffffff, #ededed 3%, #d3d3d3);
     border-color: #616161;
 }
+
 /* line 48, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar-neutral .x-title {
     color: #070707;
     text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
 }
+
 /* line 53, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar-neutral.x-docked-top {
     border-bottom-color: #616161;
 }
+
 /* line 57, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar-neutral.x-docked-bottom {
     border-top-color: #616161;
 }
+
 /* line 61, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar-neutral.x-docked-left {
     border-right-color: #616161;
 }
+
 /* line 65, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar-neutral.x-docked-right {
     border-left-color: #616161;
 }
+
 /* line 13, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-toolbar-neutral .x-button, .x-toolbar .x-toolbar-neutral .x-button,
 .x-toolbar-neutral .x-field-select .x-component-outer, .x-toolbar
@@ -5821,6 +6180,7 @@ body.x-desktop {
     background-color: lightgrey;
     color: black;
 }
+
 /* line 20, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-toolbar-neutral .x-button.x-button-back:before, .x-toolbar-neutral .x-button.x-button-forward:before, .x-toolbar .x-toolbar-neutral .x-button.x-button-back:before, .x-toolbar .x-toolbar-neutral .x-button.x-button-forward:before,
 .x-toolbar-neutral .x-field-select .x-component-outer.x-button-back:before,
@@ -5829,6 +6189,7 @@ body.x-desktop {
 .x-toolbar-neutral .x-field-select .x-component-outer.x-button-forward:before {
     background: #a0a0a0;
 }
+
 /* line 26, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-toolbar-neutral .x-button, .x-toolbar-neutral .x-button.x-button-back:after, .x-toolbar-neutral .x-button.x-button-forward:after, .x-toolbar .x-toolbar-neutral .x-button, .x-toolbar .x-toolbar-neutral .x-button.x-button-back:after, .x-toolbar .x-toolbar-neutral .x-button.x-button-forward:after,
 .x-toolbar-neutral .x-field-select .x-component-outer,
@@ -5844,6 +6205,7 @@ body.x-desktop {
     background-image: -o-linear-gradient(top, #fafafa, #e0e0e0 3%, #c7c7c7);
     background-image: -ms-linear-gradient(top, #fafafa, #e0e0e0 3%, #c7c7c7);
 }
+
 /* line 31, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-toolbar-neutral .x-button.x-button-pressing, .x-toolbar-neutral .x-button.x-button-pressing:after, .x-toolbar-neutral .x-button.x-button-pressed, .x-toolbar-neutral .x-button.x-button-pressed:after, .x-toolbar-neutral .x-button.x-button-active, .x-toolbar-neutral .x-button.x-button-active:after, .x-toolbar .x-toolbar-neutral .x-button.x-button-pressing, .x-toolbar .x-toolbar-neutral .x-button.x-button-pressing:after, .x-toolbar .x-toolbar-neutral .x-button.x-button-pressed, .x-toolbar .x-toolbar-neutral .x-button.x-button-pressed:after, .x-toolbar .x-toolbar-neutral .x-button.x-button-active, .x-toolbar .x-toolbar-neutral .x-button.x-button-active:after,
 .x-toolbar-neutral .x-field-select .x-component-outer.x-button-pressing,
@@ -5865,6 +6227,7 @@ body.x-desktop {
     background-image: -o-linear-gradient(top, #b2b2b2, #bfbfbf 10%, #cccccc 65%, #cdcdcd);
     background-image: -ms-linear-gradient(top, #b2b2b2, #bfbfbf 10%, #cccccc 65%, #cdcdcd);
 }
+
 /* line 76, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar-neutral .x-label,
 .x-toolbar-neutral .x-form-label {
@@ -5880,6 +6243,7 @@ body.x-desktop {
     background-image: -o-radial-gradient(rgba(122, 191, 239, 0.7), rgba(122, 191, 239, 0) 24px);
     background-image: -ms-radial-gradient(rgba(122, 191, 239, 0.7), rgba(122, 191, 239, 0) 24px);
 }
+
 /* line 92, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar.x-toolbar-neutral .x-toolbar-inner .x-button.x-button-pressing .x-button-icon.x-button-mask {
     background-image: none;
@@ -5936,11 +6300,13 @@ body.x-desktop {
 .x-toolbar .x-form-field-container {
     padding: 0 .3em;
 }
+
 /* line 164, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar .x-slider-field .x-component-outer,
 .x-toolbar .x-toggle-field .x-component-outer {
     padding: 0em .3em;
 }
+
 /* line 169, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar .x-field {
     width: 13em;
@@ -5949,16 +6315,19 @@ body.x-desktop {
     border-bottom: 0;
     background: transparent;
 }
+
 /* line 176, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar .x-field .x-clear-icon {
     background-size: 50% 50%;
     right: -0.8em;
     margin-top: -1.06em;
 }
+
 /* line 183, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar .x-field-input {
     padding-right: 1.6em !important;
 }
+
 /* line 191, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar .x-field-textarea .x-component-outer,
 .x-toolbar .x-field-text .x-component-outer,
@@ -5974,6 +6343,7 @@ body.x-desktop {
     -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0.1em 0 inset, rgba(0, 0, 0, 0.5) 0 -0.1em 0 inset, rgba(0, 0, 0, 0.5) 0.1em 0 0 inset, rgba(0, 0, 0, 0.5) -0.1em 0 0 inset, rgba(0, 0, 0, 0.5) 0 0.15em 0.4em inset;
     box-shadow: rgba(0, 0, 0, 0.5) 0 0.1em 0 inset, rgba(0, 0, 0, 0.5) 0 -0.1em 0 inset, rgba(0, 0, 0, 0.5) 0.1em 0 0 inset, rgba(0, 0, 0, 0.5) -0.1em 0 0 inset, rgba(0, 0, 0, 0.5) 0 0.15em 0.4em inset;
 }
+
 /* line 204, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar .x-form-label {
     background: transparent;
@@ -5981,6 +6351,7 @@ body.x-desktop {
     padding: 0;
     line-height: 1.4em;
 }
+
 /* line 211, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar .x-form-field {
     height: 1.6em;
@@ -5991,10 +6362,12 @@ body.x-desktop {
     padding: 0em .3em;
     margin: 0;
 }
+
 /* line 220, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar .x-form-field:focus {
     color: black;
 }
+
 /* line 227, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar .x-field-select .x-component-outer,
 .x-toolbar .x-field-search .x-component-outer {
@@ -6004,30 +6377,37 @@ body.x-desktop {
     -o-border-radius: 0.8em;
     border-radius: 0.8em;
 }
+
 /* line 235, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar .x-field-search .x-field-input {
     background-position: .5em 50%;
 }
+
 /* line 240, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar .x-field-select {
     -webkit-box-shadow: none;
 }
+
 /* line 243, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar .x-field-select .x-form-field {
     height: 1.4em;
 }
+
 /* line 248, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar .x-field-select {
     background: transparent;
 }
+
 /* line 252, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar .x-field-select .x-component-outer:after {
     right: .4em;
 }
+
 /* line 258, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar .x-field-select.x-item-disabled .x-component-outer:after {
     opacity: .6;
 }
+
 /* line 264, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar .x-field-select .x-component-outer:before {
     width: 3em;
@@ -6043,6 +6423,7 @@ body.x-desktop {
     -webkit-mask-repeat: repeat-y;
     -webkit-mask-size: 3em 0.05em;
 }
+
 /* line 282, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
 .x-toolbar .x-field-select .x-input-text {
     color: #fff;
@@ -6070,6 +6451,7 @@ body.x-desktop {
     -o-border-radius: 0.3em;
     border-radius: 0.3em;
 }
+
 /* line 14, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Toast.scss */
 .x-toast .x-toast-text {
     padding: 6px 0;
@@ -6081,6 +6463,7 @@ body.x-desktop {
     color: rgba(190, 224, 247, 0.9);
     text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
 }
+
 /* line 91, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_MessageBox.scss */
 .x-msgbox-dark .x-msgbox-input {
     background-image: none;
@@ -6102,10 +6485,12 @@ body.x-desktop {
     background-image: -o-linear-gradient(top, rgba(11, 60, 94, 0.9), rgba(6, 31, 49, 0.9) 3%, rgba(0, 2, 3, 0.9));
     background-image: -ms-linear-gradient(top, rgba(11, 60, 94, 0.9), rgba(6, 31, 49, 0.9) 3%, rgba(0, 2, 3, 0.9));
 }
+
 /* line 5, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Menu.scss */
 .x-menu .x-button {
     margin-bottom: 0.7em;
 }
+
 /* line 8, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/_Menu.scss */
 .x-menu .x-button:last-child {
     margin-bottom: 0;
@@ -6151,6 +6536,7 @@ body.x-desktop {
     background-image: none;
     background-color: rgba(255, 255, 255, 0.1);
 }
+
 /* line 25, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/carousel/_Carousel.scss */
 .x-carousel-indicator-light span.x-carousel-indicator-active {
     background-image: none;
@@ -6162,6 +6548,7 @@ body.x-desktop {
     background-image: none;
     background-color: rgba(0, 0, 0, 0.1);
 }
+
 /* line 25, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/carousel/_Carousel.scss */
 .x-carousel-indicator-dark span.x-carousel-indicator-active {
     background-image: none;
@@ -6175,6 +6562,7 @@ body.x-desktop {
 .x-form .x-scroll-container {
     background-color: #eeeeee;
 }
+
 /* line 10, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/form/_Panel.scss */
 .x-form .x-toolbar .x-scroll-container {
     background-color: transparent;
@@ -6189,6 +6577,7 @@ body.x-desktop {
     background-color: #f7f7f7;
     color: #080808;
 }
+
 /* line 28, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/form/_Panel.scss */
 .x-form-label span {
     font-size: .8em;
@@ -6201,10 +6590,12 @@ body.x-desktop {
 .x-form-fieldset {
     margin: .5em .5em 1.5em;
 }
+
 /* line 8, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/form/_FieldSet.scss */
 .x-form-fieldset .x-form-label {
     border-top: 1px solid white;
 }
+
 /* line 12, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/form/_FieldSet.scss */
 .x-form-fieldset .x-form-fieldset-inner {
     border: 1px solid #dddddd;
@@ -6216,11 +6607,13 @@ body.x-desktop {
     -o-border-radius: 0.4em;
     border-radius: 0.4em;
 }
+
 /* line 22, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/form/_FieldSet.scss */
 .x-form-fieldset .x-field {
     border-bottom: 1px solid #dddddd;
     background: transparent;
 }
+
 /* line 26, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/form/_FieldSet.scss */
 .x-form-fieldset .x-field:first-child {
     -moz-border-radius-topleft: 0.4em;
@@ -6230,6 +6623,7 @@ body.x-desktop {
     -webkit-border-top-right-radius: 0.4em;
     border-top-right-radius: 0.4em;
 }
+
 /* line 32, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/form/_FieldSet.scss */
 .x-form-fieldset .x-field:last-child {
     border-bottom: 0;
@@ -6264,6 +6658,7 @@ body.x-desktop {
     -webkit-border-top-left-radius: 0.4em;
     border-top-left-radius: 0.4em;
 }
+
 /* line 68, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/form/_FieldSet.scss */
 .x-label-align-left:last-child .x-form-label {
     -moz-border-radius-bottomleft: 0.4em;
@@ -6277,10 +6672,12 @@ body.x-desktop {
     -webkit-border-top-right-radius: 0.4em;
     border-top-right-radius: 0.4em;
 }
+
 /* line 81, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/form/_FieldSet.scss */
 .x-label-align-right:last-child {
     border-bottom: 0;
 }
+
 /* line 84, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/form/_FieldSet.scss */
 .x-label-align-right:last-child .x-form-label {
     -moz-border-radius-bottomright: 0.4em;
@@ -6316,6 +6713,7 @@ body.x-desktop {
     min-height: 2.5em;
     background: white;
 }
+
 /* line 12, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/field/_Field.scss */
 .x-field:last-child {
     border-bottom: 0;
@@ -6429,6 +6827,7 @@ body.x-desktop {
     bottom: 0;
     left: 0;
 }
+
 /* line 15, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/field/_Radio.scss */
 .x-field-radio .x-field-mask::after {
     content: '';
@@ -6445,6 +6844,7 @@ body.x-desktop {
     -o-border-radius: 16px;
     border-radius: 16px;
 }
+
 /* line 19, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/field/_Radio.scss */
 .x-field-radio .x-field-mask::before {
     content: '';
@@ -6479,6 +6879,7 @@ body.x-desktop {
 .x-field-search .x-field-input {
     position: relative;
 }
+
 /* line 364, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/base/mixins/_Class.scss */
 .x-field-search .x-field-input:before {
     position: absolute;
@@ -6490,6 +6891,7 @@ body.x-desktop {
     font-family: "Pictos";
     content: "s";
 }
+
 /* line 11, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/field/_Search.scss */
 .x-field-search .x-field-input:before {
     color: #ccc;
@@ -6498,10 +6900,12 @@ body.x-desktop {
     font-size: 1.1em;
     right: auto;
 }
+
 /* line 18, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/field/_Search.scss */
 .x-toolbar .x-field-search .x-field-input:before {
     top: .3em;
 }
+
 /* line 23, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/field/_Search.scss */
 .x-field-search .x-field-input .x-form-field {
     margin-left: 1em;
@@ -6529,11 +6933,13 @@ body.x-desktop {
     position: relative;
     z-index: 1;
 }
+
 /* line 25, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/field/_Select.scss */
 .x-field-select .x-component-outer:after {
     z-index: 2;
     background-color: #dddddd;
 }
+
 /* line 31, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/field/_Select.scss */
 .x-field-select .x-component-outer:before, .x-field-select .x-component-outer:after {
     pointer-events: none;
@@ -6545,10 +6951,12 @@ body.x-desktop {
 .x-select-overlay .x-list-item-label {
     height: 2.6em;
 }
+
 /* line 61, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/field/_Select.scss */
 .x-select-overlay .x-item-selected .x-list-label {
     margin-right: 2.6em;
 }
+
 /* line 65, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/field/_Select.scss */
 .x-select-overlay .x-item-selected.x-list-item::after {
     color: #dddddd;
@@ -6570,14 +6978,17 @@ body.x-desktop {
 .x-spinner .x-field-input .x-input-el {
     -webkit-text-fill-color: black;
 }
+
 /* line 13, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/field/_Spinner.scss */
 .x-spinner.x-item-disabled .x-input-el {
     -webkit-text-fill-color: #B3B3B3;
 }
+
 /* line 17, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/field/_Spinner.scss */
 .x-spinner.x-item-disabled .x-spinner-button {
     color: #aaa !important;
 }
+
 /* line 13, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-spinner.x-item-disabled .x-spinner-button, .x-toolbar .x-spinner.x-item-disabled .x-spinner-button {
     border: 1px solid #c4c4c4;
@@ -6585,10 +6996,12 @@ body.x-desktop {
     background-color: #f7f7f7;
     color: #1e1e1e;
 }
+
 /* line 20, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-spinner.x-item-disabled .x-spinner-button.x-button-back:before, .x-spinner.x-item-disabled .x-spinner-button.x-button-forward:before, .x-toolbar .x-spinner.x-item-disabled .x-spinner-button.x-button-back:before, .x-toolbar .x-spinner.x-item-disabled .x-spinner-button.x-button-forward:before {
     background: #c4c4c4;
 }
+
 /* line 26, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-spinner.x-item-disabled .x-spinner-button, .x-spinner.x-item-disabled .x-spinner-button.x-button-back:after, .x-spinner.x-item-disabled .x-spinner-button.x-button-forward:after, .x-toolbar .x-spinner.x-item-disabled .x-spinner-button, .x-toolbar .x-spinner.x-item-disabled .x-spinner-button.x-button-back:after, .x-toolbar .x-spinner.x-item-disabled .x-spinner-button.x-button-forward:after {
     background-image: none;
@@ -6598,6 +7011,7 @@ body.x-desktop {
     background-image: -o-linear-gradient(top, #ffffff, #ffffff 3%, #eaeaea);
     background-image: -ms-linear-gradient(top, #ffffff, #ffffff 3%, #eaeaea);
 }
+
 /* line 31, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-spinner.x-item-disabled .x-spinner-button.x-button-pressing, .x-spinner.x-item-disabled .x-spinner-button.x-button-pressing:after, .x-spinner.x-item-disabled .x-spinner-button.x-button-pressed, .x-spinner.x-item-disabled .x-spinner-button.x-button-pressed:after, .x-spinner.x-item-disabled .x-spinner-button.x-button-active, .x-spinner.x-item-disabled .x-spinner-button.x-button-active:after, .x-toolbar .x-spinner.x-item-disabled .x-spinner-button.x-button-pressing, .x-toolbar .x-spinner.x-item-disabled .x-spinner-button.x-button-pressing:after, .x-toolbar .x-spinner.x-item-disabled .x-spinner-button.x-button-pressed, .x-toolbar .x-spinner.x-item-disabled .x-spinner-button.x-button-pressed:after, .x-toolbar .x-spinner.x-item-disabled .x-spinner-button.x-button-active, .x-toolbar .x-spinner.x-item-disabled .x-spinner-button.x-button-active:after {
     background-image: none;
@@ -6607,6 +7021,7 @@ body.x-desktop {
     background-image: -o-linear-gradient(top, #d5d5d5, #e2e2e2 10%, #efefef 65%, #f0f0f0);
     background-image: -ms-linear-gradient(top, #d5d5d5, #e2e2e2 10%, #efefef 65%, #f0f0f0);
 }
+
 /* line 23, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/field/_Spinner.scss */
 .x-spinner .x-spinner-button {
     margin-top: .25em;
@@ -6622,6 +7037,7 @@ body.x-desktop {
     -o-border-radius: 1em;
     border-radius: 1em;
 }
+
 /* line 13, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-spinner .x-spinner-button, .x-toolbar .x-spinner .x-spinner-button {
     border: 1px solid #b7b7b7;
@@ -6629,10 +7045,12 @@ body.x-desktop {
     background-color: #eaeaea;
     color: #111111;
 }
+
 /* line 20, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-spinner .x-spinner-button.x-button-back:before, .x-spinner .x-spinner-button.x-button-forward:before, .x-toolbar .x-spinner .x-spinner-button.x-button-back:before, .x-toolbar .x-spinner .x-spinner-button.x-button-forward:before {
     background: #b7b7b7;
 }
+
 /* line 26, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-spinner .x-spinner-button, .x-spinner .x-spinner-button.x-button-back:after, .x-spinner .x-spinner-button.x-button-forward:after, .x-toolbar .x-spinner .x-spinner-button, .x-toolbar .x-spinner .x-spinner-button.x-button-back:after, .x-toolbar .x-spinner .x-spinner-button.x-button-forward:after {
     background-image: none;
@@ -6642,6 +7060,7 @@ body.x-desktop {
     background-image: -o-linear-gradient(top, #ffffff, #f7f7f7 3%, #dddddd);
     background-image: -ms-linear-gradient(top, #ffffff, #f7f7f7 3%, #dddddd);
 }
+
 /* line 31, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
 .x-spinner .x-spinner-button.x-button-pressing, .x-spinner .x-spinner-button.x-button-pressing:after, .x-spinner .x-spinner-button.x-button-pressed, .x-spinner .x-spinner-button.x-button-pressed:after, .x-spinner .x-spinner-button.x-button-active, .x-spinner .x-spinner-button.x-button-active:after, .x-toolbar .x-spinner .x-spinner-button.x-button-pressing, .x-toolbar .x-spinner .x-spinner-button.x-button-pressing:after, .x-toolbar .x-spinner .x-spinner-button.x-button-pressed, .x-toolbar .x-spinner .x-spinner-button.x-button-pressed:after, .x-toolbar .x-spinner .x-spinner-button.x-button-active, .x-toolbar .x-spinner .x-spinner-button.x-button-active:after {
     background-image: none;
@@ -6651,14 +7070,17 @@ body.x-desktop {
     background-image: -o-linear-gradient(top, #c9c9c9, #d5d5d5 10%, #e2e2e2 65%, #e3e3e3);
     background-image: -ms-linear-gradient(top, #c9c9c9, #d5d5d5 10%, #e2e2e2 65%, #e3e3e3);
 }
+
 /* line 35, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/field/_Spinner.scss */
 .x-spinner .x-spinner-button-down {
     margin-left: .25em;
 }
+
 /* line 38, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/field/_Spinner.scss */
 .x-spinner .x-spinner-button-up {
     margin-right: .25em;
 }
+
 /* line 43, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/field/_Spinner.scss */
 .x-spinner.x-field-grouped-buttons .x-spinner-button-down {
     margin-right: .5em;
@@ -6721,6 +7143,7 @@ body.x-desktop {
 .x-list {
     background-color: #f7f7f7;
 }
+
 /* line 8, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list .x-list-disclosure {
     position: relative;
@@ -6741,6 +7164,7 @@ body.x-desktop {
     height: 32px;
     margin: 7px 7px 0 0;
 }
+
 /* line 18, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list .x-list-disclosure:before {
     position: absolute;
@@ -6756,22 +7180,27 @@ body.x-desktop {
     line-height: 35px;
     text-shadow: 0 0 0;
 }
+
 /* line 30, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list.x-list-indexed .x-list-disclosure {
     margin-right: 1.8em;
 }
+
 /* line 34, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list .x-item-selected .x-list-disclosure {
     background: #fff none;
 }
+
 /* line 37, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list .x-item-selected .x-list-disclosure:before {
     color: #006bb6;
 }
+
 /* line 42, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list .x-list-item {
     color: black;
 }
+
 /* line 46, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list .x-list-item.x-item-selected .x-dock-horizontal, .x-list .x-list-item.x-item-selected.x-list-item-tpl {
     background-image: none;
@@ -6782,11 +7211,13 @@ body.x-desktop {
     background-image: -ms-linear-gradient(top, #0398ff, #007ad0 3%, #005c9d);
     color: white;
 }
+
 /* line 53, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list .x-list-item.x-item-pressed.x-list-item-tpl,
 .x-list .x-list-item.x-item-pressed .x-dock-horizontal {
     background: #b6e1ff none;
 }
+
 /* line 59, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list .x-list-item .x-list-item-body, .x-list .x-list-item.x-list-item-tpl .x-innerhtml {
     padding: 12px 15px;
@@ -6808,20 +7239,24 @@ body.x-desktop {
     font-size: 0.8em;
     padding: 0.2em 1.02em;
 }
+
 /* line 79, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list-normal .x-list-item.x-list-item-tpl,
 .x-list-normal .x-list-item .x-dock-horizontal {
     border-top: 1px solid #dedede;
 }
+
 /* line 85, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list-normal .x-list-item.x-list-item-tpl.x-list-footer-wrap, .x-list-normal .x-list-item.x-list-footer-wrap .x-dock-horizontal {
     border-bottom: 1px solid #dedede;
 }
+
 /* line 93, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list-normal .x-list-item.x-item-pressed.x-list-item-tpl, .x-list-normal .x-list-item.x-item-pressed .x-dock-horizontal {
     border-top-color: #b6e1ff;
     background-color: #b6e1ff;
 }
+
 /* line 100, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list-normal .x-list-item.x-item-selected.x-list-item-tpl, .x-list-normal .x-list-item.x-item-selected .x-dock-horizontal {
     border-top-color: #006bb6;
@@ -6831,10 +7266,12 @@ body.x-desktop {
 .x-list-round .x-scroll-view {
     background-color: #eee;
 }
+
 /* line 112, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list-round .x-list-header-swap {
     padding-right: 13px;
 }
+
 /* line 116, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list-round .x-list-inner .x-scroll-container {
     top: 13px;
@@ -6844,6 +7281,7 @@ body.x-desktop {
     width: auto !important;
     height: auto !important;
 }
+
 /* line 125, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list-round .x-list-header {
     color: #777;
@@ -6856,15 +7294,18 @@ body.x-desktop {
     background-image: -o-linear-gradient(top, #eeeeee, rgba(238, 238, 238, 0.9) 30%, rgba(238, 238, 238, 0.4));
     background-image: -ms-linear-gradient(top, #eeeeee, rgba(238, 238, 238, 0.9) 30%, rgba(238, 238, 238, 0.4));
 }
+
 /* line 134, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list-round .x-list-container {
     padding: 13px 13px 0 13px;
 }
+
 /* line 137, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list-round .x-list-container .x-list-header {
     padding-left: 13px;
     background-image: none;
 }
+
 /* line 146, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list-round.x-list-ungrouped .x-list-item-tpl,
 .x-list-round.x-list-ungrouped .x-list-item .x-dock-horizontal, .x-list-round.x-list-grouped .x-list-item-tpl,
@@ -6873,6 +7314,7 @@ body.x-desktop {
     border-width: 1px 1px 0 1px;
     background: #f7f7f7;
 }
+
 /* line 154, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list-round.x-list-ungrouped .x-list-item-first {
     -moz-border-radius-topleft: 0.4em;
@@ -6882,6 +7324,7 @@ body.x-desktop {
     -webkit-border-top-right-radius: 0.4em;
     border-top-right-radius: 0.4em;
 }
+
 /* line 160, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list-round.x-list-ungrouped .x-list-item-last {
     -moz-border-radius-bottomleft: 0.4em;
@@ -6893,6 +7336,7 @@ body.x-desktop {
     border-width: 1px;
     margin-bottom: 13px;
 }
+
 /* line 171, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list-round.x-list-grouped .x-list-header-wrap .x-dock-horizontal {
     -moz-border-radius-topleft: 0.4em;
@@ -6902,6 +7346,7 @@ body.x-desktop {
     -webkit-border-top-right-radius: 0.4em;
     border-top-right-radius: 0.4em;
 }
+
 /* line 178, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list-round.x-list-grouped .x-list-header-wrap.x-list-header {
     border: 1px solid #dedede;
@@ -6913,10 +7358,12 @@ body.x-desktop {
     -webkit-border-top-right-radius: 0.4em;
     border-top-right-radius: 0.4em;
 }
+
 /* line 186, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list-round.x-list-grouped .x-list-footer-wrap {
     background: transparent;
 }
+
 /* line 190, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list-round.x-list-grouped .x-list-footer-wrap.x-list-item-tpl,
 .x-list-round.x-list-grouped .x-list-footer-wrap .x-dock-horizontal {
@@ -6925,6 +7372,7 @@ body.x-desktop {
     padding-bottom: 13px;
     margin-bottom: 13px;
 }
+
 /* line 197, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list-round.x-list-grouped .x-list-footer-wrap.x-list-item-tpl > .x-innerhtml,
 .x-list-round.x-list-grouped .x-list-footer-wrap.x-list-item-tpl > .x-dock-body,
@@ -6939,11 +7387,13 @@ body.x-desktop {
     -webkit-border-bottom-right-radius: 0.4em;
     border-bottom-right-radius: 0.4em;
 }
+
 /* line 208, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list-round.x-list-grouped .x-list-footer-wrap.x-item-pressed > .x-innerhtml,
 .x-list-round.x-list-grouped .x-list-footer-wrap.x-item-pressed > .x-dock-body {
     background: #b6e1ff none;
 }
+
 /* line 215, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list-round.x-list-grouped .x-list-footer-wrap.x-item-selected > .x-innerhtml,
 .x-list-round.x-list-grouped .x-list-footer-wrap.x-item-selected > .x-dock-body {
@@ -6955,6 +7405,7 @@ body.x-desktop {
     background-image: -ms-linear-gradient(top, #0398ff, #007ad0 3%, #005c9d);
     color: white;
 }
+
 /* line 223, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list-round .x-indexbar-vertical {
     margin-right: 20px;
@@ -7004,6 +7455,7 @@ body.x-desktop {
     -moz-box-shadow: rgba(0, 0, 0, 0.4) -1px 0 1px;
     box-shadow: rgba(0, 0, 0, 0.4) -1px 0 1px;
 }
+
 /* line 26, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/picker/_Picker.scss */
 .x-picker-slot .x-scroll-view:first-child {
     -webkit-box-shadow: none;
@@ -7048,6 +7500,7 @@ body.x-desktop {
     background-image: -o-linear-gradient(top, #5ab5f5, #2aa0f2 3%, #0d87dc);
     background-image: -ms-linear-gradient(top, #5ab5f5, #2aa0f2 3%, #0d87dc);
 }
+
 /* line 57, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/picker/_Picker.scss */
 .x-picker-slot-title > div {
     font-size: 0.8em;
@@ -7059,6 +7512,7 @@ body.x-desktop {
 .x-picker-slot {
     border-left: 2px solid #acacac;
 }
+
 /* line 69, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/picker/_Picker.scss */
 .x-picker-slot .x-dataview-item {
     height: 2.5em;
@@ -7066,6 +7520,7 @@ body.x-desktop {
     font-weight: bold;
     padding: 0 10px;
 }
+
 /* line 76, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/picker/_Picker.scss */
 .x-picker-slot:first-child {
     border-left: 0;
@@ -7078,6 +7533,7 @@ body.x-desktop {
 .x-list-paging {
     padding: 1em 0;
 }
+
 /* line 8, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/plugin/_ListPaging.scss */
 .x-list-paging .x-list-paging-msg {
     color: #006bb6;
@@ -7087,6 +7543,7 @@ body.x-desktop {
     -o-border-radius: 6px;
     border-radius: 6px;
 }
+
 /* line 15, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/plugin/_ListPaging.scss */
 .x-list-paging.x-loading {
     padding: 0.5em;
@@ -7149,6 +7606,7 @@ body.x-desktop {
     background: transparent none;
     border: 0;
 }
+
 /* line 45, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/slider/_Slider.scss */
 .x-thumb:after {
     border: 1px solid #919191;
@@ -7173,10 +7631,12 @@ body.x-desktop {
     -o-border-radius: 0.925em;
     border-radius: 0.925em;
 }
+
 /* line 55, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/slider/_Slider.scss */
 .x-thumb.x-dragging {
     opacity: 1;
 }
+
 /* line 57, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/slider/_Slider.scss */
 .x-thumb.x-dragging:after {
     background-image: none;
@@ -7233,10 +7693,12 @@ body.x-desktop {
     -o-border-radius: 1.1em;
     border-radius: 1.1em;
 }
+
 /* line 15, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/slider/_Toggle.scss */
 .x-toggle .x-thumb.x-dragging {
     opacity: 1;
 }
+
 /* line 19, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/slider/_Toggle.scss */
 .x-toggle .x-thumb:before {
     top: 0.175em;
@@ -7302,6 +7764,7 @@ body.x-desktop {
     height: 2.6em;
     padding: 0 .8em;
 }
+
 /* line 29, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar.x-docked-top .x-tab {
     background: transparent none;
@@ -7314,6 +7777,7 @@ body.x-desktop {
     -o-border-radius: 0.9em;
     border-radius: 0.9em;
 }
+
 /* line 39, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar.x-docked-top .x-tab .x-button-label, .x-tabbar.x-docked-top .x-tab .x-badge {
     font-size: .8em;
@@ -7321,25 +7785,30 @@ body.x-desktop {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
+
 /* line 46, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar.x-docked-top .x-tab .x-badge {
     font-size: .6em !important;
     top: -0.5em;
 }
+
 /* line 51, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar.x-docked-top .x-tab .x-button-icon {
     width: 1.2em;
     height: 1.2em;
     margin: 0 auto;
 }
+
 /* line 56, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar.x-docked-top .x-tab .x-button-icon:before {
     font-size: 1.6em;
 }
+
 /* line 61, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar.x-docked-top .x-tab.x-tab-icon {
     padding: 0.3em 0.8em;
 }
+
 /* line 64, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar.x-docked-top .x-tab.x-tab-icon .x-button-label, .x-tabbar.x-docked-top .x-tab.x-tab-icon .x-badge {
     margin: 0;
@@ -7355,6 +7824,7 @@ body.x-desktop {
     height: 3em;
     padding: 0;
 }
+
 /* line 82, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar.x-docked-bottom .x-tab {
     background: transparent none;
@@ -7369,17 +7839,20 @@ body.x-desktop {
     -ms-flex-direction: column;
     flex-direction: column;
 }
+
 /* line 92, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar.x-docked-bottom .x-tab .x-button-icon {
     width: 1.65em;
     height: 1.65em;
     margin: 0 auto;
 }
+
 /* line 97, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar.x-docked-bottom .x-tab .x-button-icon:before {
     font-size: 1.6em;
     line-height: 1.1em;
 }
+
 /* line 103, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar.x-docked-bottom .x-tab .x-button-label, .x-tabbar.x-docked-bottom .x-tab .x-badge {
     margin: 0;
@@ -7401,20 +7874,24 @@ body.x-desktop {
     background-image: -o-linear-gradient(top, #56a7df, #2b91d7 3%, #2175af);
     background-image: -ms-linear-gradient(top, #56a7df, #2b91d7 3%, #2175af);
 }
+
 /* line 145, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar-light .x-tab {
     color: #c1dff4;
     border-bottom: 1px solid transparent;
 }
+
 /* line 150, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar-light .x-tab-active {
     color: white;
     border-bottom-color: #278bd1;
 }
+
 /* line 154, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar-light .x-tab-active .x-button-icon:before {
     color: #1da2ff;
 }
+
 /* line 159, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar-light .x-tab-pressed {
     color: white;
@@ -7424,6 +7901,7 @@ body.x-desktop {
 .x-tabbar-light.x-docked-bottom .x-tab {
     text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
 }
+
 /* line 170, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar-light.x-docked-bottom .x-tab-active {
     background-image: none;
@@ -7437,6 +7915,7 @@ body.x-desktop {
     -moz-box-shadow: #1d6699 0 0 0.25em inset;
     box-shadow: #1d6699 0 0 0.25em inset;
 }
+
 /* line 178, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar-light.x-docked-bottom .x-tab-active .x-button-icon:before {
     color: #1da2ff;
@@ -7464,20 +7943,24 @@ body.x-desktop {
     background-image: -o-linear-gradient(top, #1676b9, #11598c 3%, #0b3c5e);
     background-image: -ms-linear-gradient(top, #1676b9, #11598c 3%, #0b3c5e);
 }
+
 /* line 145, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar-dark .x-tab {
     color: #63b4ec;
     border-bottom: 1px solid transparent;
 }
+
 /* line 150, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar-dark .x-tab-active {
     color: white;
     border-bottom-color: #105483;
 }
+
 /* line 154, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar-dark .x-tab-active .x-button-icon:before {
     color: #50b7ff;
 }
+
 /* line 159, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar-dark .x-tab-pressed {
     color: white;
@@ -7487,6 +7970,7 @@ body.x-desktop {
 .x-tabbar-dark.x-docked-bottom .x-tab {
     text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
 }
+
 /* line 170, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar-dark.x-docked-bottom .x-tab-active {
     background-image: none;
@@ -7500,6 +7984,7 @@ body.x-desktop {
     -moz-box-shadow: #092e47 0 0 0.25em inset;
     box-shadow: #092e47 0 0 0.25em inset;
 }
+
 /* line 178, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar-dark.x-docked-bottom .x-tab-active .x-button-icon:before {
     color: #50b7ff;
@@ -7527,20 +8012,24 @@ body.x-desktop {
     background-image: -o-linear-gradient(top, #ffffff, #ededed 3%, #d3d3d3);
     background-image: -ms-linear-gradient(top, #ffffff, #ededed 3%, #d3d3d3);
 }
+
 /* line 145, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar-neutral .x-tab {
     color: #7a7a7a;
     border-bottom: 1px solid transparent;
 }
+
 /* line 150, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar-neutral .x-tab-active {
     color: black;
     border-bottom-color: #e8e8e8;
 }
+
 /* line 154, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar-neutral .x-tab-active .x-button-icon:before {
     color: #7a7a7a;
 }
+
 /* line 159, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar-neutral .x-tab-pressed {
     color: black;
@@ -7550,6 +8039,7 @@ body.x-desktop {
 .x-tabbar-neutral.x-docked-bottom .x-tab {
     text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
 }
+
 /* line 170, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar-neutral.x-docked-bottom .x-tab-active {
     background-image: none;
@@ -7563,6 +8053,7 @@ body.x-desktop {
     -moz-box-shadow: #c7c7c7 0 0 0.25em inset;
     box-shadow: #c7c7c7 0 0 0.25em inset;
 }
+
 /* line 178, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar-neutral.x-docked-bottom .x-tab-active .x-button-icon:before {
     color: #7a7a7a;
@@ -7583,81 +8074,99 @@ body.x-desktop {
 .x-grid {
     background-color: #fff !important;
 }
+
 /* line 5, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-header-container {
     border-color: #d7d7d7;
     background-color: #f5f5f5;
     color: #000000;
 }
+
 /* line 10, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-header-container .x-grid-column-resizing {
     background-color: #D2EDFE;
 }
+
 /* line 15, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-column {
     border-color: #fff #d7d7d7 #d7d7d7 #fff;
 }
+
 /* line 19, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-column.x-column-sorted-asc, .x-grid .x-grid-column.x-column-sorted-desc {
     color: #1464AE;
 }
+
 /* line 24, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-headergroup .x-inner > .x-innerhtml {
     border-color: #fff #d7d7d7 #d7d7d7 #fff;
 }
+
 /* line 28, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-row {
     border-color: #d7d7d7;
     color: #000;
 }
+
 /* line 32, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-row.x-grid-item-odd {
     background-color: #fafafa;
 }
+
 /* line 36, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-row.x-item-selected {
     background-color: #D2EDFE;
 }
+
 /* line 41, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-cell {
     border-color: #d7d7d7;
 }
+
 /* line 45, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions {
     background-color: #fff;
     border-color: #C0C0C0;
 }
+
 /* line 49, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-header {
     background: #1464AE;
     border-color: #fff #d7d7d7 #d7d7d7 #fff;
     color: #fff;
 }
+
 /* line 55, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-sortablehandle {
     color: #aaa;
 }
+
 /* line 59, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-text {
     color: #000;
 }
+
 /* line 63, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-list-item.x-list-item-tpl {
     border-top-color: #ccc;
 }
+
 /* line 67, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-visibleindicator {
     color: #1464AE;
 }
+
 /* line 71, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-groupindicator {
     color: #C0C0C0;
 }
+
 /* line 76, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-folder,
 .x-grid .x-grid-viewoptions .x-column-options-leaf {
     color: #91E698;
 }
+
 /* line 84, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-hidden .x-column-options-visibleindicator,
 .x-grid .x-grid-viewoptions .x-column-options-hidden .x-column-options-text,
@@ -7665,43 +8174,53 @@ body.x-desktop {
 .x-grid .x-grid-viewoptions .x-column-options-hidden .x-column-options-leaf {
     color: #C0C0C0;
 }
+
 /* line 89, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-grouped .x-column-options-groupindicator {
     color: #1464AE;
 }
+
 /* line 94, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-columnoptions {
     border-color: #d7d7d7;
 }
+
 /* line 98, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-multiselection-column {
     color: #C0C0C0;
 }
+
 /* line 101, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-multiselection-column.x-grid-multiselection-allselected:after {
     color: #1464AE !important;
 }
+
 /* line 106, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-multiselection-cell {
     color: #C0C0C0;
 }
+
 /* line 110, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-item-selected .x-grid-multiselection-cell:after {
     color: #1464AE;
 }
+
 /* line 114, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-pagingtoolbar {
     border-top-color: #d7d7d7;
 }
+
 /* line 118, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-summaryrow {
     background-color: #1464AE;
     color: #fff;
 }
+
 /* line 122, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-summaryrow .x-grid-cell {
     border-color: #C0C0C0;
 }
+
 /* line 127, /home/teamcity/buildAgent/work/856564e37705b5b7/touch/resources/themes/stylesheets/sencha-touch/default/src/grid/_Grid.scss */
 .x-grid .x-grid-header {
     background-image: none;
@@ -7717,29 +8236,30 @@ body.x-desktop {
     padding: 0 1.02em;
 }
 
-.add {
+.item-swipe .name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: absolute;
-    top: 50%;
-    right: 0%;
-    transform: translateX(-50%) translateY(-50%);
-    width: 38px;
-    height: 25px;
+    top: 0;
+    left: 10;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: #f5f5f5;
 }
 
-.logout {
+.item-swipe .action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 50%;
-    left: 5%;
-    transform: translateX(-50%) translateY(-50%);
-    width: 80;
-    height: 25%;
-}
-
-.user-name {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    width: 80;
-    height: 25%;
+    width: 100px;
+    height: 98%;
+    color: #fff;
+    background: #F00;
+    right: 0;
+    top: 0;
+    z-index: 5;
 }

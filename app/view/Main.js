@@ -1,7 +1,7 @@
 Ext.define('Ecommerce.view.Main', {
     extend  : 'Ext.NavigationView',
     requires: [
-        'Ecommerce.view.Category'
+        'Ecommerce.view.categories.Category'
     ],
     xtype   : 'main-view',
     config  : {

@@ -16,12 +16,11 @@ Ext.define('Ecommerce.controller.Category', {
         },
         control: {
             'category-view'                : {
-                addItem   : 'addItem',
-                activate  : 'onViewActivate',
-                deactivate: 'onViewDeactivate',
-                itemtap   : 'onCategoryTap',
-                itemswipe : 'onCategorySwipe',
-                disclose  : 'onDisclose'
+                addItem     : 'addItem',
+                activate    : 'onViewActivate',
+                deactivate  : 'onViewDeactivate',
+                itemtap     : 'onCategoryTap',
+                'deleteitem': 'deleteCategory'
             },
             'main-view #addButton'         : {
                 'onAddCategory': 'onAddNewCategory'
@@ -66,7 +65,10 @@ Ext.define('Ecommerce.controller.Category', {
             navigationBar = this.getMain().getNavigationBar();
 
         logoutButton && logoutButton.hide();
-        navigationBar.setMasked(true);
+        navigationBar.setMasked({
+            xtype      : 'mask',
+            transparent: true
+        });
         categoryView && categoryView.setMasked(true);
         this.hideDisclosure();
     },
@@ -80,22 +82,11 @@ Ext.define('Ecommerce.controller.Category', {
         products = categories.getAt(index).products();
 
         listConfig = {
-            xtype     : 'product-view',
-            itemTpl   : '{name}',
-            store     : products,
-            categoryId: categories.getAt(index).getId()
+            xtype: 'product-view',
+            store: products
         };
 
         navigationview.push(listConfig);
-    },
-
-    onCategorySwipe: function (el, index, target, record) {
-        record.set('disclosure', true);
-    },
-
-    onDisclose: function (el, record, target, index, e) {
-        Ext.getStore('Categories').remove(record);
-        e.stopEvent();
     },
 
     hideAddCategoryView: function () {
@@ -119,6 +110,25 @@ Ext.define('Ecommerce.controller.Category', {
         category.products   = [];
         categories.add(category);
         addCategoryView.destroy();
+    },
+
+    deleteCategory: function (categoryId) {
+        Ext.Msg.confirm('Delete', 'Are you sure you want to delete this category',
+            function (btn) {
+                if (btn == 'yes') {
+                    var store    = Ext.getStore('Categories'),
+                        index    = store.findBy(function (record, id) {
+                            if (categoryId == id) {
+                                return true;
+                            }
+                        }),
+                        products = store.getAt(index).products();
+
+                    products.clearData();
+                    store.removeAt(index);
+                }
+            });
+
     },
 
     validateCategory: function () {

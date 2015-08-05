@@ -6,7 +6,7 @@ Ext.define('Ecommerce.controller.Product', {
     config: {
         views  : [
             'products.AddProduct',
-            'ProductDetails'
+            'products.ProductDetails'
         ],
         refs   : {
             main              : 'main-view',
@@ -17,12 +17,11 @@ Ext.define('Ecommerce.controller.Product', {
         },
         control: {
             'product-view'                    : {
-                addItem   : 'addItem',
-                itemtap   : 'onProductTap',
-                activate  : 'onViewActivate',
-                deactivate: 'onViewDeActivate',
-                itemswipe : 'onProductSwipe',
-                disclose  : 'onProductDisclosure'
+                addItem     : 'addItem',
+                itemtap     : 'onProductTap',
+                activate    : 'onViewActivate',
+                deactivate  : 'onViewDeActivate',
+                'deleteitem': 'deleteProduct'
             },
             'productview #addNewProductButton': {
                 tap: 'onAddNewProductTap'
@@ -49,7 +48,9 @@ Ext.define('Ecommerce.controller.Product', {
         var productList   = this.getProductList(),
             navigationBar = this.getMain().getNavigationBar();
 
-        navigationBar.setMasked(false);
+        setTimeout(function () {
+            navigationBar.setMasked(false);
+        }, 500);
         productList && productList.setMasked(false);
         this.hideDisclosure();
     },
@@ -57,7 +58,10 @@ Ext.define('Ecommerce.controller.Product', {
     onViewDeActivate: function () {
         var navigationBar = this.getMain().getNavigationBar();
 
-        navigationBar.setMasked(true);
+        navigationBar.setMasked({
+            xtype      : 'loadmask',
+            transparent: true
+        });
         this.hideDisclosure();
     },
 
@@ -93,23 +97,6 @@ Ext.define('Ecommerce.controller.Product', {
         navbuttons.getComponent('editButton').show();
     },
 
-    onProductSwipe: function (el, index, target, record) {
-        record.set('disclosure', true);
-    },
-
-    onProductDisclosure: function (el, record, target, index, e) {
-        var store = this.getProductList().getStore();
-
-        store.remove(record);
-        e.stopEvent();
-    },
-
-    addItem: function () {
-        Ext.Viewport.add({
-            xtype: 'add-product-view'
-        });
-    },
-
     hideAddProductView: function () {
         var addProductView = this.getAddProductView();
         addProductView && addProductView.destroy();
@@ -128,6 +115,23 @@ Ext.define('Ecommerce.controller.Product', {
         product.disclosure = false;
         products.add(product);
         productModalView.destroy();
+    },
+
+    deleteProduct: function (productId) {
+        Ext.Msg.confirm('Delete', 'Are you sure you want to delete this product',
+            function (btn) {
+                if (btn == 'yes') {
+                    var store = Ext.getStore('Productsstore'),
+                        index = store.findBy(function (record, id) {
+                            if (productId == id) {
+                                return true;
+                            }
+                        });
+
+                    store.removeAt(index);
+                }
+            });
+
     },
 
     validateProduct: function (values) {
