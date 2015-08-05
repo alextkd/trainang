@@ -35,6 +35,13 @@ Ext.define('Ecommerce.view.cart.CartNavigation', {
                     itemId: 'checkoutButton',
                     text  : 'Checkout',
                     align : 'right'
+                },
+				{
+                    xtype : 'button',
+                    itemId: 'payButton',
+                    text  : 'Pay',
+                    align : 'right',
+					hidden: true
                 }
             ]
         },

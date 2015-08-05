@@ -9,11 +9,15 @@ Ext.define('Ecommerce.controller.Cart', {
             'UsersStored'
         ],
         views  : [
-            'cart.CartNavigation'
+            'cart.CartNavigation',
+			'cart.Checkout'
         ],
         refs   : {
             cartNavigation: 'cart-navigation-view',
-            cartButton    : '#cartButton'
+			clearButton   : '#clearButton',
+			checkoutButton: '#checkoutButton',
+            cartButton    : '#cartButton',
+			payButton     : '#payButton'
         },
         control: {
             'cart-navigation-view #exitButton'    : {
@@ -24,7 +28,11 @@ Ext.define('Ecommerce.controller.Cart', {
             },
             'cart-navigation-view #checkoutButton': {
                 tap: 'onCheckoutButton'
-            }
+            },
+			'checkout'                            : {
+				activate  : 'onViewActivate',
+				deactivate: 'onViewDeactivate'
+			}
         }
     },
 
@@ -55,6 +63,33 @@ Ext.define('Ecommerce.controller.Cart', {
     },
 
     onCheckoutButton: function () {
-        console.log('Checkout');
-    }
+        var me = this,
+			cartNavigation = me.getCartNavigation();
+			
+		cartNavigation.push({
+			xtype: 'checkout'
+		});
+    },
+	
+	onViewActivate: function() {
+		var me             = this,
+			checkoutButton = me.getCheckoutButton(),
+			clearButton    = me.getClearButton(),
+			payButton      = me.getPayButton();
+		
+	    checkoutButton.hide();
+		clearButton.hide();
+		payButton.show();
+	},
+	
+	onViewDeactivate: function() {
+	    var me             = this,
+			checkoutButton = me.getCheckoutButton(),
+			clearButton    = me.getClearButton(),
+			payButton      = me.getPayButton();
+		
+	    checkoutButton.show();
+		clearButton.show();
+		payButton.hide();
+	}
 });
