@@ -24,8 +24,8 @@ Ext.define('Ecommerce.view.Main', {
                 {
                     xtype  : 'button',
                     itemId : 'cartButton',
-                    iconCls: 'cart'
-                    //hidden : true
+                    iconCls: 'cart',
+                    hidden : true
                 },
                 {
                     xtype : 'label',

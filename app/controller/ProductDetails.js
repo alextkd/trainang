@@ -13,6 +13,7 @@ Ext.define('Ecommerce.controller.ProductDetails', {
             editButton        : '#editButton',
             addButton         : '#addButton',
             addToCartButton   : '#addToCartButton',
+            cartButton        : '#cartButton',
             editProductView   : 'edit-product-view',
             main              : 'main-view'
         },
@@ -111,12 +112,17 @@ Ext.define('Ecommerce.controller.ProductDetails', {
     },
 
     onAddToCartButtonTap: function () {
-        var store              = Ext.getStore('Cart'),
-            productDetailsView = this.getProductDetailsView(),
-            product             = productDetailsView.getRecord().getData();
+        var me                 = this,
+            store              = Ext.getStore('Cart'),
+            productDetailsView = me.getProductDetailsView(),
+            product            = productDetailsView.getRecord().getData(),
+            cartButton         = me.getCartButton();
 
-        debugger;
+        if (cartButton.isHidden() == true) {
+            cartButton.show();
+        }
         delete product.product_id;
         store.add(product);
+        Ext.Msg.alert('Succes', 'Product added to cart.');
     }
 });

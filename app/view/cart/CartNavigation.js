@@ -1,7 +1,7 @@
 Ext.define('Ecommerce.view.cart.CartNavigation', {
     extend  : 'Ext.NavigationView',
     requires: [
-        'Ecommerce.view.cart.CartView'
+        'Ecommerce.view.cart.Cart'
     ],
     xtype   : 'cart-navigation-view',
     config  : {
@@ -9,7 +9,7 @@ Ext.define('Ecommerce.view.cart.CartNavigation', {
         height       : '50%',
         items        : [
             {
-                xtype: 'cart-view'
+                xtype: 'cart'
             }
         ],
         navigationBar: {
@@ -20,7 +20,8 @@ Ext.define('Ecommerce.view.cart.CartNavigation', {
                 {
                     xtype : 'button',
                     itemId: 'exitButton',
-                    text  : 'Cancel',
+                    iconCls: 'delete',
+                    cls   : 'testare',
                     align : 'left'
                 },
                 {

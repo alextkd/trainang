@@ -18,32 +18,29 @@ Ext.define('Ecommerce.controller.Main', {
             'cart.CartNavigation'
         ],
         refs   : {
-            main          : 'main-view',
-            navigationBar : '#navigationBar',
-            login         : 'login-view',
-            welcomeLabel  : '#welcomeLabel',
-            register      : 'register-view',
-            cartNavigation: 'cart-navigation-view'
+            main         : 'main-view',
+            navigationBar: '#navigationBar',
+            login        : 'login-view',
+            welcomeLabel : '#welcomeLabel',
+            cartButton   : '#cartButton',
+            register     : 'register-view'
         },
         control: {
-            'login'                           : {
+            'login'                  : {
                 'login'   : 'onLogin',
                 'register': 'onRegister'
             },
-            'register'                        : {
+            'register'               : {
                 'createuser': 'onCreateUser'
             },
-            'main-view #addButton'            : {
+            'main-view #addButton'   : {
                 tap: 'onAddTap'
             },
-            'main-view #logoutButton'         : {
+            'main-view #logoutButton': {
                 tap: 'onLogoutTap'
             },
-            'main-view #cartButton'           : {
+            'main-view #cartButton'  : {
                 tap: 'onCartButtonTap'
-            },
-            'cart-navigation-view #exitButton': {
-                tap: 'onExitButton'
             }
         }
     },
@@ -65,13 +62,21 @@ Ext.define('Ecommerce.controller.Main', {
     onUserLoad: function (users) {
         var nav,
             container,
-            label;
+            label,
+            cartStore;
 
         Ext.Viewport.setMasked(false);
         if (users && users.length > 0) {
             Ext.Viewport.add({
                 xtype: 'main-view'
             });
+
+            cartStore = Ext.getStore('Cart');
+
+            if (cartStore.getCount() > 0) {
+                this.getCartButton().show();
+            }
+
             Ecommerce.app.currenUser = users[0].data;
             label                    = this.getWelcomeLabel();
             label.updateData(Ecommerce.app.currenUser);
@@ -180,11 +185,35 @@ Ext.define('Ecommerce.controller.Main', {
         Ext.Viewport.add({
             xtype: 'cart-navigation-view'
         })
-    },
-
-    onExitButton: function () {
-        var cartNavigationView = this.getCartNavigation();
-
-        cartNavigationView  && cartNavigationView .destroy();
     }
+
+    //onExitButton: function () {
+    //    var cartNavigationView = this.getCartNavigation();
+    //
+    //    cartNavigationView && cartNavigationView.destroy();
+    //},
+    //
+    //onClearButton: function () {
+    //    var me = this,
+    //        cartStore,
+    //        cartNavigationView,
+    //        cartButton;
+    //
+    //    Ext.Msg.confirm('Delete', 'Are you sure you want to clear the store',
+    //        function (btn) {
+    //            if (btn == 'yes') {
+    //                cartButton         = me.getCartButton();
+    //                cartStore          = Ext.getStore('Cart');
+    //                cartNavigationView = me.getCartNavigation();
+    //
+    //                cartStore.clearData();
+    //                cartNavigationView && cartNavigationView.destroy();
+    //                cartButton.hide();
+    //            }
+    //        });
+    //},
+    //
+    //onCheckoutButton: function () {
+    //    console.log('Checkout');
+    //}
 });

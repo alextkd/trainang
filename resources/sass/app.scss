@@ -4,11 +4,8 @@
 @import 'sencha-touch/default';
 @import 'sencha-touch/default/all';
 // Custom code goes here..
-
 // Examples of using the icon mixin:
 // @include icon('user');
-
-
 @import 'list';
 
 @include icon-font('wtccustomicons', inline-font-files(
@@ -16,5 +13,12 @@
                 'icomoon/icomoon.ttf', truetype,
                 'icomoon/icomoon.svg', svg
 ));
+//
+//@include icon-font('Pictos', inline-font-files(
+//                'pictos/pictos-web.woff', woff,
+//                'pictos/pictos-web.ttf', truetype,
+//                'pictos/pictos-web.svg', svg
+//));
 
-@include icon("cart" , "\e600", "wtccustomicons");
+@include icon("cart", "\e600", "wtccustomicons");
+@include icon('clear_icon');

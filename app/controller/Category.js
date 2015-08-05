@@ -113,16 +113,20 @@ Ext.define('Ecommerce.controller.Category', {
     },
 
     deleteCategory: function (categoryId) {
+        var store,
+            index,
+            products;
+
         Ext.Msg.confirm('Delete', 'Are you sure you want to delete this category',
             function (btn) {
                 if (btn == 'yes') {
-                    var store    = Ext.getStore('Categories'),
-                        index    = store.findBy(function (record, id) {
-                            if (categoryId == id) {
-                                return true;
-                            }
-                        }),
-                        products = store.getAt(index).products();
+                    store    = Ext.getStore('Categories');
+                    index    = store.findBy(function (record, id) {
+                        if (categoryId == id) {
+                            return true;
+                        }
+                    });
+                    products = store.getAt(index).products();
 
                     products.clearData();
                     store.removeAt(index);

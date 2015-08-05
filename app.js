@@ -8,7 +8,8 @@ Ext.application({
         'Login',
         'Category',
         'Product',
-        'ProductDetails'
+        'ProductDetails',
+        'Cart'
     ],
     stores     : [
         'Categories',
@@ -18,7 +19,7 @@ Ext.application({
         'Cart'
     ],
 
-    launch     : function () {
+    launch: function () {
         Ext.fly('appLoadingIndicator').destroy();
     },
 
