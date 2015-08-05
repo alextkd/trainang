@@ -14,27 +14,36 @@ Ext.define('Ecommerce.controller.Main', {
         views  : [
             'Main',
             'Login',
-            'Register'
+            'Register',
+            'cart.CartNavigation'
         ],
         refs   : {
-            main         : 'main-view',
-            navigationBar: '#navigationBar',
-            login        : 'login-view',
-            register     : 'register-view'
+            main          : 'main-view',
+            navigationBar : '#navigationBar',
+            login         : 'login-view',
+            welcomeLabel  : '#welcomeLabel',
+            register      : 'register-view',
+            cartNavigation: 'cart-navigation-view'
         },
         control: {
-            'login'                  : {
+            'login'                           : {
                 'login'   : 'onLogin',
                 'register': 'onRegister'
             },
-            'register'               : {
+            'register'                        : {
                 'createuser': 'onCreateUser'
             },
-            'main-view #addButton'   : {
+            'main-view #addButton'            : {
                 tap: 'onAddTap'
             },
-            'main-view #logoutButton': {
+            'main-view #logoutButton'         : {
                 tap: 'onLogoutTap'
+            },
+            'main-view #cartButton'           : {
+                tap: 'onCartButtonTap'
+            },
+            'cart-navigation-view #exitButton': {
+                tap: 'onExitButton'
             }
         }
     },
@@ -64,9 +73,7 @@ Ext.define('Ecommerce.controller.Main', {
                 xtype: 'main-view'
             });
             Ecommerce.app.currenUser = users[0].data;
-            nav                      = this.getMain().getNavigationBar();
-            container                = nav.getInnerAt(0);
-            label                    = container.getComponent('welcome-label');
+            label                    = this.getWelcomeLabel();
             label.updateData(Ecommerce.app.currenUser);
         }
         else {
@@ -83,21 +90,12 @@ Ext.define('Ecommerce.controller.Main', {
             usersStore       = Ext.getStore('Users'),
             usersStoredStore = Ext.getStore('UsersStored'),
             user,
-            nav,
-            container,
             label;
 
-        usersStore.each(function (item, me) {
-            var itemData = item.getData();
+        user = usersStore.findRecord('username', values['username']);
 
-            if (values['username'] == itemData['username'] &&
-                values['password'] == itemData['password']) {
-                user            = itemData;
-                return false;
-            }
-        });
-
-        if (user) {
+        if (user && user.get('password') === values['password']) {
+            user                     = user.getData();
             loginform && loginform.destroy();
             Ext.Viewport.add({
                 xtype: 'main-view'
@@ -106,10 +104,9 @@ Ext.define('Ecommerce.controller.Main', {
             delete user.id;
 
             usersStoredStore.add(user);
-            Ecommerce.app.currenUser = usersStoredStore.getAt(0).data;
-            nav                      = this.getMain().getNavigationBar();
-            container                = nav.getInnerAt(0);
-            label                    = container.getComponent('welcome-label');
+            Ecommerce.app.currenUser = user;
+
+            label = this.getWelcomeLabel();
             label.updateData(Ecommerce.app.currenUser);
             loginform.destroy();
         } else {
@@ -177,5 +174,17 @@ Ext.define('Ecommerce.controller.Main', {
 
         loginView.showSignInFailedMessage(message);
         loginView.setMasked(false);
+    },
+
+    onCartButtonTap: function () {
+        Ext.Viewport.add({
+            xtype: 'cart-navigation-view'
+        })
+    },
+
+    onExitButton: function () {
+        var cartNavigationView = this.getCartNavigation();
+
+        cartNavigationView  && cartNavigationView .destroy();
     }
 });

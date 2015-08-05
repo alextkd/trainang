@@ -1,20 +1,20 @@
 /**
  * Created by andreilakatos on 17/07/15.
  */
-Ext.define('Ecommerce.store.Users', {
+Ext.define('Ecommerce.store.Cart', {
     extend  : 'Ext.data.Store',
     requires: [
-        'Ext.data.proxy.LocalStorage'
+        'Ecommerce.model.Product'
     ],
 
     config: {
-        storeId : 'Users',
+        storeId : 'Cart',
         autoLoad: true,
         autoSync: true,
-        model   : 'Ecommerce.model.User',
+        model   : 'Ecommerce.model.Product',
         proxy   : {
             type: 'localstorage',
-            id  : 'users'
+            id  : 'products-cart'
         }
     }
 });

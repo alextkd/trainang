@@ -22,8 +22,14 @@ Ext.define('Ecommerce.view.Main', {
                     align : 'left'
                 },
                 {
+                    xtype  : 'button',
+                    itemId : 'cartButton',
+                    iconCls: 'cart'
+                    //hidden : true
+                },
+                {
                     xtype : 'label',
-                    itemId: 'welcome-label',
+                    itemId: 'welcomeLabel',
                     tpl   : '{name}',
                     data  : {}
                 },
@@ -37,6 +43,13 @@ Ext.define('Ecommerce.view.Main', {
                     xtype : 'button',
                     itemId: 'editButton',
                     text  : 'Edit',
+                    align : 'right',
+                    hidden: true
+                },
+                {
+                    xtype : 'button',
+                    itemId: 'addToCartButton',
+                    text  : 'Add',
                     align : 'right',
                     hidden: true
                 }

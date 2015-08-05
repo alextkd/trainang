@@ -12,6 +12,7 @@ Ext.define('Ecommerce.controller.ProductDetails', {
             productView       : 'productview',
             editButton        : '#editButton',
             addButton         : '#addButton',
+            addToCartButton   : '#addToCartButton',
             editProductView   : 'edit-product-view',
             main              : 'main-view'
         },
@@ -22,6 +23,9 @@ Ext.define('Ecommerce.controller.ProductDetails', {
             },
             'main-view #editButton'          : {
                 tap: 'onEditButtonTap'
+            },
+            'main-view #addToCartButton'     : {
+                tap: 'onAddToCartButtonTap'
             },
             'edit-product-view #cancelButton': {
                 tap: 'hideEditProductView'
@@ -37,6 +41,7 @@ Ext.define('Ecommerce.controller.ProductDetails', {
 
         navigationBar.setMasked(false);
         this.getEditButton().show();
+        this.getAddToCartButton().show();
     },
 
     onDeActivateView: function () {
@@ -47,6 +52,7 @@ Ext.define('Ecommerce.controller.ProductDetails', {
             transparent: true
         });
         this.getEditButton().hide();
+        this.getAddToCartButton().hide();
         this.getAddButton().show();
     },
 
@@ -102,5 +108,15 @@ Ext.define('Ecommerce.controller.ProductDetails', {
         record.set('price', product['price']);
         record.set('image', product['image']);
         this.hideEditProductView();
+    },
+
+    onAddToCartButtonTap: function () {
+        var store              = Ext.getStore('Cart'),
+            productDetailsView = this.getProductDetailsView(),
+            product             = productDetailsView.getRecord().getData();
+
+        debugger;
+        delete product.product_id;
+        store.add(product);
     }
 });

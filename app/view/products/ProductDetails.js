@@ -6,7 +6,7 @@ Ext.define('Ecommerce.view.products.ProductDetails', {
     xtype : "productdetailsview",
     config: {
         tpl:''.concat('<div>',
-        '<img src="{image}" width="100%" alt="{name}" />',
+        '<img src="{image}" height="auto" width="100%" alt="{name}" />',
          '</div>')
     }
 });

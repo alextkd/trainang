@@ -4,7 +4,6 @@
 Ext.define('Ecommerce.store.Categories', {
     extend  : 'Ext.data.Store',
     requires: [
-        'Ext.data.proxy.Memory',
         'Ecommerce.model.Category'
     ],
 
@@ -14,7 +13,8 @@ Ext.define('Ecommerce.store.Categories', {
         autoSync: true,
         model   : 'Ecommerce.model.Category',
         proxy   : {
-            type: 'localstorage'
+            type: 'localstorage',
+            id  : 'categories'
         }
     }
 });

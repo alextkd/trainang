@@ -1,8 +1,8 @@
 Ext.define('Ecommerce.component.CustomList', {
     extend: 'Ext.dataview.List',
+    xtype : 'customlist',
     config: {
         selectedCls: false,
-        scrollable : false,
         height     : '100%'
     },
 

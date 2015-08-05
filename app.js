@@ -1,6 +1,6 @@
 Ext.application({
-    name   : 'Ecommerce',
-    statics: {
+    name       : 'Ecommerce',
+    statics    : {
         localStorageAppId: '-Ecommerce'
     },
     controllers: [
@@ -14,7 +14,8 @@ Ext.application({
         'Categories',
         'Products',
         'Users',
-        'UsersStored'
+        'UsersStored',
+        'Cart'
     ],
     launch     : function () {
         Ext.fly('appLoadingIndicator').destroy();
