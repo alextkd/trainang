@@ -17,6 +17,7 @@ Ext.application({
         'UsersStored',
         'Cart'
     ],
+
     launch     : function () {
         Ext.fly('appLoadingIndicator').destroy();
     },
