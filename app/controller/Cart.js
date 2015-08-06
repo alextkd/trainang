@@ -108,7 +108,10 @@ Ext.define('Ecommerce.controller.Cart', {
             cartButton     = me.getCartButton();
 
         cartStore.clearData();
-        cartNavigation && cartNavigation.destroy();
+        cartNavigation.hide();
+        Ext.defer(function () {
+            cartNavigation && cartNavigation.destroy();
+        }, 600);
         cartButton.hide();
         Ext.Msg.alert('Succes', 'Payment complete.');
     },
