@@ -131,10 +131,7 @@ Ext.define('Ecommerce.controller.Main', {
     },
 
     onRegister: function () {
-        var me    = this,
-            login = me.getLogin();
-
-        login && login.destroy();
+        var me    = this;
 
         Ext.Viewport.add({
             xtype: 'register-view'
@@ -156,7 +153,6 @@ Ext.define('Ecommerce.controller.Main', {
         Ext.defer(function () {
             registerView && registerView.destroy();
         }, 600);
-        me.showLoginView();
         Ext.Msg.alert('Succes', ''.concat('User ', user['name'], ' created'));
     },
 
@@ -168,7 +164,6 @@ Ext.define('Ecommerce.controller.Main', {
         Ext.defer(function () {
             registerView && registerView.destroy();
         }, 600);
-        me.showLoginView();
     },
 
     validateUser  : function (values) {
