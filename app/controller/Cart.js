@@ -35,6 +35,9 @@ Ext.define('Ecommerce.controller.Cart', {
             'checkout'                            : {
                 activate  : 'onViewActivate',
                 deactivate: 'onViewDeactivate'
+            },
+            'cart'                                : {
+                'deleteitem': 'deleteProduct'
             }
         }
     },
@@ -42,7 +45,7 @@ Ext.define('Ecommerce.controller.Cart', {
     onExitButton: function () {
         var cartNavigationView = this.getCartNavigation();
         cartNavigationView.hide();
-        Ext.defer(function() {
+        Ext.defer(function () {
             cartNavigationView && cartNavigationView.destroy();
         }, 600);
     },
@@ -108,5 +111,27 @@ Ext.define('Ecommerce.controller.Cart', {
         cartNavigation && cartNavigation.destroy();
         cartButton.hide();
         Ext.Msg.alert('Succes', 'Payment complete.');
+    },
+
+    deleteProduct: function (productId) {
+        var me = this,
+            store,
+            index;
+
+        Ext.Msg.confirm('Delete', 'Are you sure you want to delete this category',
+            function (btn) {
+                if (btn == 'yes') {
+                    store = Ext.getStore('Cart');
+                    index = store.findBy(function (record, id) {
+                        if (productId == id) {
+                            return true;
+                        }
+                    });
+                    store.removeAt(index);
+                    if (store.getCount() == 0) {
+                        me.getCartButton().hide();
+                    }
+                }
+            });
     }
 });

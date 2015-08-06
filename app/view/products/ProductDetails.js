@@ -15,7 +15,7 @@ Ext.define('Ecommerce.view.products.ProductDetails', {
                 '</div>',
                 '<div class="infos">',
                     '<div class="description">{description}</div>',
-                    '<div class="price">{price}</div>',
+                    '<div class="price">{price}$</div>',
                 '</div>',
             '</div>'
         )
