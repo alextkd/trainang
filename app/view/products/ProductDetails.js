@@ -10,8 +10,8 @@ Ext.define('Ecommerce.view.products.ProductDetails', {
         data      : {},
         tpl       : ''.concat(
             '<div class="product-container">',
-                '<div class="image-container">',
-                    '<img class="image" src="{image}" alt="{name}"/>',
+                '<div class="image">',
+                    '<img width="100%" src="{image}" alt="{name}"/>',
                 '</div>',
                 '<div class="infos">',
                     '<div class="description">{description}</div>',

@@ -8,12 +8,8 @@ Ext.define('Ecommerce.view.Login', {
         'Ext.Toolbar'
     ],
     config  : {
-        title        : 'Login',
-        showAnimation: {
-            type     : 'slide',
-            direction: 'up'
-        },
-        items        : [
+        title: 'Login',
+        items: [
             {
                 xtype: 'toolbar',
                 title: 'Login Page'
@@ -49,6 +45,7 @@ Ext.define('Ecommerce.view.Login', {
             },
             {
                 xtype       : 'button',
+                cls         : 'login-button',
                 itemId      : 'logInButton',
                 ui          : 'action',
                 text        : 'Go',
@@ -59,9 +56,9 @@ Ext.define('Ecommerce.view.Login', {
             },
             {
                 xtype       : 'button',
+                cls         : 'register-button',
                 itemId      : 'registerButton',
                 ui          : 'action',
-                padding     : '10px',
                 text        : 'Register',
                 bubbleEvents: ['register'],
                 handler     : function () {
@@ -69,7 +66,6 @@ Ext.define('Ecommerce.view.Login', {
                 }
             }
 
-        ],
-        hidden       : true
+        ]
     }
 });

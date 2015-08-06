@@ -66,14 +66,12 @@ Ext.define('Ecommerce.controller.Main', {
         Ext.Viewport.add({
             xtype: 'login-view'
         });
-        this.getLogin().show();
     },
 
     showMainView: function () {
         Ext.Viewport.add({
             xtype: 'main-view'
         });
-        this.getMain().show();
     },
 
     onUserLoad: function (users) {
@@ -163,7 +161,7 @@ Ext.define('Ecommerce.controller.Main', {
     },
 
     onRegisterBack: function () {
-        var me           = this,
+        var me = this,
             registerView = me.getRegister();
 
         registerView.hide();
@@ -173,7 +171,7 @@ Ext.define('Ecommerce.controller.Main', {
         me.showLoginView();
     },
 
-    validateUser: function (values) {
+    validateUser  : function (values) {
         var model   = Ext.create("Ecommerce.model.User", values),
             errors  = model.validate(),
             isValid = errors.isValid(),
@@ -198,7 +196,7 @@ Ext.define('Ecommerce.controller.Main', {
     },
 
     onLogoutTap: function () {
-        var me          = this,
+        var me = this,
             categories  = Ext.getStore('Categories'),
             usersStored = Ext.getStore('UsersStored'),
             currentView = me.getMain().getActiveItem(),
