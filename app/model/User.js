@@ -4,10 +4,10 @@
 Ext.define('Ecommerce.model.User', {
     extend: 'Ext.data.Model',
     config: {
-        identifier: {
+        identifier : {
             type: 'uuid'
         },
-        fields    : [
+        fields     : [
             {
                 name: 'id',
                 type: 'string'
@@ -26,9 +26,31 @@ Ext.define('Ecommerce.model.User', {
             },
             {
                 name        : 'age',
-                type        : 'int',
+                type        : 'number',
                 defaultValue: 18
             }
-        ]
+        ],
+        validations: [
+            {
+                field  : 'name',
+                type   : 'presence',
+                message: 'Name is required.'
+            },
+            {
+                field  : 'username',
+                type   : 'presence',
+                message: 'Username is required.'
+            },
+            {
+                field  : 'password',
+                type   : 'presence',
+                message: 'Password is required.'
+            },
+            {
+                field  : 'age',
+                type   : 'presence',
+                message: 'Age is required.'
+            }
+        ],
     }
 });

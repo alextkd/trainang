@@ -6,7 +6,10 @@
 // Custom code goes here..
 // Examples of using the icon mixin:
 // @include icon('user');
+
 @import 'list';
+@import 'product-details';
+@import 'login';
 
 @include icon-font('wtccustomicons', inline-font-files(
                 'icomoon/icomoon.woff', woff,
@@ -21,4 +24,3 @@
 //));
 
 @include icon("cart", "\e600", "wtccustomicons");
-@include icon('clear_icon');

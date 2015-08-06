@@ -5,6 +5,14 @@ Ext.define('Ecommerce.view.Main', {
     ],
     xtype   : 'main-view',
     config  : {
+        showAnimation: {
+            type     : 'slide',
+            direction: 'up'
+        },
+        hideAnimation: {
+            type     : 'slideOut',
+            direction: 'down'
+        },
         items        : [
             {
                 xtype: 'category-view'
@@ -13,7 +21,6 @@ Ext.define('Ecommerce.view.Main', {
         navigationBar: {
             itemId: 'navigationBar',
             docked: 'top',
-            height: 40,
             items : [
                 {
                     xtype : 'button',
@@ -54,6 +61,7 @@ Ext.define('Ecommerce.view.Main', {
                     hidden: true
                 }
             ]
-        }
+        },
+        hidden       : true
     }
 });

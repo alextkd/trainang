@@ -2,8 +2,7 @@ Ext.define('Ecommerce.component.CustomList', {
     extend: 'Ext.dataview.List',
     xtype : 'customlist',
     config: {
-        selectedCls: false,
-        height     : '100%'
+        selectedCls: false
     },
 
     initialize: function () {
@@ -30,6 +29,7 @@ Ext.define('Ecommerce.component.CustomList', {
 
         me.draggable = true;
         me.startX    = ev.pageX;
+        me.startY    = ev.pageY;
         if (me.oldTarget) {
             me.hideAction(me.oldTarget, function () {
                 delete me.oldTarget;
@@ -84,15 +84,27 @@ Ext.define('Ecommerce.component.CustomList', {
                 me.oldTarget   = target;
             });
         }
+        Ext.defer(function() {
+            me.setScrollable(true);
+        }, 100, me);
     },
 
     onTouchMove: function (ev) {
-        var newX;
+        var me = this,
+            newX,
+            newY;
 
-        if (this.draggable == true) {
+        if (me.draggable == true) {
+
             newX = this.startX - ev.pageX;
+            newY = this.startY - ev.pageY;
 
             if (newX > 0 && newX < 100) {
+                if (newY < newX) {
+                    me.setScrollable(false);
+                } else {
+                    me.setScrollable(true);
+                }
                 ev.target.style.right = ''.concat(newX, 'px');
             }
         }

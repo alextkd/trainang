@@ -5,7 +5,6 @@ Ext.application({
     },
     controllers: [
         'Main',
-        'Login',
         'Category',
         'Product',
         'ProductDetails',

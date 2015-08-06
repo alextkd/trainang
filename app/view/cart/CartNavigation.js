@@ -5,24 +5,31 @@ Ext.define('Ecommerce.view.cart.CartNavigation', {
     ],
     xtype   : 'cart-navigation-view',
     config  : {
-        width        : '80%',
-        height       : '50%',
-        items        : [
+        width         : '100%',
+        height        : '100%',
+        items         : [
             {
                 xtype: 'cart'
             }
         ],
-        navigationBar: {
+        showAnimation: {
+            type     : 'slide',
+            direction: 'up'
+        },
+        hideAnimation: {
+            type     : 'slideOut',
+            direction: 'down'
+        },
+        navigationBar : {
             itemId: 'navigationBar',
             docked: 'top',
-            height: 40,
             items : [
                 {
-                    xtype : 'button',
-                    itemId: 'exitButton',
+                    xtype  : 'button',
+                    itemId : 'exitButton',
                     iconCls: 'delete',
-                    cls   : 'testare',
-                    align : 'left'
+                    cls    : 'testare',
+                    align  : 'left'
                 },
                 {
                     xtype : 'button',
@@ -36,16 +43,17 @@ Ext.define('Ecommerce.view.cart.CartNavigation', {
                     text  : 'Checkout',
                     align : 'right'
                 },
-				{
+                {
                     xtype : 'button',
                     itemId: 'payButton',
                     text  : 'Pay',
                     align : 'right',
-					hidden: true
+                    hidden: true
                 }
             ]
         },
-        modal        : true,
-        centered     : true
+        modal         : true,
+        centered      : true,
+        hidden        : true
     }
 });

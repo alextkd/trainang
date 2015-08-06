@@ -136,7 +136,6 @@ Ext.define('Ecommerce.controller.Category', {
     },
 
     validateCategory: function () {
-
         var form    = this.getAddCategoryView(),
             model   = Ext.create("Ecommerce.model.Category", form.getValues()),
             errors  = model.validate(),

@@ -10,14 +10,14 @@ Ext.define('Ecommerce.controller.Cart', {
         ],
         views  : [
             'cart.CartNavigation',
-			'cart.Checkout'
+            'cart.Checkout'
         ],
         refs   : {
             cartNavigation: 'cart-navigation-view',
-			clearButton   : '#clearButton',
-			checkoutButton: '#checkoutButton',
+            clearButton   : '#clearButton',
+            checkoutButton: '#checkoutButton',
             cartButton    : '#cartButton',
-			payButton     : '#payButton'
+            payButton     : '#payButton'
         },
         control: {
             'cart-navigation-view #exitButton'    : {
@@ -29,17 +29,22 @@ Ext.define('Ecommerce.controller.Cart', {
             'cart-navigation-view #checkoutButton': {
                 tap: 'onCheckoutButton'
             },
-			'checkout'                            : {
-				activate  : 'onViewActivate',
-				deactivate: 'onViewDeactivate'
-			}
+            'cart-navigation-view #payButton'     : {
+                tap: 'onPayButton'
+            },
+            'checkout'                            : {
+                activate  : 'onViewActivate',
+                deactivate: 'onViewDeactivate'
+            }
         }
     },
 
     onExitButton: function () {
         var cartNavigationView = this.getCartNavigation();
-
-        cartNavigationView && cartNavigationView.destroy();
+        cartNavigationView.hide();
+        Ext.defer(function() {
+            cartNavigationView && cartNavigationView.destroy();
+        }, 600);
     },
 
     onClearButton: function () {
@@ -63,33 +68,45 @@ Ext.define('Ecommerce.controller.Cart', {
     },
 
     onCheckoutButton: function () {
-        var me = this,
-			cartNavigation = me.getCartNavigation();
-			
-		cartNavigation.push({
-			xtype: 'checkout'
-		});
+        var me             = this,
+            cartNavigation = me.getCartNavigation();
+
+        cartNavigation.push({
+            xtype: 'checkout'
+        });
     },
-	
-	onViewActivate: function() {
-		var me             = this,
-			checkoutButton = me.getCheckoutButton(),
-			clearButton    = me.getClearButton(),
-			payButton      = me.getPayButton();
-		
-	    checkoutButton.hide();
-		clearButton.hide();
-		payButton.show();
-	},
-	
-	onViewDeactivate: function() {
-	    var me             = this,
-			checkoutButton = me.getCheckoutButton(),
-			clearButton    = me.getClearButton(),
-			payButton      = me.getPayButton();
-		
-	    checkoutButton.show();
-		clearButton.show();
-		payButton.hide();
-	}
+
+    onViewActivate: function () {
+        var me             = this,
+            checkoutButton = me.getCheckoutButton(),
+            clearButton    = me.getClearButton(),
+            payButton      = me.getPayButton();
+
+        checkoutButton.hide();
+        clearButton.hide();
+        payButton.show();
+    },
+
+    onViewDeactivate: function () {
+        var me             = this,
+            checkoutButton = me.getCheckoutButton(),
+            clearButton    = me.getClearButton(),
+            payButton      = me.getPayButton();
+
+        checkoutButton.show();
+        clearButton.show();
+        payButton.hide();
+    },
+
+    onPayButton: function () {
+        var me             = this,
+            cartStore      = Ext.getStore('Cart'),
+            cartNavigation = me.getCartNavigation(),
+            cartButton     = me.getCartButton();
+
+        cartStore.clearData();
+        cartNavigation && cartNavigation.destroy();
+        cartButton.hide();
+        Ext.Msg.alert('Succes', 'Payment complete.');
+    }
 });

@@ -5,24 +5,27 @@ Ext.define('Ecommerce.view.Login', {
         'Ext.form.FieldSet',
         'Ext.form.Password',
         'Ext.Label',
-        'Ext.Toolbar',
-        'Ext.util.DelayedTask'
+        'Ext.Toolbar'
     ],
     config  : {
-        title: 'Login',
-        items: [
+        title        : 'Login',
+        showAnimation: {
+            type     : 'slide',
+            direction: 'up'
+        },
+        items        : [
             {
                 xtype: 'toolbar',
                 title: 'Login Page'
             },
             {
                 xtype        : 'label',
+                cls          : 'login-label',
                 html         : 'Login failed. Please enter the correct credentials.',
                 itemId       : 'signInFailedLabel',
                 hidden       : true,
                 hideAnimation: 'fadeOut',
-                showAnimation: 'fadeIn',
-                style        : 'color:#990000;margin:5px 0px;'
+                showAnimation: 'fadeIn'
             },
             {
                 xtype : 'fieldset',
@@ -48,7 +51,6 @@ Ext.define('Ecommerce.view.Login', {
                 xtype       : 'button',
                 itemId      : 'logInButton',
                 ui          : 'action',
-                padding     : '10px',
                 text        : 'Go',
                 bubbleEvents: ['login'],
                 handler     : function () {
@@ -61,13 +63,13 @@ Ext.define('Ecommerce.view.Login', {
                 ui          : 'action',
                 padding     : '10px',
                 text        : 'Register',
-                margin      : '10 0 0 0',
                 bubbleEvents: ['register'],
                 handler     : function () {
                     this.fireEvent('register');
                 }
             }
 
-        ]
+        ],
+        hidden       : true
     }
 });

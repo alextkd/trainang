@@ -5,15 +5,31 @@ Ext.define('Ecommerce.view.Register', {
         'Ext.form.FieldSet',
         'Ext.form.Password',
         'Ext.Label',
-        'Ext.Toolbar',
-        'Ext.util.DelayedTask'
+        'Ext.Toolbar'
     ],
     config  : {
-        title: 'Login',
-        items: [
+        width        : '100%',
+        height       : '100%',
+        showAnimation: {
+            type     : 'slide',
+            direction: 'up'
+        },
+        hideAnimation: {
+            type     : 'slideOut',
+            direction: 'down'
+        },
+        title        : 'Login',
+        items        : [
             {
                 xtype: 'toolbar',
-                title: 'Register Page'
+                title: 'Register Page',
+                items: [
+                    {
+                        xtype : 'button',
+                        text  : 'Back',
+                        itemId: 'backButton'
+                    }
+                ]
             },
             {
                 xtype : 'fieldset',
@@ -61,6 +77,9 @@ Ext.define('Ecommerce.view.Register', {
                 }
             }
 
-        ]
+        ],
+        modal        : true,
+        centered     : true,
+        hidden       : true
     }
 });

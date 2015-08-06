@@ -5,8 +5,19 @@ Ext.define('Ecommerce.view.products.ProductDetails', {
     extend: 'Ext.Component',
     xtype : "productdetailsview",
     config: {
-        tpl:''.concat('<div>',
-        '<img src="{image}" height="auto" width="100%" alt="{name}" />',
-         '</div>')
+        cls       : 'product-details',
+        layout    : 'vbox',
+        data      : {},
+        tpl       : ''.concat(
+            '<div class="product-container">',
+                '<div class="image-container">',
+                    '<img class="image" src="{image}" alt="{name}"/>',
+                '</div>',
+                '<div class="infos">',
+                    '<div class="description">{description}</div>',
+                    '<div class="price">{price}</div>',
+                '</div>',
+            '</div>'
+        )
     }
 });
