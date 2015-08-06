@@ -7,7 +7,7 @@ Ext.define('Ecommerce.view.cart.Checkout', {
     config: {
         itemCls : 'item-swipe',
         itemTpl : ''.concat('<div class="listcontainer">',
-            '<div class="name">{name} <p style="float: right">{price}$</p></div>',
+            '<div class="name">{name} <p style="float: right">Price: {price}$</p></div>',
             '<div class="action" data-action="delete" data-id="{category_id}">Delete</div>',
             '</div>')
     },

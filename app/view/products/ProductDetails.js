@@ -13,9 +13,10 @@ Ext.define('Ecommerce.view.products.ProductDetails', {
                 '<div class="image">',
                     '<img width="100%" src="{image}" alt="{name}"/>',
                 '</div>',
+                '<div class="product-name">Name: {name}</div>',
                 '<div class="infos">',
-                    '<div class="description">{description}</div>',
-                    '<div class="price">{price}$</div>',
+                    '<div class="description">Description: {description}</div>',
+                    '<div class="price">Price: {price}$</div>',
                 '</div>',
             '</div>'
         )
