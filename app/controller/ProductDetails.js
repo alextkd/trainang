@@ -83,6 +83,7 @@ Ext.define('Ecommerce.controller.ProductDetails', {
     onEditButtonTap: function () {
         var productDetailsView = this.getProductDetailsView(),
             record             = productDetailsView.getRecord();
+
         Ext.Viewport.add({
             xtype : "edit-product-view",
             record: record
@@ -108,6 +109,7 @@ Ext.define('Ecommerce.controller.ProductDetails', {
         record.set('description', product['description']);
         record.set('price', product['price']);
         record.set('image', product['image']);
+
         this.hideEditProductView();
     },
 

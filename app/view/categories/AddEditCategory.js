@@ -1,8 +1,9 @@
 /**
  * Created by andreilakatos on 22/07/15.
  */
-Ext.define('Ecommerce.view.products.AddEditProduct', {
+Ext.define('Ecommerce.view.categories.AddEditCategory', {
     extend  : 'Ext.form.FormPanel',
+    xtype   : 'add-edit-category-view',
     requires: [
         'Ecommerce.component.PatternText'
     ],
@@ -19,40 +20,6 @@ Ext.define('Ecommerce.view.products.AddEditProduct', {
                         placeHolder: 'name',
                         itemId     : 'nameTextField',
                         name       : 'name',
-                        required   : true,
-                        allowBlank : false
-                    },
-                    {
-                        xtype: 'spacer'
-                    },
-                    {
-                        xtype      : 'textfield',
-                        placeHolder: 'description',
-                        itemId     : 'descriptionTextField',
-                        name       : 'description',
-                        required   : true,
-                        allowBlank : false
-                    },
-                    {
-                        xtype: 'spacer'
-                    },
-                    {
-                        xtype      : 'patterntextfield',
-                        placeHolder: 'price',
-                        itemId     : 'priceTextField',
-                        name       : 'price',
-                        minValue   : 5,
-                        required   : true,
-                        allowBlank : false
-                    },
-                    {
-                        xtype: 'spacer'
-                    },
-                    {
-                        xtype      : 'textfield',
-                        placeHolder: 'image',
-                        itemId     : 'imageTextField',
-                        name       : 'image',
                         required   : true,
                         allowBlank : false
                     }

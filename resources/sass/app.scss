@@ -10,6 +10,7 @@
 @import 'list';
 @import 'product-details';
 @import 'login';
+@import "checkout";
 
 @include icon-font('wtccustomicons', inline-font-files(
                 'icomoon/icomoon.woff', woff,

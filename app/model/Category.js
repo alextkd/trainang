@@ -13,7 +13,8 @@ Ext.define('Ecommerce.model.Category', {
                 name: 'category_id'
             },
             {
-                name: 'name'
+                name: 'name',
+                type: 'string'
             },
             {
                 name: 'ord',
@@ -33,10 +34,10 @@ Ext.define('Ecommerce.model.Category', {
             }
         ],
         hasMany    : {
-            model: 'Ecommerce.model.Product',
-            name : 'products',
-            autoLoad: true,
-            autoSync: true,
+            model     : 'Ecommerce.model.Product',
+            name      : 'products',
+            autoLoad  : true,
+            autoSync  : true,
             primaryKey: 'category_id'
         }
     }

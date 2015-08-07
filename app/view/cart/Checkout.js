@@ -5,10 +5,19 @@ Ext.define('Ecommerce.view.cart.Checkout', {
     extend: 'Ecommerce.component.CustomList',
     xtype : 'checkout',
     config: {
-        itemCls : 'item-swipe',
-        itemTpl : ''.concat('<div class="listcontainer">',
+        itemCls: 'item-swipe',
+        itemTpl: ''.concat('<div class="listcontainer">',
             '<div class="name">{name} <span class="price"><b>{price}$</b></span></div>',
-            '</div>')
+            '</div>'),
+        items  : [
+            {
+                xtype : 'label',
+                cls   : 'price-label',
+                itemId: 'priceLabel',
+                hidden: true,
+                docked: 'bottom'
+            }
+        ]
     },
 
     initialize: function () {

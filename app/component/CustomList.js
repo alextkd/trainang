@@ -2,7 +2,8 @@ Ext.define('Ecommerce.component.CustomList', {
     extend: 'Ext.dataview.List',
     xtype : 'customlist',
     config: {
-        selectedCls: false
+        selectedCls: false,
+        itemCls: 'item-swipe'
     },
 
     initialize: function () {
@@ -43,7 +44,7 @@ Ext.define('Ecommerce.component.CustomList', {
         var me = this;
 
         target.style.transition = 'right 0.5s';
-        target.style.right      = '100px';
+        target.style.right      = '25%';
 
         setTimeout(function () {
             target.style.transition = '';
@@ -55,7 +56,7 @@ Ext.define('Ecommerce.component.CustomList', {
         var me = this;
 
         target.style.transition = 'right 0.2s';
-        target.style.right      = '0px';
+        target.style.right      = '0';
 
         setTimeout(function () {
             target.style.transition = '';
@@ -92,14 +93,23 @@ Ext.define('Ecommerce.component.CustomList', {
     onTouchMove: function (ev) {
         var me = this,
             newX,
-            newY;
+            newY,
+            itemSwipe,
+            action,
+            actionWidth;
+        itemSwipe = Ext.fly(ev.getTarget()).up('.item-swipe');
+        if (itemSwipe && itemSwipe.down('.action')) {
+            actionWidth = itemSwipe.down('.action') ? itemSwipe.down('.action').getWidth() + 50 : 100;
+        } else {
+            actionWidth = 100;
+        }
 
         if (me.draggable == true) {
 
             newX = this.startX - ev.pageX;
             newY = this.startY - ev.pageY;
 
-            if (newX > 0 && newX < 100) {
+            if (newX > 0 && newX < actionWidth) {
                 if (newY < newX) {
                     me.setScrollable(false);
                 } else {
@@ -110,28 +120,14 @@ Ext.define('Ecommerce.component.CustomList', {
         }
     },
 
-    onActionTap: function (ev) {
+    onActionTap: function (ev, element) {
         var me     = this,
-            target = ev.getTarget(),
+            target = element,
             action = target.dataset ? target.dataset.action : target.getAttribute('data-action'),
             id     = target.dataset ? target.dataset.id : target.getAttribute('data-id');
 
-
-        if (this.actionshown) {
-            me.hideAction(ev.target);
-
-            switch (action) {
-                case 'delete':
-                    me.fireEvent('deleteitem', id);
-                    break;
-                case 'flag':
-                    //add it to favorites
-                    break;
-                default :
-                    break;
-            }
-
-            ev.stopEvent();
-        }
+        me.hideAction(ev.target);
+        me.fireEvent(action, id);
+        ev.stopEvent();
     }
 });

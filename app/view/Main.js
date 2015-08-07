@@ -30,7 +30,15 @@ Ext.define('Ecommerce.view.Main', {
                     xtype : 'label',
                     itemId: 'welcomeLabel',
                     tpl   : '{name}',
-                    data  : {}
+                    data  : {},
+                    hidden: true
+                },
+                {
+                    xtype : 'label',
+                    itemId: 'categoryLabel',
+                    tpl   : '{name}',
+                    data  : {},
+                    hidden: true
                 },
                 {
                     xtype : 'button',

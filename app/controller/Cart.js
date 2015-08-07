@@ -14,10 +14,12 @@ Ext.define('Ecommerce.controller.Cart', {
         ],
         refs   : {
             cartNavigation: 'cart-navigation-view',
+            checkoutView  : 'checkot-view',
             clearButton   : '#clearButton',
             checkoutButton: '#checkoutButton',
             cartButton    : '#cartButton',
-            payButton     : '#payButton'
+            payButton     : '#payButton',
+            priceLabel    : '#priceLabel'
         },
         control: {
             'cart-navigation-view #exitButton'    : {
@@ -79,12 +81,32 @@ Ext.define('Ecommerce.controller.Cart', {
         });
     },
 
+    calculateTotal: function () {
+        var cartStore  = Ext.getStore('Cart'),
+            totalPrice = 0,
+            data;
+
+        cartStore.each(function (item) {
+            data = item.getData();
+
+            totalPrice += data.price;
+        });
+        return totalPrice;
+    },
+
     onViewActivate: function () {
         var me             = this,
             checkoutButton = me.getCheckoutButton(),
             clearButton    = me.getClearButton(),
-            payButton      = me.getPayButton();
+            payButton      = me.getPayButton(),
+            priceLabel     = me.getPriceLabel();
 
+        priceLabel.setHtml(''.concat(
+            '<b>Total price: ',
+            me.calculateTotal(),
+            '$</b>'
+        ));
+        priceLabel.show();
         checkoutButton.hide();
         clearButton.hide();
         payButton.show();
@@ -94,8 +116,10 @@ Ext.define('Ecommerce.controller.Cart', {
         var me             = this,
             checkoutButton = me.getCheckoutButton(),
             clearButton    = me.getClearButton(),
-            payButton      = me.getPayButton();
+            payButton      = me.getPayButton(),
+            priceLabel     = me.getPriceLabel();
 
+        priceLabel.hide();
         checkoutButton.show();
         clearButton.show();
         payButton.hide();

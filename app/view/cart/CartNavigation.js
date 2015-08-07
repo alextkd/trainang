@@ -5,9 +5,9 @@ Ext.define('Ecommerce.view.cart.CartNavigation', {
     ],
     xtype   : 'cart-navigation-view',
     config  : {
-        width         : '100%',
-        height        : '100%',
-        items         : [
+        width        : '100%',
+        height       : '100%',
+        items        : [
             {
                 xtype: 'cart'
             }
@@ -20,7 +20,7 @@ Ext.define('Ecommerce.view.cart.CartNavigation', {
             type     : 'slideOut',
             direction: 'down'
         },
-        navigationBar : {
+        navigationBar: {
             itemId: 'navigationBar',
             docked: 'top',
             items : [
@@ -52,8 +52,8 @@ Ext.define('Ecommerce.view.cart.CartNavigation', {
                 }
             ]
         },
-        modal         : true,
-        centered      : true,
-        hidden        : true
+        modal        : true,
+        centered     : true,
+        hidden       : true
     }
 });

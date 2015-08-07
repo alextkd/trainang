@@ -5,38 +5,49 @@ Ext.define('Ecommerce.controller.Category', {
     extend  : 'Ext.app.Controller',
     requires: [
         'Ecommerce.view.categories.AddCategory',
-        'Ecommerce.model.Product'
+        'Ecommerce.view.categories.EditCategory',
+        'Ecommerce.model.Product',
+        'Ext.MessageBox'
     ],
     config  : {
         refs   : {
-            categoryView   : 'category-view',
-            addCategoryView: 'addcategoryview',
-            logoutButton   : '#logoutButton',
-            main           : 'main-view'
+            categoryView    : 'category-view',
+            addCategoryView : 'add-category-view',
+            editCategoryView: 'edit-category-view',
+            logoutButton    : '#logoutButton',
+            main            : 'main-view',
+            welcomeLabel    : '#welcomeLabel'
         },
         control: {
-            'category-view'                : {
+            'category-view'                   : {
                 addItem     : 'addItem',
                 activate    : 'onViewActivate',
                 deactivate  : 'onViewDeactivate',
                 itemtap     : 'onCategoryTap',
-                'deleteitem': 'deleteCategory'
+                'deleteitem': 'deleteCategory',
+                'edititem'  : 'editCategory'
             },
-            'main-view #addButton'         : {
+            'main-view #addButton'            : {
                 'onAddCategory': 'onAddNewCategory'
             },
-            'addcategoryview #cancelButton': {
+            'add-category-view #cancelButton' : {
                 tap: 'hideAddCategoryView'
             },
-            'addcategoryview #submitButton': {
+            'add-category-view #submitButton' : {
                 tap: 'addCategory'
+            },
+            'edit-category-view #cancelButton': {
+                tap: 'hideEditCategoryView'
+            },
+            'edit-category-view #submitButton': {
+                tap: 'onEditCategory'
             }
         }
     },
 
     addItem: function () {
         Ext.Viewport.add({
-            xtype: 'addcategoryview'
+            xtype: 'add-category-view'
         });
     },
 
@@ -49,10 +60,13 @@ Ext.define('Ecommerce.controller.Category', {
     },
 
     onViewActivate: function () {
-        var logoutButton  = this.getLogoutButton(),
-            categoryView  = this.getCategoryView(),
-            navigationBar = this.getMain().getNavigationBar();
+        var me            = this,
+            logoutButton  = me.getLogoutButton(),
+            categoryView  = me.getCategoryView(),
+            navigationBar = me.getMain().getNavigationBar(),
+            welcomeLabel  = me.getWelcomeLabel();
 
+        welcomeLabel && welcomeLabel.show();
         navigationBar.setMasked(false);
         logoutButton && logoutButton.show();
         categoryView && categoryView.setMasked(false);
@@ -60,10 +74,14 @@ Ext.define('Ecommerce.controller.Category', {
     },
 
     onViewDeactivate: function () {
-        var logoutButton  = this.getLogoutButton(),
-            categoryView  = this.getCategoryView(),
-            navigationBar = this.getMain().getNavigationBar();
+        var me            = this,
+            logoutButton  = me.getLogoutButton(),
+            categoryView  = me.getCategoryView(),
+            navigationBar = me.getMain().getNavigationBar(),
+            welcomeLabel  = me.getWelcomeLabel();
 
+
+        welcomeLabel && welcomeLabel.hide();
         logoutButton && logoutButton.hide();
         navigationBar.setMasked({
             xtype      : 'mask',
@@ -95,13 +113,19 @@ Ext.define('Ecommerce.controller.Category', {
         addCategoryView && addCategoryView.destroy();
     },
 
-    addCategory: function (button, event) {
-        var me              = this.getAddCategoryView(),
-            category        = me.getValues(),
-            categories      = Ext.getStore('Categories'),
-            addCategoryView = this.getAddCategoryView();
+    hideEditCategoryView: function () {
+        var editCategoryView = this.getEditCategoryView();
 
-        if (!this.validateCategory(button, event)) {
+        editCategoryView && editCategoryView.destroy();
+    },
+
+    addCategory: function (button, event) {
+        var me              = this,
+            addCategoryView = me.getAddCategoryView(),
+            category        = addCategoryView.getValues(),
+            categories      = Ext.getStore('Categories');
+
+        if (!this.validateCategory(category)) {
             return;
         }
 
@@ -110,6 +134,22 @@ Ext.define('Ecommerce.controller.Category', {
         category.products   = [];
         categories.add(category);
         addCategoryView.destroy();
+    },
+
+    onEditCategory: function (button, event) {
+        var me               = this,
+            editCategoryView = me.getEditCategoryView(),
+            category         = editCategoryView.getValues(),
+            categoryId       = editCategoryView.config.categoryId,
+            categories       = Ext.getStore('Categories'),
+            record;
+
+        if (!this.validateCategory(category)) {
+            return;
+        }
+        record = categories.findRecord('category_id', categoryId);
+        record.set('name', category['name']);
+        editCategoryView.destroy();
     },
 
     deleteCategory: function (categoryId) {
@@ -135,9 +175,18 @@ Ext.define('Ecommerce.controller.Category', {
 
     },
 
-    validateCategory: function () {
-        var form    = this.getAddCategoryView(),
-            model   = Ext.create("Ecommerce.model.Category", form.getValues()),
+    editCategory: function (categoryId) {
+        var category = Ext.getStore('Categories').findRecord('category_id', categoryId);
+
+        Ext.Viewport.add({
+            xtype     : 'edit-category-view',
+            record    : category,
+            categoryId: categoryId
+        });
+    },
+
+    validateCategory: function (values) {
+        var model   = Ext.create("Ecommerce.model.Category", values),
             errors  = model.validate(),
             isValid = errors.isValid(),
             message = '',

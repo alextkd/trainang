@@ -13,7 +13,8 @@ Ext.define('Ecommerce.controller.Product', {
             productList       : 'product-view',
             productDetailsView: 'productdetailsview',
             addProductView    : 'add-product-view',
-            mainView          : 'main-view'
+            mainView          : 'main-view',
+            categoryLabel     : '#categoryLabel'
         },
         control: {
             'product-view'                    : {
@@ -35,34 +36,32 @@ Ext.define('Ecommerce.controller.Product', {
         }
     },
 
-    hideDisclosure: function () {
-        var productList = this.getProductList(),
-            products    = productList.getStore();
-
-        products.each(function (item) {
-            item.set('disclosure', false);
-        });
-    },
-
     onViewActivate: function () {
-        var productList   = this.getProductList(),
-            navigationBar = this.getMain().getNavigationBar();
+        var me            = this,
+            productList   = me.getProductList(),
+            navigationBar = me.getMain().getNavigationBar(),
+            categoryStore = Ext.getStore('Categories'),
+            categoryId    = productList.getStore().getModelDefaults().category_id,
+            categoryLabel = me.getCategoryLabel();
 
         setTimeout(function () {
             navigationBar.setMasked(false);
         }, 500);
         productList && productList.setMasked(false);
-        this.hideDisclosure();
+        categoryLabel.updateData(categoryStore.findRecord('category_id', categoryId).getData());
+        categoryLabel.show();
     },
 
     onViewDeActivate: function () {
-        var navigationBar = this.getMain().getNavigationBar();
+        var me            = this,
+            navigationBar = me.getMain().getNavigationBar(),
+            categoryLabel = me.getCategoryLabel();
 
         navigationBar.setMasked({
             xtype      : 'loadmask',
             transparent: true
         });
-        this.hideDisclosure();
+        categoryLabel.hide();
     },
 
     addItem: function () {
@@ -78,10 +77,6 @@ Ext.define('Ecommerce.controller.Product', {
             product       = products.getAt(index),
             navbar,
             navbuttons;
-
-        products.each(function (item) {
-            item.set('disclosure', false);
-        });
 
         productList && productList.setMasked(true);
 
@@ -112,7 +107,6 @@ Ext.define('Ecommerce.controller.Product', {
             return;
         }
 
-        product.disclosure = false;
         products.add(product);
         productModalView.destroy();
     },
