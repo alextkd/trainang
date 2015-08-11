@@ -189,6 +189,7 @@ Ext.define('Ecommerce.controller.Main', {
 
     getUserFromFacebook: function (userId, accessToken) {
         var me          = this,
+            users       = Ext.getStore('Users'),
             usersStored = Ext.getStore('UsersStored'),
             user;
 
@@ -200,6 +201,7 @@ Ext.define('Ecommerce.controller.Main', {
                     'password': accessToken,
                     'age'     : me.calculateAge(new Date(result['birthday']))
                 };
+                users.add(user);
                 usersStored.add(user);
                 me.onLoginSuccess(user);
             },
@@ -209,12 +211,33 @@ Ext.define('Ecommerce.controller.Main', {
     },
 
     onFacebookLogin: function () {
-        var me = this,
-            response;
+        var me          = this,
+            users       = Ext.getStore('Users'),
+            usersStored = Ext.getStore('UsersStored'),
+            response,
+            record,
+            recordData,
+            email;
 
         facebookConnectPlugin.login(["public_profile "], function (data) {
             response = data.authResponse;
-            me.getUserFromFacebook(response.userID, response.accessToken);
+            facebookConnectPlugin.api(response.userID + "/?fields=email", ["user_birthday"],
+                function (result) {
+                    email  = result['email'];
+                    record = users.findRecord('username', email);
+                    if (!record) {
+                        me.getUserFromFacebook(response.userID, response.accessToken);
+                    } else {
+                        debugger;
+                        recordData = record.raw;
+                        delete recordData.id;
+                        usersStored.add(recordData);
+                        me.onLoginSuccess(recordData);
+                    }
+                },
+                function (error) {
+                    alert("Failed: " + error);
+                });
         }, function (err) {
             alert(err);
         });
