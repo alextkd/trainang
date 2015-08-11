@@ -64,8 +64,16 @@ Ext.define('Ecommerce.view.Login', {
                 handler     : function () {
                     this.fireEvent('register');
                 }
+            },
+            {
+                xtype       : 'button',
+                pressedCls  : '',
+                cls         : 'facebook-button',
+                bubbleEvents: ['facebookLogin'],
+                handler     : function () {
+                    this.fireEvent('facebookLogin');
+                }
             }
-
         ]
     }
 });

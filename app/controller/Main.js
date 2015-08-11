@@ -28,8 +28,9 @@ Ext.define('Ecommerce.controller.Main', {
         },
         control: {
             'login'                    : {
-                'login'   : 'onLogin',
-                'register': 'onRegister'
+                'login'        : 'onLogin',
+                'register'     : 'onRegister',
+                'facebookLogin': 'onFacebookLogin'
             },
             'register'                 : {
                 'createuser': 'onCreateUser'
@@ -131,7 +132,7 @@ Ext.define('Ecommerce.controller.Main', {
     },
 
     onRegister: function () {
-        var me    = this;
+        var me = this;
 
         Ext.Viewport.add({
             xtype: 'register-view'
@@ -157,7 +158,7 @@ Ext.define('Ecommerce.controller.Main', {
     },
 
     onRegisterBack: function () {
-        var me = this,
+        var me           = this,
             registerView = me.getRegister();
 
         registerView.hide();
@@ -166,7 +167,60 @@ Ext.define('Ecommerce.controller.Main', {
         }, 600);
     },
 
-    validateUser  : function (values) {
+    calculateAge: function (birthday) {
+        var ageDifMs = Date.now() - birthday.getTime(),
+            ageDate  = new Date(ageDifMs);
+
+        return Math.abs(ageDate.getUTCFullYear() - 1970);
+    },
+
+    onLoginSuccess: function (user) {
+        var me        = this,
+            loginform = me.getLogin(),
+            label;
+
+        me.showMainView();
+
+        Ecommerce.app.currenUser = user;
+        label                    = me.getWelcomeLabel();
+        label.updateData(Ecommerce.app.currenUser);
+        loginform.destroy();
+    },
+
+    getUserFromFacebook: function (userId, accessToken) {
+        var me          = this,
+            usersStored = Ext.getStore('UsersStored'),
+            user;
+
+        facebookConnectPlugin.api(userId + "/?fields=name,email,birthday", ["user_birthday"],
+            function (result) {
+                user = {
+                    'name'    : result['name'],
+                    'username': result['email'],
+                    'password': accessToken,
+                    'age'     : me.calculateAge(new Date(result['birthday']))
+                };
+                usersStored.add(user);
+                me.onLoginSuccess(user);
+            },
+            function (error) {
+                alert("Failed: " + error);
+            });
+    },
+
+    onFacebookLogin: function () {
+        var me = this,
+            response;
+
+        facebookConnectPlugin.login(["public_profile "], function (data) {
+            response = data.authResponse;
+            me.getUserFromFacebook(response.userID, response.accessToken);
+        }, function (err) {
+            alert(err);
+        });
+    },
+
+    validateUser: function (values) {
         var model   = Ext.create("Ecommerce.model.User", values),
             errors  = model.validate(),
             isValid = errors.isValid(),
@@ -191,7 +245,7 @@ Ext.define('Ecommerce.controller.Main', {
     },
 
     onLogoutTap: function () {
-        var me = this,
+        var me          = this,
             categories  = Ext.getStore('Categories'),
             usersStored = Ext.getStore('UsersStored'),
             currentView = me.getMain().getActiveItem(),

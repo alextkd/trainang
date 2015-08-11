@@ -10,18 +10,14 @@
 @import 'list';
 @import 'product-details';
 @import 'login';
+
 @import "checkout";
 
+
 @include icon-font('wtccustomicons', inline-font-files(
-                'icomoon/icomoon.woff', woff,
-                'icomoon/icomoon.ttf', truetype,
+		'icomoon/icomoon.woff', woff,
+		 'icomoon/icomoon.ttf', truetype,
                 'icomoon/icomoon.svg', svg
 ));
-//
-//@include icon-font('Pictos', inline-font-files(
-//                'pictos/pictos-web.woff', woff,
-//                'pictos/pictos-web.ttf', truetype,
-//                'pictos/pictos-web.svg', svg
-//));
 
 @include icon("cart", "\e600", "wtccustomicons");

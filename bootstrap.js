@@ -9,6 +9,7 @@
  * metadata-driven class system features
  */
 Ext.Loader.addClassPathMappings({
+  "Ecommerce": "app",
   "Ext": "touch/src",
   "Ext-more": "touch/src/core/Ext-more.js",
   "Ext.Boot": ".sencha/app/Boot.js",
@@ -21,6 +22,7 @@ Ext.Loader.addClassPathMappings({
   "Ext.Element-static": "touch/src/dom/Element.static.js",
   "Ext.Element-style": "touch/src/dom/Element.style.js",
   "Ext.Element-traversal": "touch/src/dom/Element.traversal.js",
+  "Ext.cmd": "../../../bin/Sencha/Cmd/6.0.0.202/plugins/src",
   "Ext.core.DomQuery": "touch/src/dom/Query.js",
   "Ext.device.Purchases.Product": "touch/src/device/purchases/Sencha.js",
   "Ext.device.filesystem.DirectoryEntry": "touch/src/device/filesystem/Sencha.js",
@@ -31,11 +33,40 @@ Ext.Loader.addClassPathMappings({
   "Ext.device.sqlite.Database": "touch/src/device/sqlite/Sencha.js",
   "Ext.device.sqlite.SQLResultSet": "touch/src/device/sqlite/Sencha.js",
   "Ext.device.sqlite.SQLResultSetRowList": "touch/src/device/sqlite/Sencha.js",
-  "Ext.device.sqlite.SQLTransaction": "touch/src/device/sqlite/Sencha.js",
-  "Ecommerce": "app"
+  "Ext.device.sqlite.SQLTransaction": "touch/src/device/sqlite/Sencha.js"
 });
 
 Ext.ClassManager.addNameAlternateMappings({
+  "Ecommerce.component.CustomList": [],
+  "Ecommerce.component.PatternText": [],
+  "Ecommerce.controller.Cart": [],
+  "Ecommerce.controller.Category": [],
+  "Ecommerce.controller.Main": [],
+  "Ecommerce.controller.Product": [],
+  "Ecommerce.controller.ProductDetails": [],
+  "Ecommerce.model.Category": [],
+  "Ecommerce.model.Product": [],
+  "Ecommerce.model.User": [],
+  "Ecommerce.store.Cart": [],
+  "Ecommerce.store.Categories": [],
+  "Ecommerce.store.Products": [],
+  "Ecommerce.store.Users": [],
+  "Ecommerce.store.UsersStored": [],
+  "Ecommerce.view.Login": [],
+  "Ecommerce.view.Main": [],
+  "Ecommerce.view.Register": [],
+  "Ecommerce.view.cart.Cart": [],
+  "Ecommerce.view.cart.CartNavigation": [],
+  "Ecommerce.view.cart.Checkout": [],
+  "Ecommerce.view.categories.AddCategory": [],
+  "Ecommerce.view.categories.AddEditCategory": [],
+  "Ecommerce.view.categories.Category": [],
+  "Ecommerce.view.categories.EditCategory": [],
+  "Ecommerce.view.products.AddEditProduct": [],
+  "Ecommerce.view.products.AddProduct": [],
+  "Ecommerce.view.products.EditProduct": [],
+  "Ecommerce.view.products.Product": [],
+  "Ecommerce.view.products.ProductDetails": [],
   "Ext.AbstractComponent": [],
   "Ext.AbstractManager": [],
   "Ext.AbstractPlugin": [],
@@ -532,17 +563,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
-  "Ext.log.Base": [],
-  "Ext.log.Logger": [],
-  "Ext.log.filter.Filter": [],
-  "Ext.log.filter.Priority": [],
-  "Ext.log.formatter.Default": [],
-  "Ext.log.formatter.Formatter": [],
-  "Ext.log.formatter.Identity": [],
-  "Ext.log.writer.Console": [],
-  "Ext.log.writer.DocumentTitle": [],
-  "Ext.log.writer.Remote": [],
-  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -667,11 +687,72 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
-  ],
-  "Ecommerce.view.Main": []
+  ]
 });
 
 Ext.ClassManager.addNameAliasMappings({
+  "Ecommerce.component.CustomList": [
+    "widget.customlist"
+  ],
+  "Ecommerce.component.PatternText": [
+    "widget.patterntextfield"
+  ],
+  "Ecommerce.controller.Cart": [],
+  "Ecommerce.controller.Category": [],
+  "Ecommerce.controller.Main": [],
+  "Ecommerce.controller.Product": [],
+  "Ecommerce.controller.ProductDetails": [],
+  "Ecommerce.model.Category": [],
+  "Ecommerce.model.Product": [],
+  "Ecommerce.model.User": [],
+  "Ecommerce.store.Cart": [],
+  "Ecommerce.store.Categories": [],
+  "Ecommerce.store.Products": [],
+  "Ecommerce.store.Users": [],
+  "Ecommerce.store.UsersStored": [],
+  "Ecommerce.view.Login": [
+    "widget.login-view"
+  ],
+  "Ecommerce.view.Main": [
+    "widget.main-view"
+  ],
+  "Ecommerce.view.Register": [
+    "widget.register-view"
+  ],
+  "Ecommerce.view.cart.Cart": [
+    "widget.cart"
+  ],
+  "Ecommerce.view.cart.CartNavigation": [
+    "widget.cart-navigation-view"
+  ],
+  "Ecommerce.view.cart.Checkout": [
+    "widget.checkout"
+  ],
+  "Ecommerce.view.categories.AddCategory": [
+    "widget.add-category-view"
+  ],
+  "Ecommerce.view.categories.AddEditCategory": [
+    "widget.add-edit-category-view"
+  ],
+  "Ecommerce.view.categories.Category": [
+    "widget.category-view"
+  ],
+  "Ecommerce.view.categories.EditCategory": [
+    "widget.edit-category-view"
+  ],
+  "Ecommerce.view.products.AddEditProduct": [],
+  "Ecommerce.view.products.AddProduct": [
+    "widget.add-product-view"
+  ],
+  "Ecommerce.view.products.EditProduct": [
+    "widget.edit-product-view"
+  ],
+  "Ecommerce.view.products.Product": [
+    "widget.product-view"
+  ],
+  "Ecommerce.view.products.ProductDetails": [
+    "widget.productdetailsview"
+  ],
   "Ext.AbstractComponent": [],
   "Ext.AbstractManager": [],
   "Ext.AbstractPlugin": [],
@@ -1249,17 +1330,6 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
-  "Ext.log.Base": [],
-  "Ext.log.Logger": [],
-  "Ext.log.filter.Filter": [],
-  "Ext.log.filter.Priority": [],
-  "Ext.log.formatter.Default": [],
-  "Ext.log.formatter.Formatter": [],
-  "Ext.log.formatter.Identity": [],
-  "Ext.log.writer.Console": [],
-  "Ext.log.writer.DocumentTitle": [],
-  "Ext.log.writer.Remote": [],
-  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -1396,10 +1466,7 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
-  "Ext.viewport.WindowsPhone": [],
-  "Ecommerce.view.Main": [
-    "widget.main"
-  ]
+  "Ext.viewport.WindowsPhone": []
 });
 
 

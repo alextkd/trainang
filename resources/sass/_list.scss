@@ -3,10 +3,10 @@
     .delete {
       height: 100%;
       width: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+      float: right;
       background-color: red;
+      padding-top: 12%;
+      padding-left: 8%;
       color: white;
       text-align: center;
       font-size: 3.5vw;
@@ -14,10 +14,10 @@
     .edit {
       height: 100%;
       width: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+      float: left;
       background-color: yellow;
+      padding-top: 12%;
+      padding-left: 12%;
       color: blue;
       font-size: 3.5vw;
     }
@@ -34,7 +34,6 @@
       float: right;
     }
     text-align: left;
-    padding: 2% 5%;
     position: absolute;
     top: 0;
     left: 10;

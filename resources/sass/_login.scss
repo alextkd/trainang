@@ -4,10 +4,20 @@
 }
 
 .login-button {
-  margin: 0px 0px 10px 0px;
+  margin-bottom: 10px;
   padding: 10px;
 }
 
 .register-button {
   padding: 10px;
+}
+
+.facebook-button {
+  margin-top: 10px;
+  background-image: url('../images/m.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #2f5f9e;
+  background-position: top center;
+  width: 100%;
 }
