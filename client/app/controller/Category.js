@@ -15,7 +15,7 @@ Ext.define('Ecommerce.controller.Category', {
             addCategoryView : 'add-category-view',
             editCategoryView: 'edit-category-view',
             logoutButton    : '#logoutButton',
-            main            : 'main-view',
+            main            : 'products-navigation-view',
             welcomeLabel    : '#welcomeLabel'
         },
         control: {

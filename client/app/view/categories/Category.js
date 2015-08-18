@@ -6,8 +6,8 @@ Ext.define('Ecommerce.view.categories.Category', {
         itemTpl: ''.concat(
             '<div class="name">{name}</div>',
             '<div class="action">',
-                '<div class="edit"  data-action="edititem" data-id="{category_id}">Edit</div>',
-                '<div class="delete"  data-action="deleteitem" data-id="{category_id}">Delete</div>',
+            '<div class="edit"  data-action="edititem" data-id="{category_id}">Edit</div>',
+            '<div class="delete"  data-action="deleteitem" data-id="{category_id}">Delete</div>',
             '</div>'
         )
     },

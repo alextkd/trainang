@@ -4,20 +4,18 @@
 Ext.define('Ecommerce.model.User', {
     extend: 'Ext.data.Model',
     config: {
-        identifier : {
-            type: 'uuid'
-        },
+
         fields     : [
             {
                 name: 'id',
-                type: 'string'
+                type: 'number'
             },
             {
                 name: 'name',
                 type: 'string'
             },
             {
-                name: 'username',
+                name: 'email',
                 type: 'string'
             },
             {
@@ -51,6 +49,6 @@ Ext.define('Ecommerce.model.User', {
                 type   : 'presence',
                 message: 'Age is required.'
             }
-        ],
+        ]
     }
 });

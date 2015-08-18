@@ -8,7 +8,8 @@ Ext.application({
         'Category',
         'Product',
         'ProductDetails',
-        'Cart'
+        'Cart',
+        'Profile'
     ],
     stores     : [
         'Categories',

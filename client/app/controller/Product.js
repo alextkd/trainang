@@ -9,7 +9,7 @@ Ext.define('Ecommerce.controller.Product', {
             'products.ProductDetails'
         ],
         refs   : {
-            main              : 'main-view',
+            main              : 'products-navigation-view',
             productList       : 'product-view',
             productDetailsView: 'productdetailsview',
             addProductView    : 'add-product-view',

@@ -1,15 +1,10 @@
-Ext.define('Ecommerce.view.Main', {
+Ext.define('Ecommerce.view.ProductsNavigation', {
     extend  : 'Ext.NavigationView',
     requires: [
         'Ecommerce.view.categories.Category'
     ],
-    xtype   : 'main-view',
+    xtype   : 'products-navigation-view',
     config  : {
-        items        : [
-            {
-                xtype: 'category-view'
-            }
-        ],
         navigationBar: {
             itemId: 'navigationBar',
             docked: 'top',
@@ -61,6 +56,11 @@ Ext.define('Ecommerce.view.Main', {
                     hidden: true
                 }
             ]
-        }
+        },
+        items        : [
+            {
+                xtype: 'category-view'
+            }
+        ]
     }
 });

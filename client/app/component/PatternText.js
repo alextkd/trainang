@@ -3,7 +3,7 @@
  */
 Ext.define('Ecommerce.component.PatternText', {
     extend: 'Ext.field.Text',
-    alias : 'widget.patterntextfield',
+    xtype : 'patterntextfield',
 
     config: {
         pattern: '[0-9]*'

@@ -44,9 +44,9 @@ Ext.define('Ecommerce.view.Register', {
                     },
                     {
                         xtype      : 'textfield',
-                        placeHolder: 'Username',
+                        placeHolder: 'Email',
                         itemId     : 'userNameTextField',
-                        name       : 'username',
+                        name       : 'email',
                         required   : true
                     },
                     {

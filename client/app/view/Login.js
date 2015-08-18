@@ -29,15 +29,13 @@ Ext.define('Ecommerce.view.Login', {
                 items : [
                     {
                         xtype      : 'textfield',
-                        placeHolder: 'Username',
-                        itemId     : 'userNameTextField',
-                        name       : 'username',
+                        placeHolder: 'Email',
+                        name       : 'email',
                         required   : true
                     },
                     {
                         xtype      : 'passwordfield',
                         placeHolder: 'Password',
-                        itemId     : 'passwordTextField',
                         name       : 'password',
                         required   : true
                     }

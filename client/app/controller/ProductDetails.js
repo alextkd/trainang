@@ -15,7 +15,7 @@ Ext.define('Ecommerce.controller.ProductDetails', {
             addToCartButton   : '#addToCartButton',
             cartButton        : '#cartButton',
             editProductView   : 'edit-product-view',
-            main              : 'main-view'
+            main              : 'products-navigation-view'
         },
         control: {
             'productdetailsview'             : {

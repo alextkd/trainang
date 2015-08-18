@@ -109,7 +109,7 @@ Ext.define('Ecommerce.controller.Main', {
             user,
             label;
 
-        user = usersStore.findRecord('username', values['username']);
+        user = usersStore.findRecord('email', values['email']);
 
         if (user && user.get('password') === values['password']) {
             user                     = user.getData();
@@ -224,7 +224,7 @@ Ext.define('Ecommerce.controller.Main', {
             facebookConnectPlugin.api(response.userID + "/?fields=email", ["user_birthday"],
                 function (result) {
                     email  = result['email'];
-                    record = users.findRecord('username', email);
+                    record = users.findRecord('email', email);
                     if (!record) {
                         me.getUserFromFacebook(response.userID, response.accessToken);
                     } else {
