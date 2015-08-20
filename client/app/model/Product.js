@@ -28,11 +28,6 @@ Ext.define('Ecommerce.model.Product', {
             {
                 name: 'image',
                 type: 'string'
-            },
-            {
-                name        : 'disclosure',
-                type        : 'boolean',
-                defaultValue: false
             }
         ],
         validations: [

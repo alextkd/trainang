@@ -50,6 +50,19 @@ Ext.define('Ecommerce.controller.Main', {
         }
     },
 
+    init: function () {
+        this.initServices();
+    },
+
+    initServices: function () {
+        var app = this.getApplication();
+
+        app.services = {
+            error  : Ext.create('Ecommerce.services.Error'),
+            account: Ext.create('Ecommerce.services.Account')
+        };
+    },
+
     launch: function () {
         var me = this;
 
@@ -58,9 +71,12 @@ Ext.define('Ecommerce.controller.Main', {
         });
 
         Ext.getStore('UsersStored').load({
+
             callback: me.onUserLoad,
             scope   : me
         });
+
+        Ext.getStore('Users').load();
     },
 
     showLoginView: function () {

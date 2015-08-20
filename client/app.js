@@ -1,5 +1,10 @@
 Ext.application({
     name       : 'Ecommerce',
+    requires   : [
+        'Ecommerce.mixin.Serviceable',
+        'Ecommerce.services.Account',
+        'Ecommerce.services.Error'
+    ],
     statics    : {
         localStorageAppId: '-Ecommerce'
     },
@@ -20,7 +25,12 @@ Ext.application({
     ],
 
     launch: function () {
+        //debugger;
         Ext.fly('appLoadingIndicator').destroy();
+    },
+
+    getService: function (servicePath) {
+        return this.services[servicePath];
     },
 
     onUpdated: function () {

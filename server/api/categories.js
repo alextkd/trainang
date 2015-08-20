@@ -1,13 +1,13 @@
-var models = require('../models'),
-    router = require('express').Router(),
-    User   = models.User;
+var models   = require('../models'),
+    router   = require('express').Router(),
+    Category = models.Category;
 
-router.route('/users')
+router.route('/categories')
     .get(function (req, res, next) {
-        User.findAll().then(function (users) {
+        Category.findAll().then(function (categories) {
             var response = {
                 success: true,
-                data   : users
+                data   : categories
             };
             res.status(200).send(response);
         });
@@ -18,65 +18,62 @@ router.route('/users')
                 success: false
             };
 
-        User.create({
-            name    : data['name'],
-            email   : data['email'],
-            password: data['password'],
-            age     : data['age']
-        }).then(function (user) {
-            response.data    = user;
+        Category.create({
+            name: data['name']
+        }).then(function (category) {
+            response.data    = category;
             response.success = true;
             res.status(200).json(response);
         });
     });
 
-router.route('/users/:userId')
+router.route('/categories/:categoryId')
     .get(function (req, res, next) {
-        var userId   = req.params.userId,
-            response = {
+        var categoryId = req.params.categoryId,
+            response   = {
                 success: false
             };
 
-        User.find({
+        Category.find({
             where: {
-                user_id: userId
+                category_id: categoryId
             }
-        }).then(function (user) {
-            response.data    = user;
+        }).then(function (category) {
+            response.data    = category;
             response.success = true;
             res.status(200).json(response);
         });
     })
     .put(function (req, res, next) {
-        var data     = req.body,
-            userId   = req.params.userId,
-            response = {
+        var data       = req.body,
+            categoryId = req.params.categoryId,
+            response   = {
                 success: false
             };
 
-        User.update(data, {
+        Category.update(data, {
             where: {
-                id: userId
+                id: categoryId
             }
-        }).then(function (user) {
-            response.data    = user;
+        }).then(function (category) {
+            response.data    = category;
             response.success = true;
             res.status(200).send(response);
         });
     })
     .delete(function (req, res, next) {
-        var userId   = req.params.userId,
-            response = {
+        var categoryId = req.params.categoryId,
+            response   = {
                 success: false
             };
 
-        User.destroy({
+        Category.destroy({
             where: {
-                id: userId
+                id: categoryId
             }
         }).then(function (result) {
             response.data    = {
-                id: userId
+                id: categoryId
             };
             response.success = true;
             res.status(200).json(response);

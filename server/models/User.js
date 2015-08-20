@@ -1,5 +1,5 @@
 /*
- * User's model
+ * User model
  * */
 
 

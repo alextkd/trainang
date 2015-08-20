@@ -4,11 +4,14 @@
 Ext.define('Ecommerce.model.User', {
     extend: 'Ext.data.Model',
     config: {
-
+        identifier : {
+            type: 'uuid'
+        },
+        idProperty : 'id',
         fields     : [
             {
                 name: 'id',
-                type: 'number'
+                type: 'auto'
             },
             {
                 name: 'name',
@@ -35,9 +38,9 @@ Ext.define('Ecommerce.model.User', {
                 message: 'Name is required.'
             },
             {
-                field  : 'username',
+                field  : 'email',
                 type   : 'presence',
-                message: 'Username is required.'
+                message: 'Email is required.'
             },
             {
                 field  : 'password',
