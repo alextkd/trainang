@@ -11,15 +11,6 @@ Ext.define('Ecommerce.store.Users', {
     config: {
         storeId : 'Users',
         autoSync: true,
-        //autoLoad: true,
-        model   : 'Ecommerce.model.User',
-        proxy   : {
-            type  : 'rest',
-            url   : 'http://localhost:8080/api/users',
-            reader: {
-                type        : 'json',
-                rootProperty: 'data'
-            }
-        }
+        model   : 'Ecommerce.model.User'
     }
 });

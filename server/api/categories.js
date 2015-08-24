@@ -3,7 +3,7 @@ var models   = require('../models'),
     Category = models.Category;
 
 router.route('/categories')
-    .get(function (req, res, next) {
+    .get(function (req, res) {
         Category.findAll().then(function (categories) {
             var response = {
                 success: true,
@@ -12,7 +12,7 @@ router.route('/categories')
             res.status(200).send(response);
         });
     })
-    .post(function (req, res, next) {
+    .post(function (req, res) {
         var data     = req.body,
             response = {
                 success: false
@@ -28,7 +28,7 @@ router.route('/categories')
     });
 
 router.route('/categories/:categoryId')
-    .get(function (req, res, next) {
+    .get(function (req, res) {
         var categoryId = req.params.categoryId,
             response   = {
                 success: false
@@ -44,7 +44,7 @@ router.route('/categories/:categoryId')
             res.status(200).json(response);
         });
     })
-    .put(function (req, res, next) {
+    .put(function (req, res) {
         var data       = req.body,
             categoryId = req.params.categoryId,
             response   = {
@@ -61,7 +61,7 @@ router.route('/categories/:categoryId')
             res.status(200).send(response);
         });
     })
-    .delete(function (req, res, next) {
+    .delete(function (req, res) {
         var categoryId = req.params.categoryId,
             response   = {
                 success: false

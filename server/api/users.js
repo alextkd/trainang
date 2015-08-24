@@ -3,7 +3,7 @@ var models = require('../models'),
     User   = models.User;
 
 router.route('/users')
-    .get(function (req, res, next) {
+    .get(function (req, res) {
         User.findAll().then(function (users) {
             var response = {
                 success: true,
@@ -12,7 +12,7 @@ router.route('/users')
             res.status(200).send(response);
         });
     })
-    .post(function (req, res, next) {
+    .post(function (req, res) {
         var data     = req.body,
             response = {
                 success: false
@@ -31,7 +31,7 @@ router.route('/users')
     });
 
 router.route('/users/:userId')
-    .get(function (req, res, next) {
+    .get(function (req, res) {
         var userId   = req.params.userId,
             response = {
                 success: false
@@ -47,7 +47,7 @@ router.route('/users/:userId')
             res.status(200).json(response);
         });
     })
-    .put(function (req, res, next) {
+    .put(function (req, res) {
         var data     = req.body,
             userId   = req.params.userId,
             response = {
@@ -64,7 +64,7 @@ router.route('/users/:userId')
             res.status(200).send(response);
         });
     })
-    .delete(function (req, res, next) {
+    .delete(function (req, res) {
         var userId   = req.params.userId,
             response = {
                 success: false

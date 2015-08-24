@@ -18,7 +18,7 @@ Ext.define('Ecommerce.controller.Main', {
             'cart.CartNavigation'
         ],
         refs   : {
-            main         : 'main-view',
+            main         : 'products-navigation-view',
             navigationBar: '#navigationBar',
             login        : 'login-view',
             welcomeLabel : '#welcomeLabel',
@@ -59,7 +59,8 @@ Ext.define('Ecommerce.controller.Main', {
 
         app.services = {
             error  : Ext.create('Ecommerce.services.Error'),
-            account: Ext.create('Ecommerce.services.Account')
+            account: Ext.create('Ecommerce.services.Account'),
+            products: Ext.create('Ecommerce.services.Products')
         };
     },
 
@@ -77,6 +78,7 @@ Ext.define('Ecommerce.controller.Main', {
         });
 
         Ext.getStore('Users').load();
+        Ext.getStore('Categories').load();
     },
 
     showLoginView: function () {
@@ -292,9 +294,6 @@ Ext.define('Ecommerce.controller.Main', {
 
         if (currentView.$className == 'Ecommerce.view.Product') {
             products = currentView.getStore();
-            products.each(function (item) {
-                item.set('disclosure', false);
-            });
         }
 
         usersStored.removeAt(0);

@@ -7,11 +7,11 @@ Ext.define('Ecommerce.model.Product', {
         identifier : {
             type: 'uuid'
         },
-        idProperty : 'product_id',
+        idProperty : 'id',
         fields     : [
             {
-                name: 'product_id',
-                type: 'id'
+                name: 'id',
+                type: 'auto'
             },
             {
                 name: 'name',
@@ -51,13 +51,6 @@ Ext.define('Ecommerce.model.Product', {
                 type   : 'presence',
                 message: 'Image is required.'
             }
-        ],
-        proxy      : {
-            type  : 'localstorage',
-            reader: {
-                type: 'json'
-            }
-        },
-        belongsTo  : 'Ecommerce.model.Category'
+        ]
     }
 });

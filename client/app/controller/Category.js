@@ -19,7 +19,7 @@ Ext.define('Ecommerce.controller.Category', {
             welcomeLabel    : '#welcomeLabel'
         },
         control: {
-            'category-view'                   : {
+            'category-view'                      : {
                 addItem     : 'addItem',
                 activate    : 'onViewActivate',
                 deactivate  : 'onViewDeactivate',
@@ -27,19 +27,19 @@ Ext.define('Ecommerce.controller.Category', {
                 'deleteitem': 'deleteCategory',
                 'edititem'  : 'editCategory'
             },
-            'main-view #addButton'            : {
+            'products-navigation-view #addButton': {
                 'onAddCategory': 'onAddNewCategory'
             },
-            'add-category-view #cancelButton' : {
+            'add-category-view #cancelButton'    : {
                 tap: 'hideAddCategoryView'
             },
-            'add-category-view #submitButton' : {
+            'add-category-view #submitButton'    : {
                 tap: 'addCategory'
             },
-            'edit-category-view #cancelButton': {
+            'edit-category-view #cancelButton'   : {
                 tap: 'hideEditCategoryView'
             },
-            'edit-category-view #submitButton': {
+            'edit-category-view #submitButton'   : {
                 tap: 'onEditCategory'
             }
         }
@@ -64,12 +64,14 @@ Ext.define('Ecommerce.controller.Category', {
             logoutButton  = me.getLogoutButton(),
             categoryView  = me.getCategoryView(),
             navigationBar = me.getMain().getNavigationBar(),
-            welcomeLabel  = me.getWelcomeLabel();
+            welcomeLabel  = me.getWelcomeLabel(),
+            productsStore = Ext.getStore('Products');
 
         welcomeLabel && welcomeLabel.show();
         navigationBar.setMasked(false);
         logoutButton && logoutButton.show();
         categoryView && categoryView.setMasked(false);
+        productsStore.getCount() && productsStore.clearData();
         this.hideDisclosure();
     },
 
@@ -92,19 +94,28 @@ Ext.define('Ecommerce.controller.Category', {
     },
 
     onCategoryTap: function (el, index) {
-        var navigationview = this.getMain(),
+        var me             = this,
+            navigationview = me.getMain(),
             categories     = Ext.getStore('Categories'),
-            products,
+            products       = Ext.getStore('Products'),
+            categoryId     = categories.getAt(index).getId(),
+            responseData,
             listConfig;
 
-        products = categories.getAt(index).products();
-
-        listConfig = {
-            xtype: 'product-view',
-            store: products
-        };
-
-        navigationview.push(listConfig);
+        me.getApplication().getService('products').loadProducts({
+            categoryId: categoryId,
+            callback  : function (options, success, response) {
+                if (success) {
+                    responseData = JSON.parse(response.responseText).data;
+                    responseData && products.add(JSON.parse(response.responseText).data);
+                    listConfig   = {
+                        xtype     : 'product-view',
+                        categoryId: categoryId
+                    };
+                    navigationview.push(listConfig);
+                }
+            }
+        });
     },
 
     hideAddCategoryView: function () {
@@ -154,21 +165,12 @@ Ext.define('Ecommerce.controller.Category', {
 
     deleteCategory: function (categoryId) {
         var store,
-            index,
-            products;
+            index;
 
         Ext.Msg.confirm('Delete', 'Are you sure you want to delete this category',
             function (btn) {
                 if (btn == 'yes') {
-                    store    = Ext.getStore('Categories');
-                    index    = store.findBy(function (record, id) {
-                        if (categoryId == id) {
-                            return true;
-                        }
-                    });
-                    products = store.getAt(index).products();
-
-                    products.clearData();
+                    store = Ext.getStore('Categories');
                     store.removeAt(index);
                 }
             });

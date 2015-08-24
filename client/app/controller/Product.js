@@ -41,14 +41,14 @@ Ext.define('Ecommerce.controller.Product', {
             productList   = me.getProductList(),
             navigationBar = me.getMain().getNavigationBar(),
             categoryStore = Ext.getStore('Categories'),
-            categoryId    = productList.getStore().getModelDefaults().category_id,
+            categoryId    = productList.categoryId,
             categoryLabel = me.getCategoryLabel();
 
         setTimeout(function () {
             navigationBar.setMasked(false);
         }, 500);
         productList && productList.setMasked(false);
-        categoryLabel.updateData(categoryStore.findRecord('category_id', categoryId).getData());
+        categoryLabel.updateData(categoryStore.findRecord('id', categoryId).getData());
         categoryLabel.show();
     },
 
@@ -98,31 +98,46 @@ Ext.define('Ecommerce.controller.Product', {
     },
 
     addProduct: function () {
-        var productModalView = this.getAddProductView(),
+        var me = this,
+            productModalView = me.getAddProductView(),
             product          = productModalView.getValues(),
-            productList      = this.getProductList(),
+            productList      = me.getProductList(),
             products         = productList.getStore();
 
         if (this.validateProduct(product) == false) {
             return;
         }
 
+        me.getApplication().getService('products').addProduct({
+            categoryId: productList.categoryId,
+            data      : product,
+            callback  : function (options, success, response) {
+                debugger;
+            }
+        });
+
         products.add(product);
         productModalView.destroy();
     },
 
     deleteProduct: function (productId) {
+        var me          = this,
+            productList = me.getProductList(),
+            store;
+
         Ext.Msg.confirm('Delete', 'Are you sure you want to delete this product',
             function (btn) {
                 if (btn == 'yes') {
-                    var store = Ext.getStore('Productsstore'),
-                        index = store.findBy(function (record, id) {
-                            if (productId == id) {
-                                return true;
+                    store = productList.getStore();
+                    me.getApplication().getService('products').removeProduct({
+                        categoryId: productList.categoryId,
+                        productId : productId,
+                        callback  : function (options, success, response) {
+                            if (success) {
+                                store.remove(store.findRecord('id', productId));
                             }
-                        });
-
-                    store.removeAt(index);
+                        }
+                    });
                 }
             });
 

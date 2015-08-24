@@ -1,5 +1,5 @@
 /**
- * Created by andreilakatos on 17/07/15.
+ * Created by andreilakatos on 24/08/15.
  */
 Ext.define('Ecommerce.store.Products', {
     extend  : 'Ext.data.Store',
@@ -9,12 +9,7 @@ Ext.define('Ecommerce.store.Products', {
 
     config: {
         storeId : 'Products',
-        autoLoad: true,
         autoSync: true,
-        model   : 'Ecommerce.model.Product',
-        proxy   : {
-            type: 'localstorage',
-            id  : 'products'
-        }
+        model   : 'Ecommerce.model.Product'
     }
 });

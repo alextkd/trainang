@@ -26,7 +26,7 @@ router.route('/categories/:categoryId/products')
         }).then(function (category) {
             var response = {
                 success: true,
-                data   : category.Products
+                data   : category ? category.Products : null
             };
 
             res.status(200).send(response);
@@ -45,6 +45,7 @@ router.route('/categories/:categoryId/products')
             price      : data['price'],
             image      : data['image']
         }).then(function (product) {
+
             response.data    = product;
             response.success = true;
             Category_Product.create({

@@ -9,12 +9,7 @@ Ext.define('Ecommerce.store.Categories', {
 
     config: {
         storeId : 'Categories',
-        autoLoad: true,
         autoSync: true,
-        model   : 'Ecommerce.model.Category',
-        proxy   : {
-            type: 'localstorage',
-            id  : 'categories'
-        }
+        model   : 'Ecommerce.model.Category'
     }
 });

@@ -97,19 +97,25 @@ Ext.define('Ecommerce.controller.ProductDetails', {
     },
 
     editProduct: function () {
-        var editProductView    = this.getEditProductView(),
-            productDetailsView = this.getProductDetailsView(),
+        var me                 = this,
+            editProductView    = me.getEditProductView(),
+            productDetailsView = me.getProductDetailsView(),
             product            = editProductView.getValues(),
             record             = productDetailsView.getRecord();
 
         if (!this.validateProduct(product)) {
             return;
         }
-        record.set('name', product['name']);
-        record.set('description', product['description']);
-        record.set('price', product['price']);
-        record.set('image', product['image']);
 
+        me.getApplication().getService('products').editProduct({
+            productId: record.getId(),
+            data     : product,
+            callback : function (options, success, response) {
+                if (success) {
+                    record.set(product);
+                }
+            }
+        });
         this.hideEditProductView();
     },
 

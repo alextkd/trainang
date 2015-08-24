@@ -52,6 +52,18 @@ Ext.define('Ecommerce.model.User', {
                 type   : 'presence',
                 message: 'Age is required.'
             }
-        ]
+        ],
+        proxy      : {
+            type              : 'rest',
+            url               : 'http://localhost:8080/api/users',
+            noCache           : false,
+            limitParam        : false,
+            enablePagingParams: false,
+            startParam        : false,
+            reader            : {
+                type        : 'json',
+                rootProperty: 'data'
+            }
+        }
     }
 });

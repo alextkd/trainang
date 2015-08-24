@@ -1,9 +1,12 @@
 Ext.application({
     name       : 'Ecommerce',
     requires   : [
+        'Ext.Ajax',
         'Ecommerce.mixin.Serviceable',
         'Ecommerce.services.Account',
-        'Ecommerce.services.Error'
+        'Ecommerce.services.Error',
+        'Ecommerce.services.Products',
+        'Ecommerce.component.Rest'
     ],
     statics    : {
         localStorageAppId: '-Ecommerce'
@@ -18,14 +21,13 @@ Ext.application({
     ],
     stores     : [
         'Categories',
-        'Products',
         'Users',
         'UsersStored',
-        'Cart'
+        'Cart',
+        'Products'
     ],
 
     launch: function () {
-        //debugger;
         Ext.fly('appLoadingIndicator').destroy();
     },
 

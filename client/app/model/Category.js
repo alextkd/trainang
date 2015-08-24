@@ -7,10 +7,11 @@ Ext.define('Ecommerce.model.Category', {
         identifier : {
             type: 'uuid'
         },
-        idProperty : 'category_id',
+        idProperty : 'id',
         fields     : [
             {
-                name: 'category_id'
+                name: 'id',
+                type: 'auto'
             },
             {
                 name: 'name',
@@ -19,11 +20,6 @@ Ext.define('Ecommerce.model.Category', {
             {
                 name: 'ord',
                 type: 'int'
-            },
-            {
-                name        : 'disclosure',
-                type        : 'boolean',
-                defaultValue: false
             }
         ],
         validations: [
@@ -33,12 +29,25 @@ Ext.define('Ecommerce.model.Category', {
                 message: 'Name is required.'
             }
         ],
-        hasMany    : {
-            model     : 'Ecommerce.model.Product',
-            name      : 'products',
-            autoLoad  : true,
-            autoSync  : true,
-            primaryKey: 'category_id'
+        /*hasMany    : {
+            storeId     : 'Productsstore',
+            model       : 'Ecommerce.model.Product',
+            name        : 'products',
+            //autoLoad    : true,
+            batchActions: true,
+            autoSync    : true
+        },*/
+        proxy      : {
+            type              : 'rest',
+            url               : 'http://localhost:8080/api/categories',
+            noCache           : false,
+            limitParam        : false,
+            enablePagingParams: false,
+            startParam        : false,
+            reader            : {
+                type        : 'json',
+                rootProperty: 'data'
+            }
         }
     }
 });
