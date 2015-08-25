@@ -12,6 +12,8 @@ Ext.define('Ecommerce.services.Products', {
             url     : url,
             method  : 'GET',
             callback: config.callback || Ext.emptyFn,
+            success : config.success || Ext.emptyFn,
+            failure : config.failure || Ext.emptyFn,
             scope   : config.scope || me
         });
     },
@@ -26,6 +28,8 @@ Ext.define('Ecommerce.services.Products', {
             url     : url,
             method  : 'DELETE',
             callback: config.callback || Ext.emptyFn,
+            success : config.success || Ext.emptyFn,
+            failure : config.failure || Ext.emptyFn,
             scope   : config.scope || me
         });
     },
@@ -38,6 +42,8 @@ Ext.define('Ecommerce.services.Products', {
         Ext.Ajax.request({
             url     : url,
             callback: config.callback || Ext.emptyFn,
+            success : config.success || Ext.emptyFn,
+            failure : config.failure || Ext.emptyFn,
             scope   : config.scope || me,
             jsonData: Ext.encode(config.data)
 
@@ -54,6 +60,8 @@ Ext.define('Ecommerce.services.Products', {
             url     : url,
             method  : 'PUT',
             callback: config.callback || Ext.emptyFn,
+            success : config.success || Ext.emptyFn,
+            failure : config.failure || Ext.emptyFn,
             scope   : config.scope || me,
             jsonData: Ext.encode(config.data)
         });

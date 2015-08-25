@@ -98,7 +98,7 @@ Ext.define('Ecommerce.controller.Product', {
     },
 
     addProduct: function () {
-        var me = this,
+        var me               = this,
             productModalView = me.getAddProductView(),
             product          = productModalView.getValues(),
             productList      = me.getProductList(),
@@ -111,12 +111,14 @@ Ext.define('Ecommerce.controller.Product', {
         me.getApplication().getService('products').addProduct({
             categoryId: productList.categoryId,
             data      : product,
-            callback  : function (options, success, response) {
-                debugger;
+            success   : function () {
+                products.add(product);
+                Ext.Msg.alert('Success', 'Product added.');
+            },
+            failure   : function () {
+                Ext.Msg.alert('Failure', 'Product cannot be added.');
             }
         });
-
-        products.add(product);
         productModalView.destroy();
     },
 
@@ -132,10 +134,13 @@ Ext.define('Ecommerce.controller.Product', {
                     me.getApplication().getService('products').removeProduct({
                         categoryId: productList.categoryId,
                         productId : productId,
-                        callback  : function (options, success, response) {
-                            if (success) {
-                                store.remove(store.findRecord('id', productId));
-                            }
+                        success   : function () {
+                            store.remove(store.findRecord('id', productId));
+                            Ext.Msg.alert('Success', 'Product deleted.');
+                        },
+                        failure   : function () {
+                            debugger;
+                            Ext.Msg.alert('Failure', 'Product cannot be deleted.');
                         }
                     });
                 }
@@ -158,11 +163,8 @@ Ext.define('Ecommerce.controller.Product', {
 
                 s = Ext.String.format('field[name={0}]', errorObj.getField());
             });
-        } else {
-            title   = 'Success';
-            message = 'Product added.'
+            Ext.Msg.alert(title, message);
         }
-        Ext.Msg.alert(title, message);
         return isValid;
     }
 });

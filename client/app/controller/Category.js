@@ -104,16 +104,17 @@ Ext.define('Ecommerce.controller.Category', {
 
         me.getApplication().getService('products').loadProducts({
             categoryId: categoryId,
-            callback  : function (options, success, response) {
-                if (success) {
-                    responseData = JSON.parse(response.responseText).data;
-                    responseData && products.add(JSON.parse(response.responseText).data);
-                    listConfig   = {
-                        xtype     : 'product-view',
-                        categoryId: categoryId
-                    };
-                    navigationview.push(listConfig);
-                }
+            success   : function (response) {
+                responseData = JSON.parse(response.responseText).data;
+                responseData && products.add(JSON.parse(response.responseText).data);
+                listConfig   = {
+                    xtype     : 'product-view',
+                    categoryId: categoryId
+                };
+                navigationview.push(listConfig);
+            },
+            failure   : function (response) {
+                debugger;
             }
         });
     },

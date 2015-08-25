@@ -72,11 +72,8 @@ Ext.define('Ecommerce.controller.ProductDetails', {
 
                 s = Ext.String.format('field[name={0}]', errorObj.getField());
             });
-        } else {
-            title   = 'Success';
-            message = 'Product edited.'
+            Ext.Msg.alert(title, message);
         }
-        Ext.Msg.alert(title, message);
         return isValid;
     },
 
@@ -110,10 +107,12 @@ Ext.define('Ecommerce.controller.ProductDetails', {
         me.getApplication().getService('products').editProduct({
             productId: record.getId(),
             data     : product,
-            callback : function (options, success, response) {
-                if (success) {
-                    record.set(product);
-                }
+            success  : function () {
+                record.set(product);
+                Ext.Msg.alert('Success', 'Product edited.');
+            },
+            failure  : function () {
+                Ext.Msg.alert('Failure', 'Product cannont be edited.');
             }
         });
         this.hideEditProductView();
