@@ -22,7 +22,7 @@ Ext.Loader.addClassPathMappings({
   "Ext.Element-static": "touch/src/dom/Element.static.js",
   "Ext.Element-style": "touch/src/dom/Element.style.js",
   "Ext.Element-traversal": "touch/src/dom/Element.traversal.js",
-  "Ext.cmd": "../../../bin/Sencha/Cmd/6.0.0.202/plugins/src",
+  "Ext.cmd": "../../../../bin/Sencha/Cmd/6.0.0.202/plugins/src",
   "Ext.core.DomQuery": "touch/src/dom/Query.js",
   "Ext.device.Purchases.Product": "touch/src/device/purchases/Sencha.js",
   "Ext.device.filesystem.DirectoryEntry": "touch/src/device/filesystem/Sencha.js",
@@ -38,15 +38,25 @@ Ext.Loader.addClassPathMappings({
 
 Ext.ClassManager.addNameAlternateMappings({
   "Ecommerce.component.CustomList": [],
+  "Ecommerce.component.MD5": [],
   "Ecommerce.component.PatternText": [],
+  "Ecommerce.component.Rest": [],
+  "Ecommerce.component.SlideNavigationView": [],
+  "Ecommerce.controller.Base": [],
   "Ecommerce.controller.Cart": [],
   "Ecommerce.controller.Category": [],
   "Ecommerce.controller.Main": [],
   "Ecommerce.controller.Product": [],
   "Ecommerce.controller.ProductDetails": [],
+  "Ecommerce.controller.Profile": [],
+  "Ecommerce.mixin.Serviceable": [],
   "Ecommerce.model.Category": [],
   "Ecommerce.model.Product": [],
   "Ecommerce.model.User": [],
+  "Ecommerce.services.Account": [],
+  "Ecommerce.services.Categories": [],
+  "Ecommerce.services.Error": [],
+  "Ecommerce.services.Products": [],
   "Ecommerce.store.Cart": [],
   "Ecommerce.store.Categories": [],
   "Ecommerce.store.Products": [],
@@ -54,6 +64,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ecommerce.store.UsersStored": [],
   "Ecommerce.view.Login": [],
   "Ecommerce.view.Main": [],
+  "Ecommerce.view.ProductsNavigation": [],
   "Ecommerce.view.Register": [],
   "Ecommerce.view.cart.Cart": [],
   "Ecommerce.view.cart.CartNavigation": [],
@@ -67,6 +78,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ecommerce.view.products.EditProduct": [],
   "Ecommerce.view.products.Product": [],
   "Ecommerce.view.products.ProductDetails": [],
+  "Ecommerce.view.user.Profile": [],
   "Ext.AbstractComponent": [],
   "Ext.AbstractManager": [],
   "Ext.AbstractPlugin": [],
@@ -694,17 +706,31 @@ Ext.ClassManager.addNameAliasMappings({
   "Ecommerce.component.CustomList": [
     "widget.customlist"
   ],
+  "Ecommerce.component.MD5": [],
   "Ecommerce.component.PatternText": [
     "widget.patterntextfield"
   ],
+  "Ecommerce.component.Rest": [
+    "proxy.custom-rest"
+  ],
+  "Ecommerce.component.SlideNavigationView": [
+    "widget.slidenavigationview"
+  ],
+  "Ecommerce.controller.Base": [],
   "Ecommerce.controller.Cart": [],
   "Ecommerce.controller.Category": [],
   "Ecommerce.controller.Main": [],
   "Ecommerce.controller.Product": [],
   "Ecommerce.controller.ProductDetails": [],
+  "Ecommerce.controller.Profile": [],
+  "Ecommerce.mixin.Serviceable": [],
   "Ecommerce.model.Category": [],
   "Ecommerce.model.Product": [],
   "Ecommerce.model.User": [],
+  "Ecommerce.services.Account": [],
+  "Ecommerce.services.Categories": [],
+  "Ecommerce.services.Error": [],
+  "Ecommerce.services.Products": [],
   "Ecommerce.store.Cart": [],
   "Ecommerce.store.Categories": [],
   "Ecommerce.store.Products": [],
@@ -715,6 +741,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "Ecommerce.view.Main": [
     "widget.main-view"
+  ],
+  "Ecommerce.view.ProductsNavigation": [
+    "widget.products-navigation-view"
   ],
   "Ecommerce.view.Register": [
     "widget.register-view"
@@ -752,6 +781,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "Ecommerce.view.products.ProductDetails": [
     "widget.productdetailsview"
+  ],
+  "Ecommerce.view.user.Profile": [
+    "widget.profile-view"
   ],
   "Ext.AbstractComponent": [],
   "Ext.AbstractManager": [],

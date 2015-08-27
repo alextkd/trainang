@@ -1,6 +1,5 @@
-Ext.define('Ecommerce.services.Account', {
-
-    md5: function (s, raw, hexcase, chrsz) {
+Ext.define('Ecommerce.component.MD5', {
+    encrypt: function (s, raw, hexcase, chrsz) {
         raw     = raw || false;
         hexcase = hexcase || false;
         chrsz   = chrsz || 8;
@@ -147,63 +146,5 @@ Ext.define('Ecommerce.services.Account', {
         }
 
         return (raw ? binl2str(core_md5(str2binl(s), s.length * chrsz)) : binl2hex(core_md5(str2binl(s), s.length * chrsz))    );
-    },
-
-    login: function (config) {
-        var me = this;
-
-        Ext.Ajax.request({
-            url     : 'http://localhost:8080/api/users/login',
-            method  : 'POST',
-            jsonData: Ext.encode({
-                email   : config.userObject.email,
-                password: me.md5(config.userObject.password)
-            }),
-            params  : {
-                method: 'post'
-            },
-            callback: config.callback || Ext.emptyFn,
-            success : config.success || Ext.emptyFn,
-            failure : config.failure || Ext.emptyFn,
-            scope   : config.scope || me
-        });
-    },
-
-    logout: function (config) {
-        var me = this;
-
-        Ext.Ajax.request({
-            url     : 'http://localhost:8080/api/users/logout',
-            method  : 'DELETE',
-            jsonData: Ext.encode({
-                userId: config.userId
-            }),
-            params  : {
-                method: 'post'
-            },
-            callback: config.callback || Ext.emptyFn,
-            success : config.success || Ext.emptyFn,
-            failure : config.failure || Ext.emptyFn,
-            scope   : config.scope || me
-        });
-    },
-
-    register: function (config) {
-        var me = this;
-
-        config.userObject.password = me.md5(config.userObject.password);
-
-        Ext.Ajax.request({
-            url     : 'http://localhost:8080/api/users/register',
-            method  : 'POST',
-            jsonData: Ext.encode(config.userObject),
-            params  : {
-                method: 'post'
-            },
-            callback: config.callback || Ext.emptyFn,
-            success : config.success || Ext.emptyFn,
-            failure : config.failure || Ext.emptyFn,
-            scope   : config.scope || me
-        });
     }
 });

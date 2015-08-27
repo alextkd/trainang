@@ -105,6 +105,7 @@ Ext.define('Ecommerce.controller.ProductDetails', {
         }
 
         me.getApplication().getService('products').editProduct({
+            authToken : Ecommerce.app.authToken,
             productId: record.getId(),
             data     : product,
             success  : function () {

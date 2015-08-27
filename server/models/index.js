@@ -9,7 +9,8 @@ var ConfigDb  = require('../config').database,
         'User',
         'Product',
         'Category',
-        'Category_Product'
+        'Category_Product',
+        'Auth'
     ];
 
 

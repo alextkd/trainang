@@ -25,17 +25,18 @@ Ext.define('Ecommerce.controller.Profile', {
     onSubmitButton: function () {
         var me          = this,
             profileView = me.getProfileView(),
-            user        = profileView.getValues(),
-            record      = profileView.getRecord();
+            user        = profileView.getValues();
 
-        if (user['oldpassword'] == record.get('password')) {
-            user.password = user.newpassword;
-        } else {
-            Ext.Msg.alert('Error', 'Old Password is wrong.')
-            return ;
-        }
-        record.set(user);
-        Ext.Msg.alert('Succes', 'User updated.')
+        me.getApplication().getService('account').editUser({
+            userObject: user,
+            success   : function () {
+                Ext.Msg.alert('Succes', 'User updated');
+            },
+
+            failure: function (response) {
+                Ext.Msg.alert('Failure', response.responseText);
+            }
+        });
     },
 
     onViewDeActivate: function () {

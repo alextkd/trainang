@@ -14,15 +14,15 @@ Ext.define('Ecommerce.model.User', {
                 type: 'auto'
             },
             {
+                name: 'user_id',
+                type: 'int'
+            },
+            {
                 name: 'name',
                 type: 'string'
             },
             {
                 name: 'email',
-                type: 'string'
-            },
-            {
-                name: 'password',
                 type: 'string'
             },
             {
@@ -41,11 +41,6 @@ Ext.define('Ecommerce.model.User', {
                 field  : 'email',
                 type   : 'presence',
                 message: 'Email is required.'
-            },
-            {
-                field  : 'password',
-                type   : 'presence',
-                message: 'Password is required.'
             },
             {
                 field  : 'age',

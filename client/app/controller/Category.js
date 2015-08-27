@@ -104,6 +104,7 @@ Ext.define('Ecommerce.controller.Category', {
 
         me.getApplication().getService('products').loadProducts({
             categoryId: categoryId,
+            authToken : Ecommerce.app.authToken,
             success   : function (response) {
                 responseData = JSON.parse(response.responseText).data;
                 responseData && products.add(JSON.parse(response.responseText).data);

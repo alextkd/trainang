@@ -22,8 +22,8 @@ Ext.define('Ecommerce.view.user.Profile', {
                     },
                     {
                         xtype      : 'textfield',
-                        placeHolder: 'Username',
-                        name       : 'username',
+                        placeHolder: 'Email',
+                        name       : 'email',
                         required   : true,
                         allowBlank : false
                     },

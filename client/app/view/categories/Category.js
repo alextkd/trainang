@@ -13,9 +13,11 @@ Ext.define('Ecommerce.view.categories.Category', {
     },
 
     initialize: function () {
-        var me = this;
+        var me            = this,
+            categoryStore = Ext.getStore('Categories');
 
+        categoryStore.load();
         me.callParent(arguments);
-        me.setStore(Ext.getStore('Categories'));
+        me.setStore(categoryStore);
     }
 });

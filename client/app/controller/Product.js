@@ -109,6 +109,7 @@ Ext.define('Ecommerce.controller.Product', {
         }
 
         me.getApplication().getService('products').addProduct({
+            authToken : Ecommerce.app.authToken,
             categoryId: productList.categoryId,
             data      : product,
             success   : function () {
@@ -132,6 +133,7 @@ Ext.define('Ecommerce.controller.Product', {
                 if (btn == 'yes') {
                     store = productList.getStore();
                     me.getApplication().getService('products').removeProduct({
+                        authToken : Ecommerce.app.authToken,
                         categoryId: productList.categoryId,
                         productId : productId,
                         success   : function () {

@@ -7,7 +7,7 @@ Ext.define('Ecommerce.view.Main', {
     xtype   : 'main-view',
     config  : {
         fullscreen         : true,
-        slideSelector       : 'x-toolbar',
+        slideSelector      : 'x-toolbar',
         containerSlideDelay: 10,
         selectSlideDuration: 200,
         itemMask           : true,

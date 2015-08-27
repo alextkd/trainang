@@ -15,16 +15,19 @@ Ext.define('Ecommerce.controller.Main', {
             'Main',
             'Login',
             'Register',
-            'cart.CartNavigation'
+            'cart.CartNavigation',
+            'user.Profile'
         ],
         refs   : {
-            main         : 'products-navigation-view',
-            navigationBar: '#navigationBar',
-            login        : 'login-view',
-            welcomeLabel : '#welcomeLabel',
-            cartButton   : '#cartButton',
-            signInLabel  : '#signInFailedLabel',
-            register     : 'register-view'
+            slideNavigation: 'main-view',
+            profile        : 'profile-view',
+            main           : 'products-navigation-view',
+            navigationBar  : '#navigationBar',
+            login          : 'login-view',
+            welcomeLabel   : '#welcomeLabel',
+            cartButton     : '#cartButton',
+            signInLabel    : '#signInFailedLabel',
+            register       : 'register-view'
         },
         control: {
             'login'                    : {
@@ -58,8 +61,8 @@ Ext.define('Ecommerce.controller.Main', {
         var app = this.getApplication();
 
         app.services = {
-            error  : Ext.create('Ecommerce.services.Error'),
-            account: Ext.create('Ecommerce.services.Account'),
+            error   : Ext.create('Ecommerce.services.Error'),
+            account : Ext.create('Ecommerce.services.Account'),
             products: Ext.create('Ecommerce.services.Products')
         };
     },
@@ -76,9 +79,6 @@ Ext.define('Ecommerce.controller.Main', {
             callback: me.onUserLoad,
             scope   : me
         });
-
-        Ext.getStore('Users').load();
-        Ext.getStore('Categories').load();
     },
 
     showLoginView: function () {
@@ -101,6 +101,10 @@ Ext.define('Ecommerce.controller.Main', {
         Ext.Viewport.setMasked(false);
         if (users && users.length > 0) {
 
+            Ext.Ajax.setDefaultHeaders({
+                'x-auth': localStorage.getItem('x-auth')
+            });
+
             me.showMainView();
 
             cartStore = Ext.getStore('Cart');
@@ -122,31 +126,35 @@ Ext.define('Ecommerce.controller.Main', {
         var me               = this,
             loginform        = me.getLogin(),
             values           = loginform.getValues(),
-            usersStore       = Ext.getStore('Users'),
             usersStoredStore = Ext.getStore('UsersStored'),
             user,
             label;
 
-        user = usersStore.findRecord('email', values['email']);
+        me.getApplication().getService('account').login({
+            userObject: values,
+            success   : function (response) {
+                responseJson = Ext.decode(response.responseText);
 
-        if (user && user.get('password') === values['password']) {
-            user                     = user.getData();
-            loginform && loginform.destroy();
+                user                     = responseJson.data;
+                user['user_id']          = user.id;
+                delete user.id;
 
-            me.showMainView();
+                localStorage.setItem('x-auth', responseJson.token);
+                usersStoredStore.add(user);
+                Ext.Ajax.setDefaultHeaders({
+                    'x-auth': localStorage.getItem('x-auth')
+                });
+                me.showMainView();
+                Ecommerce.app.currenUser = user;
+                label                    = me.getWelcomeLabel();
+                label.updateData(Ecommerce.app.currenUser);
+                loginform && loginform.destroy();
+            },
 
-            delete user.id;
-
-            usersStoredStore.add(user);
-            Ecommerce.app.currenUser = user;
-
-            label = this.getWelcomeLabel();
-            label.updateData(Ecommerce.app.currenUser);
-            loginform.destroy();
-        } else {
-            label = me.getSignInLabel();
-            label.show();
-        }
+            failure: function (response) {
+                Ext.Msg.alert('Failure', response.responseText);
+            }
+        });
     },
 
     onRegister: function () {
@@ -161,18 +169,24 @@ Ext.define('Ecommerce.controller.Main', {
     onCreateUser: function () {
         var me           = this,
             registerView = me.getRegister(),
-            user         = registerView.getValues(),
-            usersStore   = Ext.getStore('Users');
+            user         = registerView.getValues();
 
-        usersStore.add(user);
         if (!me.validateUser(user)) {
             return false;
         }
-        registerView.hide();
-        Ext.defer(function () {
-            registerView && registerView.destroy();
-        }, 600);
-        Ext.Msg.alert('Succes', ''.concat('User ', user['name'], ' created'));
+        me.getApplication().getService('account').register({
+            userObject: user,
+            success   : function (response) {
+                Ext.Msg.alert('Success', 'User '.concat(user.name, ' created.'));
+                registerView.hide();
+                Ext.defer(function () {
+                    registerView && registerView.destroy();
+                }, 600);
+            },
+            failure   : function (response) {
+                Ext.Msg.alert('Failure', 'User '.concat(user.name, ' cannot be created.'));
+            }
+        });
     },
 
     onRegisterBack: function () {
@@ -246,7 +260,6 @@ Ext.define('Ecommerce.controller.Main', {
                     if (!record) {
                         me.getUserFromFacebook(response.userID, response.accessToken);
                     } else {
-                        debugger;
                         recordData = record.raw;
                         delete recordData.id;
                         usersStored.add(recordData);
@@ -287,23 +300,27 @@ Ext.define('Ecommerce.controller.Main', {
 
     onLogoutTap: function () {
         var me          = this,
-            categories  = Ext.getStore('Categories'),
-            usersStored = Ext.getStore('UsersStored'),
-            currentView = me.getMain().getActiveItem(),
-            products;
+            usersStored = Ext.getStore('UsersStored');
 
-        if (currentView.$className == 'Ecommerce.view.Product') {
-            products = currentView.getStore();
-        }
+        me.getApplication().getService('account').logout({
+            userId : Ecommerce.app.currenUser['user_id'],
+            success: function () {
+                usersStored.removeAt(0);
 
-        usersStored.removeAt(0);
-        categories.each(function (item) {
-            item.set('disclosure', false);
+                me.getMain().destroy();
+                //me.getProfile().destroy();
+                me.getSlideNavigation().destroy();
+                localStorage.removeItem('x-auth');
+
+                me.showLoginView();
+
+                Ext.Msg.alert('Success', 'Logged out.')
+            },
+
+            failure: function () {
+                Ext.Msg.alert('Failed', 'Failed to logout.')
+            }
         });
-
-        me.getMain().destroy();
-
-        me.showLoginView();
     },
 
     onCartButtonTap: function () {

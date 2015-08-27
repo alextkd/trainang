@@ -6,7 +6,8 @@ var express             = require('express'),
     bodyParser          = require('body-parser'),
     userRestHandler     = require('./api/users'),
     categoryRestHandler = require('./api/categories'),
-    productRestHandler  = require('./api/products');
+    productRestHandler  = require('./api/products'),
+    models              = require('./models');
 
 
 app.get('/', function (req, res) {
@@ -15,6 +16,27 @@ app.get('/', function (req, res) {
 
 app.use(bodyParser.json());
 app.use(bodyParser.text());
+
+app.use(function (req, res, next) {
+    var authToken = req.header('x-auth'),
+        Auth      = models.Auth;
+
+    if (req.originalUrl.search('users') < 0 && req.method != 'PUT') {
+        Auth.find({
+            where: {
+                token: authToken
+            }
+        }).then(function (auth) {
+            if (auth) {
+                next();
+            } else {
+                res.status(403).send('Forbidden access, authentification token not found.')
+            }
+        });
+    } else {
+        next();
+    }
+});
 
 app.use('/api', userRestHandler);
 
